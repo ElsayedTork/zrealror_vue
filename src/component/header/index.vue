@@ -1,5 +1,5 @@
 <template>
-  <header class="header mb-5">
+  <header class="header">
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
         <a class="navbar-brand" href="#">
@@ -39,9 +39,6 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Contact Us</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
             <!-- <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
@@ -68,7 +65,13 @@
             <li><i class="fa-regular fa-bell"></i></li>
             <li>
               <div class="dropdown">
-                <img src="./../../assets/images/man.png" alt="" srcset="" />
+                <img
+                  src="./../../assets/images/man.png"
+                  alt=""
+                  srcset=""
+                  width="32"
+                  height="32"
+                />
                 <a
                   class="dropdown-toggle"
                   href="#"
