@@ -7,7 +7,7 @@
 
 <script>
 import Header from './component/header/index.vue';
-import Footer from './component/footer/footer.vue';
+import Footer from './component/footer/index.vue';
 
 export default {
   data() {
@@ -35,8 +35,14 @@ html {
 ul,
 p,
 span,
-div {
+div,
+hr,
+img,
+figure,
+h5,
+h3 {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 </style>
