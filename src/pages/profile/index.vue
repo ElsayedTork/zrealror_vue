@@ -2,132 +2,65 @@
   <div class="profile">
     <div class="container">
       <div class="row">
-        <section class="col-sm-2 profile__left">
-          <ul class="profile__left__list">
-            <li class="active">
-              <img
-                src="./../../assets/icons/profile/profile-circle.svg"
-                alt=""
-              />
-              <span>my profile</span>
-            </li>
-            <li>
-              <div class="dropdown">
-                <img src="./../../assets/icons/profile/wishlist.svg" alt="" />
-                <button
-                  class="btn px-0 pe-0 ps-1 dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <span>My Wishlists</span>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
+        <section class="col-xl-2 col-md-4 col-sm-12">
+          <div class="profile__left">
+            <ul class="profile__left__list">
+              <li class="active">
+                <img
+                  src="./../../assets/icons/profile/profile-circle.svg"
+                  alt=""
+                />
+                <span>my profile</span>
+              </li>
+              <li>
+                <div class="dropdown">
+                  <img src="./../../assets/icons/profile/wishlist.svg" alt="" />
+                  <button
+                    class="btn px-0 pe-0 ps-1 dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <span>My Wishlists</span>
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li>
-              <img
-                src="./../../assets/icons/profile/PaperDownload.svg"
-                alt=""
-              />
-              <span>My Requests</span>
-            </li>
-            <li>
-              <img src="./../../assets/icons/profile/logout.svg" alt="" />
-              <span>Logout</span>
-            </li>
-          </ul>
-          <div
-            class="profile__left__advertisement d-flex justify-content-center align-items-center"
-          >
-            <span>184 x 540</span>
-          </div>
-        </section>
-        <section class="col-sm-7 profile__center">
-          <h3>My Profile</h3>
-
-          <profile-about></profile-about>
-          <Statistics />
-          <div class="profile__center__search mt-4">
-            <h4>Saved Search</h4>
-            <hr />
-            <div class="profile__center__search_body">
-              <div
-                class="d-flex justify-content-between align-items-center profile__center__search_body__item-upper"
-              >
-                <h5>Search Name</h5>
-                <h5>Action</h5>
-              </div>
-              <div
-                class="profile__center__search_body__item d-flex justify-content-between align-items-center"
-              >
-                <p>Properties in cairo less than 700k</p>
-                <div>
-                  <button>apply search</button>
-                  <figure>
-                    <img
-                      src="./../../assets/images/Delete.png"
-                      alt=""
-                      srcset=""
-                    />
-                  </figure>
-                </div>
-              </div>
-              <div
-                class="profile__center__search_body__item d-flex justify-content-between align-items-center"
-              >
-                <p>Properties in cairo less than 700k</p>
-                <div>
-                  <button>apply search</button>
-                  <figure>
-                    <img
-                      src="./../../assets/images/Delete.png"
-                      alt=""
-                      srcset=""
-                    />
-                  </figure>
-                </div>
-              </div>
-              <div
-                class="profile__center__search_body__item d-flex justify-content-between align-items-center"
-              >
-                <p>Properties in cairo less than 700k</p>
-                <div>
-                  <button>apply search</button>
-                  <figure>
-                    <img
-                      src="./../../assets/images/Delete.png"
-                      alt=""
-                      srcset=""
-                    />
-                  </figure>
-                </div>
-              </div>
-              <div
-                class="profile__center__search_body__item d-flex justify-content-between align-items-center"
-              >
-                <p>Properties in cairo less than 700k</p>
-                <div>
-                  <button>apply search</button>
-                  <figure>
-                    <img
-                      src="./../../assets/images/Delete.png"
-                      alt=""
-                      srcset=""
-                    />
-                  </figure>
-                </div>
-              </div>
+              </li>
+              <li>
+                <img
+                  src="./../../assets/icons/profile/PaperDownload.svg"
+                  alt=""
+                />
+                <span>My Requests</span>
+              </li>
+              <li>
+                <img src="./../../assets/icons/profile/logout.svg" alt="" />
+                <span>Logout</span>
+              </li>
+            </ul>
+            <div
+              class="profile__left__advertisement d-flex justify-content-center align-items-center"
+            >
+              <span>184 x 540</span>
             </div>
           </div>
         </section>
-        <section class="col-sm-3 profile__end">
+        <section class="col-xl-7 col-md-8 col-sm-12 profile__center">
+          <h3>My Profile</h3>
+          <profile-about></profile-about>
+          <Statistics />
+          <saved-search></saved-search>
+        </section>
+        <section class="col-xl-3 col-md-6 col-sm-12 profile__end">
           <div
             class="profile__end__add d-flex justify-content-center align-items-center"
           >
@@ -141,10 +74,12 @@
 <script>
 import ProfileAbout from './../../component/profileAbout/index.vue';
 import Statistics from './../../component/statistics/index.vue';
+import SavedSearch from './../../component/savedSearch/index.vue';
 export default {
   components: {
     ProfileAbout,
     Statistics,
+    SavedSearch,
   },
 };
 </script>
@@ -236,6 +171,7 @@ export default {
           border-radius: 8px;
           padding: 20px;
           width: 200px;
+
           span {
             font-weight: 500;
           }
@@ -278,6 +214,7 @@ export default {
       background-color: #fff;
       border-radius: 16px;
       margin-block-end: 100px;
+      padding-block-end: 20px;
       h4 {
         font-weight: 600;
         font-size: 18px;
@@ -294,6 +231,9 @@ export default {
           padding-inline: 24px;
           border-radius: 8px;
           margin-block-end: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
           button {
             background-color: rgba(34, 0, 84, 0.04);
             color: var(--main-color);
@@ -351,5 +291,19 @@ export default {
       }
     }
   }
+}
+
+@media (max-width: 992px) {
+  .profile__center h3 {
+    margin-block-start: 20px !important;
+  }
+  .profile__center__search_body__item {
+    display: block !important;
+    p {
+      margin-block-end: 5px;
+    }
+  }
+}
+@media (max-width: 768px) {
 }
 </style>

@@ -3,7 +3,7 @@
     <div class="container">
       <div class="footer__flex">
         <section class="footer__flex__left">
-          <figure>
+          <figure class="mb-2">
             <img src="./../../assets/images/logo.svg" alt="" />
           </figure>
           <p>
@@ -91,12 +91,12 @@
     </div>
     <div class="footer__down">
       <div class="container">
-        <div class="footer__down__flex">
-          <p class="me-5 footer__down__flex__frist">
-            @2022 <span>Zrealtors</span>. All rights reserved.
-          </p>
+        <div class="footer__down__flex flex-row-reverse">
           <p class="footer__down__flex__second">
             <span class="me-5">Terms & Conditions</span> <span>Privacy</span>
+          </p>
+          <p class="me-5 footer__down__flex__frist">
+            @2022 <span>Zrealtors</span>. All rights reserved.
           </p>
         </div>
       </div>
@@ -112,6 +112,7 @@ footer {
   .footer__flex {
     display: flex;
     justify-content: space-between;
+    margin-block-end: 56px;
     .footer__flex__left {
       p {
         color: #fff;
@@ -156,14 +157,50 @@ footer {
     padding-block: 28px;
     .footer__down__flex {
       display: flex;
+
       //width: 50%;
       p.footer__down__flex__frist {
         color: #fff;
+        span {
+          color: rgba(200, 164, 93, 1);
+        }
       }
       p.footer__down__flex__second {
         color: #fff;
+        margin-inline-start: 200px;
       }
     }
+  }
+}
+
+@media (max-width: 992px) {
+  .footer__flex {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .footer__flex__right,
+  .footer__flex__left {
+    margin-block-end: 30px;
+  }
+  .footer__down__flex {
+    display: flex;
+    flex-flow: column;
+    flex-direction: column !important;
+  }
+  p.footer__down__flex__second {
+    color: #fff;
+    margin-inline-start: 0px !important;
+    margin-block-end: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer__flex {
+    display: block !important;
+  }
+  .footer__flex__right,
+  .footer__flex__left {
+    margin-block-end: 30px;
   }
 }
 </style>
