@@ -2,18 +2,12 @@ import { createStore } from 'vuex';
 export default createStore({
   state() {
     return {
-      searches: [
-        'How To Develope',
-        'How To Find',
-        'How To Search',
-        'he works well',
-      ],
+      searches: ['How To Find', 'How To Search', 'he works well'],
     };
   },
   mutations: {
-    //     setUsers(state, users) {
-    //       state.users = users;
-    //     },
+    // deletesearch(state, payload) {
+    // },
   },
   actions: {
     //     actionUsers({ commit }) {

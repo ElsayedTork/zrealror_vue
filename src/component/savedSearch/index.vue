@@ -18,7 +18,12 @@
         <div>
           <button>apply search</button>
           <figure>
-            <img src="./../../assets/images/Delete.png" alt="" srcset="" />
+            <img
+              @click="handelDeleteClick(index)"
+              src="./../../assets/images/Delete.png"
+              alt=""
+              srcset=""
+            />
           </figure>
         </div>
       </div>
@@ -36,6 +41,11 @@ export default {
   computed: {
     searches() {
       return this.$store.state.searches;
+    },
+  },
+  methods: {
+    handelDeleteClick(index) {
+      console.log(index);
     },
   },
 };
