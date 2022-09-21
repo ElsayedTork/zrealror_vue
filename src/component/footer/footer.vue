@@ -1,5 +1,4 @@
 <template>
-  <fa :icon="['fab', 'youtube']" />
   <footer class="footer">
     <div class="container">
       <div class="footer__flex">
@@ -11,7 +10,7 @@
             Zrealtors is the highest rated <br />Shopify expert team in the
             world.
           </p>
-          <ul>
+          <ul class="mt-4">
             <li>
               <a href="#">
                 <i class="fa-brands fa-facebook-f"></i>

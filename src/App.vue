@@ -36,7 +36,10 @@ ul,
 p,
 span,
 div,
-hr {
+hr,
+img,
+figure,
+h5 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
