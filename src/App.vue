@@ -35,8 +35,13 @@ html {
 ul,
 p,
 span,
-div {
+div,
+hr,
+img,
+figure,
+h5 {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 </style>
