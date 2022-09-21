@@ -45,7 +45,8 @@ export default {
   },
   methods: {
     handelDeleteClick(index) {
-      console.log(index);
+      let ele = this.searches[index];
+      this.$store.dispatch('deleteSearch', ele);
     },
   },
 };

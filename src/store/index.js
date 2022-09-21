@@ -6,15 +6,13 @@ export default createStore({
     };
   },
   mutations: {
-    // deletesearch(state, payload) {
-    // },
+    deleteSearchMut(state, ele) {
+      state.searches = state.searches.filter((item) => item !== ele);
+    },
   },
   actions: {
-    //     actionUsers({ commit }) {
-    //       fetch('https://jsonplaceholder.typicode.com/users')
-    //         .then((response) => response.json())
-    //         .then((json) => {
-    //           commit('setUsers', json);
-    //         });
+    deleteSearch({ commit }, ele) {
+      commit('deleteSearchMut', ele);
+    },
   },
 });
