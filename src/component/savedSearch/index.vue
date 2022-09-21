@@ -11,7 +11,8 @@
       </div>
       <div
         class="profile__center__search_body__item"
-        :v-for="search in allSearches"
+        v-for="(search, index) in searches"
+        :key="index"
       >
         <p>{{ search }}</p>
         <div>
@@ -28,13 +29,15 @@
 export default {
   data() {
     return {
-      allSearches: ['update data', 'delete data'],
+      allSearches: [],
     };
   },
-  created() {
-    this.allSearches = this.$store.state.searches;
+
+  computed: {
+    searches() {
+      return this.$store.state.searches;
+    },
   },
-  computed: {},
 };
 </script>
 <style></style>

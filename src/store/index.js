@@ -2,7 +2,12 @@ import { createStore } from 'vuex';
 export default createStore({
   state() {
     return {
-      searches: ['How To Develope', 'How To Find', 'How To Search'],
+      searches: [
+        'How To Develope',
+        'How To Find',
+        'How To Search',
+        'he works well',
+      ],
     };
   },
   mutations: {
