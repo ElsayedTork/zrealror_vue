@@ -39,7 +39,8 @@ div,
 hr,
 img,
 figure,
-h5 {
+h5,
+h3 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
