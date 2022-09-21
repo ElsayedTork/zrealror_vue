@@ -11,41 +11,9 @@
       </div>
       <div
         class="profile__center__search_body__item"
+        :v-for="search in allSearches"
       >
-        <p>Properties in cairo less than 700k</p>
-        <div>
-          <button>apply search</button>
-          <figure>
-            <img src="./../../assets/images/Delete.png" alt="" srcset="" />
-          </figure>
-        </div>
-      </div>
-      <div
-        class="profile__center__search_body__item d-flex justify-content-between align-items-center"
-      >
-        <p>Properties in cairo less than 700k</p>
-        <div>
-          <button>apply search</button>
-          <figure>
-            <img src="./../../assets/images/Delete.png" alt="" srcset="" />
-          </figure>
-        </div>
-      </div>
-      <div
-        class="profile__center__search_body__item d-flex justify-content-between align-items-center"
-      >
-        <p>Properties in cairo less than 700k</p>
-        <div>
-          <button>apply search</button>
-          <figure>
-            <img src="./../../assets/images/Delete.png" alt="" srcset="" />
-          </figure>
-        </div>
-      </div>
-      <div
-        class="profile__center__search_body__item d-flex justify-content-between align-items-center"
-      >
-        <p>Properties in cairo less than 700k</p>
+        <p>{{ search }}</p>
         <div>
           <button>apply search</button>
           <figure>
@@ -56,5 +24,17 @@
     </div>
   </div>
 </template>
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      allSearches: ['update data', 'delete data'],
+    };
+  },
+  created() {
+    this.allSearches = this.$store.state.searches;
+  },
+  computed: {},
+};
+</script>
 <style></style>
