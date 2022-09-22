@@ -30,7 +30,7 @@
                   class="form-control shadow-none"
                   id="FristName"
                   aria-describedby="emailHelp"
-                  placeholder="Enter email"
+                  placeholder="Ahmed"
                 />
               </div>
             </div>
@@ -42,7 +42,7 @@
                   class="form-control shadow-none"
                   id="LastName"
                   aria-describedby="emailHelp"
-                  placeholder=""
+                  placeholder="Mohamed"
                 />
               </div>
             </div>
@@ -50,13 +50,13 @@
           <div class="row">
             <div class="col-sm-6">
               <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
+                <label for="emailForm">Email address</label>
                 <input
                   type="email"
                   class="form-control shadow-none"
-                  id="exampleInputEmail1"
+                  id="emailForm"
                   aria-describedby="emailHelp"
-                  placeholder="Enter email"
+                  placeholder="ahmed@gmail.com"
                 />
               </div>
             </div>
@@ -68,7 +68,7 @@
                   class="form-control shadow-none"
                   id="MobileNumber"
                   aria-describedby="emailHelp"
-                  placeholder="Enter email"
+                  placeholder="0122 568 5997"
                 />
               </div>
             </div>
@@ -79,16 +79,19 @@
                 <label for="exampleInputEmail1">Password</label>
                 <input
                   type="Password"
-                  class="form-control"
+                  class="form-control shadow-none"
                   id="Password"
                   aria-describedby="emailHelp"
-                  placeholder="Enter email"
+                  placeholder=""
                 />
               </div>
             </div>
             <div class="col-sm-6">
               <label for="exampleInputEmail1">City</label>
-              <select class="form-select" aria-label="Default select example">
+              <select
+                class="form-select shadow-none"
+                aria-label="Default select example"
+              >
                 <option selected value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
@@ -98,35 +101,37 @@
           <div class="row">
             <div class="col-sm-6">
               <label for="MaritalStatue">Gender</label>
-              <div class="d-flex justify-content-between form-control">
-                <div class="form-check">
+              <div
+                class="MaritalStatue d-flex justify-content-between form-control"
+              >
+                <div class="form-check active">
                   <input
                     class="form-check-input"
                     type="radio"
                     name="flexRadioDefault"
                     id="flexRadioDefault1"
                   />
-                  <label class="form-check-label" for="flexRadioDefault1">
+                  <span class="form-check-label" for="flexRadioDefault1">
                     Male
-                  </label>
+                  </span>
                 </div>
                 <div class="form-check">
                   <input
                     class="form-check-input"
                     type="radio"
                     name="flexRadioDefault"
-                    id="ss"
+                    id="female"
                   />
-                  <label class="form-check-label" for="ss"> female </label>
+                  <span class="form-check-label" for="female"> female </span>
                 </div>
                 <div class="form-check">
                   <input
                     class="form-check-input"
                     type="radio"
                     name="flexRadioDefault"
-                    id="ss"
+                    id="Custom"
                   />
-                  <label class="form-check-label" for="ss"> Custom </label>
+                  <span class="form-check-label" for="Custom"> Custom </span>
                 </div>
               </div>
             </div>
@@ -147,7 +152,7 @@
             <div class="col-sm-6">
               <label for="MaritalStatue">Marital Statue</label>
               <select
-                class="form-select"
+                class="form-select shadow-none"
                 id="MaritalStatue"
                 aria-label="Default select example"
               >
@@ -164,10 +169,14 @@
                   class="form-control shadow-none"
                   id="Childern"
                   aria-describedby="emailHelp"
-                  placeholder="Enter email"
+                  placeholder="5"
                 />
               </div>
             </div>
+          </div>
+          <div class="edit__body__form__btn">
+            <custom-button text="cancel" btnClass="cancel me-2"></custom-button>
+            <custom-button text="save" btnClass="save me-2"></custom-button>
           </div>
         </form>
       </section>
@@ -184,6 +193,7 @@ export default {
 .edit {
   background-color: #fff;
   border-radius: 16px;
+  margin-block-end: 103px;
   header {
     font-size: 1.125rem;
     font-weight: 600;
@@ -192,7 +202,7 @@ export default {
     padding: 16px 24px;
   }
   &__body {
-    padding: 16px 24px;
+    padding: 16px 32px;
     &__image {
       display: flex;
       align-items: center;
@@ -227,6 +237,7 @@ export default {
       }
     }
     &__form {
+      margin-block-start: 56px;
       label {
         color: #777e90;
         font-size: 12px;
@@ -236,10 +247,54 @@ export default {
       input[type='text'],
       input[type='email'],
       input[type='password'],
+      input[type='date'],
       select {
         border-color: #eeeeee;
         padding-block: 15px;
         padding-inline: 20px;
+        margin-block-end: 24px;
+      }
+      ::-webkit-input-placeholder {
+        color: #152c5b !important;
+      }
+      :-ms-input-placeholder {
+        color: #152c5b !important;
+      }
+      ::placeholder,
+      select option {
+        color: #152c5b !important;
+      }
+      span.form-check-label {
+        color: #777e90;
+      }
+      input[type='radio']:checked {
+        color: red;
+      }
+      .form-check.active {
+        span {
+          color: var(--main-color);
+        }
+      }
+      .MaritalStatue {
+        padding-block: 14px;
+        border-color: #eeeeee;
+      }
+      ::-webkit-calendar-picker-indicator {
+        background-image: url('./../../assets/icons/profile/calendar.svg');
+      }
+      .edit__body__form__btn {
+        display: flex;
+        justify-content: end;
+        .cancel {
+          background-color: #fff;
+          color: var(--main-color);
+          border-color: transparent;
+        }
+        .save {
+          background-color: var(--main-color);
+          color: #fff;
+          border-color: transparent;
+        }
       }
     }
   }

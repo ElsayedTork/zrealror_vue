@@ -2,7 +2,12 @@
   <div class="profile__center__about">
     <header class="d-flex justify-content-between align-items-center">
       <h4>Personal Info</h4>
-      <button><i class="fa-solid fa-pen"></i> <span>Edit Profile</span></button>
+      <router-link to="/edit">
+        <button>
+          <i class="fa-solid fa-pen"></i>
+          <span class="mx-2">Edit Profile</span>
+        </button>
+      </router-link>
     </header>
     <hr />
     <div class="profile__center__about__body">

@@ -1,5 +1,4 @@
 <template>
-  
   <profile-about></profile-about>
   <Statistics />
   <saved-search></saved-search>

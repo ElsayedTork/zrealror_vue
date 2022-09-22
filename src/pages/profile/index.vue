@@ -3,81 +3,28 @@
     <div class="container">
       <div class="row">
         <section class="col-xl-2 col-md-4 col-sm-12">
-          <div class="profile__left">
-            <ul class="profile__left__list">
-              <li class="active">
-                <img
-                  src="./../../assets/icons/profile/profile-circle.svg"
-                  alt=""
-                />
-                <span>my profile</span>
-              </li>
-              <li>
-                <div class="dropdown">
-                  <img src="./../../assets/icons/profile/wishlist.svg" alt="" />
-                  <button
-                    class="btn px-0 pe-0 ps-1 dropdown-toggle"
-                    type="button"
-                    id="dropdownMenuButton"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    <span>My Wishlists</span>
-                  </button>
-                  <div
-                    class="dropdown-menu"
-                    aria-labelledby="dropdownMenuButton"
-                  >
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <img
-                  src="./../../assets/icons/profile/PaperDownload.svg"
-                  alt=""
-                />
-                <span>My Requests</span>
-              </li>
-              <li>
-                <img src="./../../assets/icons/profile/logout.svg" alt="" />
-                <span>Logout</span>
-              </li>
-            </ul>
-            <div
-              class="profile__left__advertisement d-flex justify-content-center align-items-center"
-            >
-              <span>184 x 540</span>
-            </div>
-          </div>
+          <my-profile></my-profile>
         </section>
         <section class="col-xl-7 col-md-8 col-sm-12 profile__center">
           <h3>My Profile</h3>
-
-          <!-- <Profile /> -->
-          <edit-profile></edit-profile>
+          <Profile />
         </section>
         <section class="col-xl-3 col-md-6 col-sm-12 profile__end">
-          <div
-            class="profile__end__add d-flex justify-content-center align-items-center"
-          >
-            <span>293 x 640</span>
-          </div>
+          <AdvertiseMent />
         </section>
       </div>
     </div>
   </div>
 </template>
 <script>
-// import Profile from './../../component/profile/index.vue';
-import EditProfile from './../../component/editProfile/index.vue';
+import Profile from './../../component/profile/index.vue';
+import MyProfile from './../../component/myProfile/index.vue';
+import AdvertiseMent from './../../component/advertiseMent/index.vue';
 export default {
   components: {
-    // Profile,
-    EditProfile,
+    Profile,
+    MyProfile,
+    AdvertiseMent,
   },
 };
 </script>
@@ -149,6 +96,7 @@ export default {
           padding-inline: 9px;
         }
       }
+
       .profile__center__about__body {
         padding-inline: 32px;
         margin-block-start: 32px;

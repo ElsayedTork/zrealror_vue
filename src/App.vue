@@ -40,7 +40,8 @@ hr,
 img,
 figure,
 h5,
-h3 {
+h3,
+nav {
   margin: 0;
   padding: 0;
   box-sizing: border-box;

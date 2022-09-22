@@ -3,6 +3,16 @@ export default createStore({
   state() {
     return {
       searches: ['How To Find', 'How To Search', 'he works well'],
+      profileData:{
+        email:'',
+        password:'',
+        Mobile:'',
+        Language:'',
+        city:'',
+        Gender:'',
+        DateofBirth:'',
+        
+      }
     };
   },
   mutations: {
