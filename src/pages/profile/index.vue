@@ -56,9 +56,9 @@
         </section>
         <section class="col-xl-7 col-md-8 col-sm-12 profile__center">
           <h3>My Profile</h3>
-          <profile-about></profile-about>
-          <Statistics />
-          <saved-search></saved-search>
+
+          <!-- <Profile /> -->
+          <edit-profile></edit-profile>
         </section>
         <section class="col-xl-3 col-md-6 col-sm-12 profile__end">
           <div
@@ -72,14 +72,12 @@
   </div>
 </template>
 <script>
-import ProfileAbout from './../../component/profileAbout/index.vue';
-import Statistics from './../../component/statistics/index.vue';
-import SavedSearch from './../../component/savedSearch/index.vue';
+// import Profile from './../../component/profile/index.vue';
+import EditProfile from './../../component/editProfile/index.vue';
 export default {
   components: {
-    ProfileAbout,
-    Statistics,
-    SavedSearch,
+    // Profile,
+    EditProfile,
   },
 };
 </script>
