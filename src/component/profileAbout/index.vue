@@ -31,39 +31,39 @@
       <section class="row profile__center__about__body__data">
         <ul class="col-sm-6 col-md-4 col-12">
           <li>Email:</li>
-          <li>ahmed@gmail.com</li>
+          <li>{{ $store.state.profileData.email }}</li>
         </ul>
         <ul class="col-sm-6 col-md-4 col-12">
           <li>Password:</li>
-          <li>•••••••••••</li>
+          <li>{{ $store.state.profileData.Password }}</li>
         </ul>
         <ul class="col-sm-6 col-md-4 col-12">
           <li>Mobile Number:</li>
-          <li>0122 568 5997</li>
+          <li>{{ $store.state.profileData.Mobile }}</li>
         </ul>
         <ul class="col-sm-6 col-md-4 col-12">
           <li>Language:</li>
-          <li>English</li>
+          <li>{{ $store.state.profileData.Language }}</li>
         </ul>
         <ul class="col-sm-6 col-md-4 col-12">
           <li>City:</li>
-          <li>Cairo</li>
+          <li>{{ $store.state.profileData.City }}</li>
         </ul>
         <ul class="col-sm-6 col-md-4 col-12">
           <li>Gender:</li>
-          <li>Male</li>
+          <li>{{ $store.state.profileData.Gender }}</li>
         </ul>
         <ul class="col-sm-6 col-md-4 col-12">
           <li>Date of Birth:</li>
-          <li>17/7/1995</li>
+          <li>{{ $store.state.profileData.DateofBirth }}</li>
         </ul>
         <ul class="col-sm-6 col-md-4 col-12">
           <li>Marital Statue:</li>
-          <li>Married</li>
+          <li>{{ $store.state.profileData.Gender }}</li>
         </ul>
         <ul class="col-sm-6 col-md-4 col-12">
           <li>Number of Childern:</li>
-          <li>5</li>
+          <li>{{ $store.state.profileData.NumberofChildern }}</li>
         </ul>
       </section>
     </div>

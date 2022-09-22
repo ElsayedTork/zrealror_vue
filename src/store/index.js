@@ -3,16 +3,17 @@ export default createStore({
   state() {
     return {
       searches: ['How To Find', 'How To Search', 'he works well'],
-      profileData:{
-        email:'',
-        password:'',
-        Mobile:'',
-        Language:'',
-        city:'',
-        Gender:'',
-        DateofBirth:'',
-        
-      }
+      profileData: {
+        email: 'ahmed@gmail.com',
+        password: '3242343',
+        Mobile: '0122 568 5997',
+        Language: 'English',
+        city: 'City',
+        Gender: 'Gender',
+        DateofBirth: '17/7/1995',
+        MaritalStatue: 'Married',
+        NumberofChildern: 5,
+      },
     };
   },
   mutations: {
