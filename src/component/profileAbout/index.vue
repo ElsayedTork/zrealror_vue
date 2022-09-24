@@ -24,7 +24,10 @@
           />
         </div>
         <div>
-          <h3>Ahmed Mohamed</h3>
+          <h3>
+            {{ $store.state.profileData.FristName }}
+            {{ $store.state.profileData.LastName }}
+          </h3>
           <p>@Ahmed.M</p>
         </div>
       </section>

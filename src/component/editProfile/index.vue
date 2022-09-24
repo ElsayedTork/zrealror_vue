@@ -20,7 +20,7 @@
         </div>
       </section>
       <section class="edit__body__form">
-        <form>
+        <form @submit.prevent="handleEdit">
           <div class="row">
             <div class="col-sm-6">
               <div class="form-group">
@@ -30,7 +30,8 @@
                   class="form-control shadow-none"
                   id="FristName"
                   aria-describedby="emailHelp"
-                  placeholder="Ahmed"
+                  :placeholder="$store.state.profileData.FristName"
+                  v-model="FristName"
                 />
               </div>
             </div>
@@ -42,7 +43,8 @@
                   class="form-control shadow-none"
                   id="LastName"
                   aria-describedby="emailHelp"
-                  placeholder="Mohamed"
+                  :placeholder="$store.state.profileData.LastName"
+                  v-model="LastName"
                 />
               </div>
             </div>
@@ -56,7 +58,8 @@
                   class="form-control shadow-none"
                   id="emailForm"
                   aria-describedby="emailHelp"
-                  placeholder="ahmed@gmail.com"
+                  :placeholder="$store.state.profileData.email"
+                  v-model="emailForm"
                 />
               </div>
             </div>
@@ -64,11 +67,12 @@
               <div class="form-group">
                 <label for="MobileNumber">Mobile Number</label>
                 <input
-                  type="email"
+                  type="text"
                   class="form-control shadow-none"
                   id="MobileNumber"
                   aria-describedby="emailHelp"
-                  placeholder="0122 568 5997"
+                  :placeholder="$store.state.profileData.Mobile"
+                  v-model="Mobile"
                 />
               </div>
             </div>
@@ -82,7 +86,8 @@
                   class="form-control shadow-none"
                   id="Password"
                   aria-describedby="emailHelp"
-                  placeholder=""
+                  :placeholder="$store.state.profileData.password"
+                  v-model="Password"
                 />
               </div>
             </div>
@@ -91,10 +96,11 @@
               <select
                 class="form-select shadow-none"
                 aria-label="Default select example"
+                v-model="City"
               >
-                <option selected value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option selected value="One">One</option>
+                <option value="Two">Two</option>
+                <option value="Three">Three</option>
               </select>
             </div>
           </div>
@@ -110,6 +116,8 @@
                     type="radio"
                     name="flexRadioDefault"
                     id="flexRadioDefault1"
+                    value="Male"
+                    v-model="Gender"
                   />
                   <span class="form-check-label" for="flexRadioDefault1">
                     Male
@@ -119,8 +127,10 @@
                   <input
                     class="form-check-input"
                     type="radio"
+                    value="feMale"
                     name="flexRadioDefault"
                     id="female"
+                    v-model="Gender"
                   />
                   <span class="form-check-label" for="female"> female </span>
                 </div>
@@ -128,8 +138,10 @@
                   <input
                     class="form-check-input"
                     type="radio"
+                    value="Custom"
                     name="flexRadioDefault"
                     id="Custom"
+                    v-model="Gender"
                   />
                   <span class="form-check-label" for="Custom"> Custom </span>
                 </div>
@@ -143,7 +155,8 @@
                   class="form-control shadow-none"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
-                  placeholder="Enter email"
+                  :placeholder="$store.state.profileData.DateofBirth"
+                  v-model="date"
                 />
               </div>
             </div>
@@ -155,6 +168,7 @@
                 class="form-select shadow-none"
                 id="MaritalStatue"
                 aria-label="Default select example"
+                v-model="MaritalStatue"
               >
                 <option selected value="1">Married</option>
                 <option value="2">Two</option>
@@ -165,11 +179,12 @@
               <div class="form-group">
                 <label for="Childern">Number of Childern</label>
                 <input
-                  type="Password"
+                  type="text"
                   class="form-control shadow-none"
                   id="Childern"
                   aria-describedby="emailHelp"
-                  placeholder="5"
+                  :placeholder="$store.state.profileData.NumberofChildern"
+                  v-model="NumberofChildern"
                 />
               </div>
             </div>
@@ -186,7 +201,38 @@
 <script>
 import customButton from './../../component/shared/customButton/index.vue';
 export default {
+  data() {
+    return {
+      FristName: '',
+      LastName: '',
+      emailForm: '',
+      Mobile: '',
+      Password: '',
+      City: '',
+      date: '',
+      MaritalStatue: '',
+      NumberofChildern: '',
+    };
+  },
   components: { customButton },
+  methods: {
+    handleEdit() {
+      let datas = {
+        FristName: this.FristName,
+        LastName: this.LastName,
+        emailForm: this.emailForm,
+        Mobile: this.Mobile,
+        Password: this.Password,
+        City: this.City,
+        Gender: this.Gender,
+        MaritalStatue: this.MaritalStatue,
+        data: this.date,
+        NumberofChildern: this.NumberofChildern,
+      };
+      this.$store.dispatch('setProfileDataAction', datas);
+      this.$router.push('/profile');
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>

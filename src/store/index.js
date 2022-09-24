@@ -4,6 +4,8 @@ export default createStore({
     return {
       searches: ['How To Find', 'How To Search', 'he works well'],
       profileData: {
+        FristName: 'Ahmed',
+        LastName: 'Mohamed',
         email: 'ahmed@gmail.com',
         password: '3242343',
         Mobile: '0122 568 5997',
@@ -20,10 +22,18 @@ export default createStore({
     deleteSearchMut(state, ele) {
       state.searches = state.searches.filter((item) => item !== ele);
     },
+    setProfileData(state, obj) {
+      state.profileData = obj;
+      console.log(state.profileData);
+    },
   },
   actions: {
     deleteSearch({ commit }, ele) {
       commit('deleteSearchMut', ele);
+    },
+    setProfileDataAction({ commit }, obj) {
+      console.log(obj);
+      commit('setProfileData', obj);
     },
   },
 });
