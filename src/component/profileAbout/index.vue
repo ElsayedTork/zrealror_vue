@@ -46,11 +46,11 @@
         </ul>
         <ul class="col-sm-6 col-md-4 col-12">
           <li>Language:</li>
-          <li>{{ $store.state.profileData.Language }}</li>
+          <li>English</li>
         </ul>
         <ul class="col-sm-6 col-md-4 col-12">
           <li>City:</li>
-          <li>{{ $store.state.profileData.City }}</li>
+          <li>{{ $store.state.profileData.city }}</li>
         </ul>
         <ul class="col-sm-6 col-md-4 col-12">
           <li>Gender:</li>
@@ -62,7 +62,7 @@
         </ul>
         <ul class="col-sm-6 col-md-4 col-12">
           <li>Marital Statue:</li>
-          <li>{{ $store.state.profileData.Gender }}</li>
+          <li>{{ $store.state.profileData.MaritalStatue }}</li>
         </ul>
         <ul class="col-sm-6 col-md-4 col-12">
           <li>Number of Childern:</li>

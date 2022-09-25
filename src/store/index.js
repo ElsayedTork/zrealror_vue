@@ -10,7 +10,7 @@ export default createStore({
         password: '3242343',
         Mobile: '0122 568 5997',
         Language: 'English',
-        city: 'City',
+        city: 'cairo',
         Gender: 'Gender',
         DateofBirth: '17/7/1995',
         MaritalStatue: 'Married',

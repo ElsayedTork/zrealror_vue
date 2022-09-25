@@ -31,7 +31,7 @@
                   id="FristName"
                   aria-describedby="emailHelp"
                   :placeholder="$store.state.profileData.FristName"
-                  v-model="FristName"
+                  v-model="$store.state.profileData.FristName"
                 />
               </div>
             </div>
@@ -52,14 +52,14 @@
           <div class="row">
             <div class="col-sm-6">
               <div class="form-group">
-                <label for="emailForm">Email address</label>
+                <label for="email">Email address</label>
                 <input
                   type="email"
                   class="form-control shadow-none"
-                  id="emailForm"
+                  id="email"
                   aria-describedby="emailHelp"
                   :placeholder="$store.state.profileData.email"
-                  v-model="emailForm"
+                  v-model="email"
                 />
               </div>
             </div>
@@ -98,9 +98,9 @@
                 aria-label="Default select example"
                 v-model="City"
               >
-                <option selected value="One">One</option>
-                <option value="Two">Two</option>
-                <option value="Three">Three</option>
+                <option selected value="Cairo">Cairo</option>
+                <option value="Alex">Alex</option>
+                <option value="Tanta">Tanta</option>
               </select>
             </div>
           </div>
@@ -170,9 +170,9 @@
                 aria-label="Default select example"
                 v-model="MaritalStatue"
               >
-                <option selected value="1">Married</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option selected value="Married">Married</option>
+                <option value="Single">Single</option>
+                <option value="devorced">devorced</option>
               </select>
             </div>
             <div class="col-sm-6">
@@ -205,7 +205,7 @@ export default {
     return {
       FristName: '',
       LastName: '',
-      emailForm: '',
+      email: '',
       Mobile: '',
       Password: '',
       City: '',
@@ -220,10 +220,10 @@ export default {
       let datas = {
         FristName: this.FristName,
         LastName: this.LastName,
-        emailForm: this.emailForm,
+        email: this.email,
         Mobile: this.Mobile,
         Password: this.Password,
-        City: this.City,
+        city: this.city,
         Gender: this.Gender,
         MaritalStatue: this.MaritalStatue,
         data: this.date,
