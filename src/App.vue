@@ -40,10 +40,17 @@ hr,
 img,
 figure,
 h5,
+h4,
 h3,
-nav {
+h2,
+h1 nav {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Inter;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter-Medium.ttf');
 }
 </style>

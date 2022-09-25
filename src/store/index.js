@@ -16,6 +16,10 @@ export default createStore({
         MaritalStatue: 'Married',
         NumberofChildern: 5,
       },
+      statistics: [
+        { id: 0, type: 'Open', srcImg: 'TickSquare.png', num: 80 },
+        { id: 1, type: 'Closed', srcImg: 'CloseSquare.png', num: 72 },
+      ],
     };
   },
   mutations: {

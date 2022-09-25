@@ -61,7 +61,25 @@
             </li> -->
           </ul>
           <ul class="header__info">
-            <li><i class="fa-solid fa-calendar-days"></i></li>
+            <li>
+              <!-- <div class="form-group" style="position: relative"> -->
+              <i class="fa-solid fa-calendar-days"></i>
+              <!-- <input
+                  type="date"
+                  class="form-control shadow-none"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder=""
+                  style="
+                    width: 45px;
+                    opacity: 0.8;
+                    font-size: 20px;
+                    background-color: transparent;
+                    border-color: transparent;
+                  "
+                /> -->
+              <!-- </div> -->
+            </li>
             <li><i class="fa-regular fa-bell"></i></li>
             <li>
               <div class="dropdown">
@@ -124,6 +142,11 @@ export default {};
       list-style: none;
       display: inline-block;
       color: #fff;
+      input[type='date']::-webkit-calendar-picker-indicator {
+        background-image: url('./../../assets/icons/calendar-days-solid.svg');
+        fill: #fff !important;
+        color-scheme: #fff;
+      }
       i {
         font-size: 25px;
         margin-inline-end: 20px;

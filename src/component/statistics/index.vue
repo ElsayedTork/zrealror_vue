@@ -4,27 +4,37 @@
       <h4>statistics</h4>
     </header>
     <hr />
+
     <div class="profile__center__about__body pb-4 d-flex align-items-center">
-      <div class="profile__center__about__body__item me-2">
-        <span>Opened Requests</span>
+      <div
+        class="profile__center__about__body__item me-2"
+        v-for="statistic in statistics"
+        :key="statistic.id"
+      >
+        <span>{{ statistic.type }} Requests</span>
         <div class="d-flex align-items-center justify-content-start">
-          <figure class="me-2">
-            <img src="./../../assets/images/TickSquare.png" alt="" />
+          <figure :class="statistic.type">
+            <img
+              :src="require(`./../../assets/images/${statistic.srcImg}`)"
+              :alt="statistic.type"
+            />
           </figure>
-          <b>80</b>
-        </div>
-      </div>
-      <div class="profile__center__about__body__item">
-        <span>Closed Requests</span>
-        <div class="d-flex align-items-center justify-content-start">
-          <figure class="me-2">
-            <img src="./../../assets/images/CloseSquare.png" alt="" />
-          </figure>
-          <b>72</b>
+          <b class="ms-2">{{ statistic.num }}</b>
         </div>
       </div>
     </div>
   </div>
 </template>
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      statistics: [],
+    };
+  },
+  created() {
+    this.statistics = this.$store.state.statistics;
+  },
+};
+</script>
 <style lang="scss"></style>

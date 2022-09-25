@@ -8,7 +8,6 @@
         <section class="col-xl-7 col-md-8 col-sm-12 profile__center">
           <h3>My Profile</h3>
           <edit-profile></edit-profile>
-
           <router-view></router-view>
         </section>
         <section class="col-xl-3 col-md-6 col-sm-12 profile__end">

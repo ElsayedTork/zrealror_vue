@@ -32,7 +32,7 @@ export default {
 .profile {
   padding-block-start: 40px;
   background-color: #e5e5e5;
-  .profile__left {
+  &__left {
     background-color: #fff;
     padding-inline: 18px;
     padding-block: 24px;
@@ -72,13 +72,13 @@ export default {
       }
     }
   }
-  .profile__center {
+  &__center {
     h3 {
       font-size: 24px;
       font-weight: 600;
       margin-block-end: 24px;
     }
-    .profile__center__about {
+    &__about {
       background-color: #fff;
       border-radius: 16px;
       header {
@@ -97,10 +97,10 @@ export default {
         }
       }
 
-      .profile__center__about__body {
+      &__body {
         padding-inline: 32px;
         margin-block-start: 32px;
-        .profile__center__about__body__name {
+        &__name {
           h3 {
             color: rgba(27, 37, 52, 1);
             font-size: 20px;
@@ -112,12 +112,11 @@ export default {
             font-weight: 400;
           }
         }
-        .profile__center__about__body__item {
+        &__item {
           border: 1px solid #eee;
           border-radius: 8px;
           padding: 20px;
           width: 200px;
-
           span {
             font-weight: 500;
           }
@@ -125,16 +124,21 @@ export default {
             margin-block-start: 20px;
             figure {
               padding: 14px !important;
-              background-color: rgba(127, 186, 122, 0.12);
               border-radius: 8px;
               img {
                 width: 20px;
                 height: 20px;
               }
             }
+            figure.Open {
+              background-color: rgba(127, 186, 122, 0.12);
+            }
+            figure.Closed {
+              background-color: rgba(255, 117, 76, 0.12);
+            }
           }
         }
-        .profile__center__about__body__data {
+        &__data {
           margin-block-end: 32px;
           margin-block-start: 42px;
           ul {
@@ -156,7 +160,7 @@ export default {
         }
       }
     }
-    .profile__center__search {
+    &__search {
       background-color: #fff;
       border-radius: 16px;
       margin-block-end: 100px;
