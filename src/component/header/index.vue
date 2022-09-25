@@ -102,10 +102,46 @@
                 </a>
 
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Ahmed mohamed</a></li>
-                  <li><a class="dropdown-item" href="#">Asma Naser</a></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                  <li class="dropdown-item viewProfile">
+                    <p class="d-flex justify-content-between w-100">
+                      <span>View Profile</span>
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </p>
+                  </li>
+                  <li class="dropdown-item">
+                    <p>
+                      <img
+                        src="./../../assets/images/man.png"
+                        width="40"
+                        height="40"
+                        alt=""
+                        srcset=""
+                        class="me-1"
+                      />
+                      <span>Ahmed mohamed</span>
+                    </p>
+                  </li>
+                  <li class="dropdown-item">
+                    <p>
+                      <img
+                        src="./../../assets/images/woman.png"
+                        width="40"
+                        height="40"
+                        alt=""
+                        srcset=""
+                        class="me-1"
+                      />
+                      <span>Asma Naser</span>
+                    </p>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item logOut">
+                    <img
+                      src="./../../assets/icons/profile/logout.svg"
+                      alt=""
+                      class="me-2"
+                    />
+                    <span class="logOut">Log Out</span>
                   </li>
                 </ul>
               </div>
@@ -136,6 +172,41 @@ export default {};
       .dropdown-toggle {
         color: #fff;
         text-decoration: none;
+      }
+      .dropdown-item {
+        margin-bottom: 24px;
+        display: inline-block;
+        p {
+          background-color: #f6f7fb;
+          padding: 12px;
+          border-radius: 10px;
+
+          span {
+            color: #101018;
+            font-weight: 600;
+          }
+        }
+      }
+      li.logOut {
+        background-color: transparent;
+        margin-block-start: 27px;
+        span {
+          color: #737680 !important;
+        }
+      }
+      li.viewProfile {
+        display: flex;
+        justify-content: space-between;
+        p {
+          background-color: transparent;
+          i {
+            color: #737680;
+            font-size: 18px;
+          }
+          span {
+            font-weight: 500;
+          }
+        }
       }
     }
     li {
