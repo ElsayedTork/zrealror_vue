@@ -24,27 +24,27 @@
           <div class="row">
             <div class="col-sm-6">
               <div class="form-group">
-                <label for="FristName">Frist Name</label>
+                <label for="fristName">frist Name</label>
                 <input
                   type="text"
                   class="form-control shadow-none"
-                  id="FristName"
+                  id="fristName"
                   aria-describedby="emailHelp"
-                  :placeholder="$store.state.profileData.FristName"
-                  v-model="$store.state.profileData.FristName"
+                  :placeholder="$store.state.profileData.fristName"
+                  v-model="fristName"
                 />
               </div>
             </div>
             <div class="col-sm-6">
               <div class="form-group">
-                <label for="LastName">last Name</label>
+                <label for="lastName">last Name</label>
                 <input
                   type="text"
                   class="form-control shadow-none"
-                  id="LastName"
+                  id="lastName"
                   aria-describedby="emailHelp"
-                  :placeholder="$store.state.profileData.LastName"
-                  v-model="LastName"
+                  :placeholder="$store.state.profileData.lastName"
+                  v-model="lastName"
                 />
               </div>
             </div>
@@ -65,14 +65,14 @@
             </div>
             <div class="col-sm-6">
               <div class="form-group">
-                <label for="MobileNumber">Mobile Number</label>
+                <label for="mobileNumber">mobile Number</label>
                 <input
                   type="text"
                   class="form-control shadow-none"
-                  id="MobileNumber"
+                  id="mobileNumber"
                   aria-describedby="emailHelp"
-                  :placeholder="$store.state.profileData.Mobile"
-                  v-model="Mobile"
+                  :placeholder="$store.state.profileData.mobile"
+                  v-model="mobile"
                 />
               </div>
             </div>
@@ -96,7 +96,7 @@
               <select
                 class="form-select shadow-none"
                 aria-label="Default select example"
-                v-model="City"
+                v-model="city"
               >
                 <option selected value="Cairo">Cairo</option>
                 <option value="Alex">Alex</option>
@@ -106,9 +106,9 @@
           </div>
           <div class="row">
             <div class="col-sm-6">
-              <label for="MaritalStatue">Gender</label>
+              <label for="maritalStatue">gender</label>
               <div
-                class="MaritalStatue d-flex justify-content-between form-control"
+                class="maritalStatue d-flex justify-content-between form-control"
               >
                 <div class="form-check active">
                   <input
@@ -117,7 +117,8 @@
                     name="flexRadioDefault"
                     id="flexRadioDefault1"
                     value="Male"
-                    v-model="Gender"
+                    v-model="gender"
+                    checked
                   />
                   <span class="form-check-label" for="flexRadioDefault1">
                     Male
@@ -130,7 +131,7 @@
                     value="feMale"
                     name="flexRadioDefault"
                     id="female"
-                    v-model="Gender"
+                    v-model="gender"
                   />
                   <span class="form-check-label" for="female"> female </span>
                 </div>
@@ -141,7 +142,7 @@
                     value="Custom"
                     name="flexRadioDefault"
                     id="Custom"
-                    v-model="Gender"
+                    v-model="gender"
                   />
                   <span class="form-check-label" for="Custom"> Custom </span>
                 </div>
@@ -155,20 +156,20 @@
                   class="form-control shadow-none"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
-                  :placeholder="$store.state.profileData.DateofBirth"
-                  v-model="date"
+                  :placeholder="$store.state.profileData.dateofBirth"
+                  v-model="dateofBirth"
                 />
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-sm-6">
-              <label for="MaritalStatue">Marital Statue</label>
+              <label for="maritalStatue">Marital Statue</label>
               <select
                 class="form-select shadow-none"
-                id="MaritalStatue"
+                id="maritalStatue"
                 aria-label="Default select example"
-                v-model="MaritalStatue"
+                v-model="maritalStatue"
               >
                 <option selected value="Married">Married</option>
                 <option value="Single">Single</option>
@@ -183,8 +184,8 @@
                   class="form-control shadow-none"
                   id="Childern"
                   aria-describedby="emailHelp"
-                  :placeholder="$store.state.profileData.NumberofChildern"
-                  v-model="NumberofChildern"
+                  :placeholder="$store.state.profileData.numberofChildern"
+                  v-model="numberofChildern"
                 />
               </div>
             </div>
@@ -203,31 +204,32 @@ import customButton from './../../component/shared/customButton/index.vue';
 export default {
   data() {
     return {
-      FristName: '',
-      LastName: '',
-      email: '',
-      Mobile: '',
-      Password: '',
-      City: '',
-      date: '',
-      MaritalStatue: '',
-      NumberofChildern: '',
+      fristName: this.$store.state.profileData.FristName,
+      lastName: this.$store.state.profileData.lastName,
+      email: this.$store.state.profileData.email,
+      mobile: this.$store.state.profileData.mobile,
+      password: this.$store.state.profileData.password,
+      dateofBirth: this.$store.state.profileData.dateofBirth,
+      city: this.$store.state.profileData.city,
+      maritalStatue: this.$store.state.profileData.maritalStatue,
+      numberofChildern: this.$store.state.profileData.numberofChildern,
+      theGender: this.$store.state.profileData.gender,
     };
   },
   components: { customButton },
   methods: {
     handleEdit() {
       let datas = {
-        FristName: this.FristName,
-        LastName: this.LastName,
+        fristName: this.fristName,
+        lastName: this.lastName,
         email: this.email,
-        Mobile: this.Mobile,
-        Password: this.Password,
+        mobile: this.mobile,
+        password: this.password,
         city: this.city,
-        Gender: this.Gender,
-        MaritalStatue: this.MaritalStatue,
-        data: this.date,
-        NumberofChildern: this.NumberofChildern,
+        gender: this.theGender,
+        maritalStatue: this.maritalStatue,
+        dateofBirth: this.dateofBirth,
+        numberofChildern: this.numberofChildern,
       };
       this.$store.dispatch('setProfileDataAction', datas);
       this.$router.push('/profile');
@@ -321,7 +323,7 @@ export default {
           color: var(--main-color);
         }
       }
-      .MaritalStatue {
+      .maritalStatue {
         padding-block: 14px;
         border-color: #eeeeee;
       }
