@@ -51,10 +51,13 @@ export default {
           color: rgba(115, 118, 128, 1);
         }
       }
-      li.active {
+      li.active,
+      li:hover {
         background-color: rgba(246, 247, 251, 1);
-        padding: 10px 12px;
+        //  padding: 10px 12px;
+        padding-block: 10px;
         border-radius: 6px;
+        padding-inline-start: 5px;
         span {
           color: var(--main-color);
         }

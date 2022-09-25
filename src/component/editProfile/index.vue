@@ -315,8 +315,8 @@ export default {
       span.form-check-label {
         color: #777e90;
       }
-      input[type='radio']:checked {
-        color: red !important;
+      input[type='radio']:checked & + span {
+        color: var(--main-color) !important;
       }
 
       .maritalStatue {
@@ -342,8 +342,5 @@ export default {
       }
     }
   }
-}
-input[type='radio']:checked + span {
-  color: var(--main-color) !important;
 }
 </style>
