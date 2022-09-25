@@ -118,7 +118,7 @@
                     id="flexRadioDefault1"
                     value="Male"
                     v-model="gender"
-                    checked
+                    checked="true"
                   />
                   <span class="form-check-label" for="flexRadioDefault1">
                     Male
@@ -316,13 +316,9 @@ export default {
         color: #777e90;
       }
       input[type='radio']:checked {
-        color: red;
+        color: red !important;
       }
-      .form-check.active {
-        span {
-          color: var(--main-color);
-        }
-      }
+
       .maritalStatue {
         padding-block: 14px;
         border-color: #eeeeee;
@@ -346,5 +342,8 @@ export default {
       }
     }
   }
+}
+input[type='radio']:checked + span {
+  color: var(--main-color) !important;
 }
 </style>
