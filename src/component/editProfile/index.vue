@@ -343,4 +343,10 @@ export default {
     }
   }
 }
+
+@media (max-width: 576px) {
+  .edit__body__image {
+    display: block;
+  }
+}
 </style>

@@ -42,6 +42,7 @@ export default {
       margin-block-end: 150px;
       li {
         list-style: none;
+        padding-block: 10px;
         margin-block-end: 16px;
         span {
           margin-inline-start: 15px;
@@ -49,6 +50,11 @@ export default {
           font-weight: 500;
           text-transform: capitalize;
           color: rgba(115, 118, 128, 1);
+        }
+        .dropdown-toggle {
+          &:hover {
+            border: 1px solid transparent;
+          }
         }
       }
       li.active,
@@ -168,6 +174,7 @@ export default {
       border-radius: 16px;
       margin-block-end: 100px;
       padding-block-end: 20px;
+
       h4 {
         font-weight: 600;
         font-size: 18px;
@@ -257,6 +264,21 @@ export default {
     }
   }
 }
-@media (max-width: 768px) {
+
+@media (max-width: 576px) {
+  .profile__center__search
+    .profile__center__search_body__item-upper
+    h5:last-child {
+    width: 50px;
+  }
+  .profile__center__about header h4 {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .profile__center__about header button {
+    padding-inline: 2px;
+    font-size: 14px;
+    font-weight: 400;
+  }
 }
 </style>
