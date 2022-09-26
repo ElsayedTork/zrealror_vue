@@ -158,7 +158,6 @@ footer {
     .footer__down__flex {
       display: flex;
 
-      //width: 50%;
       p.footer__down__flex__frist {
         color: #fff;
         span {
