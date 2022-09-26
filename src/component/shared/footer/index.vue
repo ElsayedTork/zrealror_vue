@@ -107,7 +107,7 @@
 footer {
   background: var(--main-op-color);
   padding-block-start: 5.0625rem;
-  background-image: url(./../../assets/images/Rectangle.svg);
+  background-image: url(./../../../assets/images/Rectangle.svg);
   .footer__flex {
     display: flex;
     justify-content: space-between;

@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-xl navbar-light">
       <div class="container">
         <a class="navbar-brand" href="#">
-          <img src="./../../assets/images/logo.svg" alt="" />
+          <img src="./../../../assets/images/logo.svg" alt="" />
         </a>
         <button
           class="navbar-toggler"
@@ -48,7 +48,7 @@
             <li>
               <div class="dropdown">
                 <img
-                  src="./../../assets/images/man.png"
+                  src="./../../../assets/images/man.png"
                   alt=""
                   srcset=""
                   width="32"
@@ -75,7 +75,7 @@
                   <li class="dropdown-item">
                     <p>
                       <img
-                        src="./../../assets/images/man.png"
+                        src="./../../../assets/images/man.png"
                         width="40"
                         height="40"
                         alt=""
@@ -88,7 +88,7 @@
                   <li class="dropdown-item">
                     <p>
                       <img
-                        src="./../../assets/images/woman.png"
+                        src="./../../../assets/images/woman.png"
                         width="40"
                         height="40"
                         alt=""
@@ -101,7 +101,7 @@
                   <hr />
                   <li class="dropdown-item logOut">
                     <img
-                      src="./../../assets/icons/profile/logout.svg"
+                      src="./../../../assets/icons/profile/logout.svg"
                       alt=""
                       class="me-2"
                     />
@@ -120,7 +120,7 @@
 <style lang="scss" scoped>
 .header {
   background-color: var(--main-op-color);
-  background-image: url('./../../assets/images/Rectangle.svg');
+  background-image: url('./../../../assets/images/Rectangle.svg');
   padding-block: 40px;
   ul.navbar-nav {
     li.nav-item {
@@ -176,7 +176,7 @@
       display: inline-block;
       color: var(--white-color);
       input[type='date']::-webkit-calendar-picker-indicator {
-        background-image: url('./../../assets/icons/calendar-days-solid.svg');
+        background-image: url('./../../../assets/icons/calendar-days-solid.svg');
         fill: var(--white-color) !important;
         color-scheme: var(--white-color);
       }
