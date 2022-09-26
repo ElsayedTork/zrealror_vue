@@ -11,7 +11,7 @@
           <router-view></router-view>
         </section>
         <section class="col-xl-3 col-md-6 col-sm-12 profile__end">
-          <AdvertiseMent />
+          <advertiseMent></advertiseMent>
         </section>
       </div>
     </div>

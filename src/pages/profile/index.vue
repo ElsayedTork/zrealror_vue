@@ -7,7 +7,7 @@
         </section>
         <section class="col-xl-7 col-md-8 col-sm-12 profile__center">
           <h3>My Profile</h3>
-          <Profile />
+          <profile-container></profile-container>
         </section>
         <section class="col-xl-3 col-md-6 col-sm-12 profile__end">
           <AdvertiseMent />
@@ -17,7 +17,7 @@
   </div>
 </template>
 <script>
-import Profile from './../../component/profile/index.vue';
+import ProfileContainer from './../../component/profileContainer/index.vue';
 import SideBar from './../../component/shared/sideBar/index.vue';
 import AdvertiseMent from './../../component/advertiseMent/index.vue';
 export default {
@@ -27,7 +27,7 @@ export default {
     };
   },
   components: {
-    Profile,
+    ProfileContainer,
     SideBar,
     AdvertiseMent,
   },
@@ -240,19 +240,6 @@ export default {
     hr {
       color: #aaa;
       font-size: 1.375rem;
-    }
-  }
-  .profile__end {
-    .profile__end__add {
-      height: 640px;
-      width: 100%;
-      background-color: var(--advertisement-color);
-      border-radius: 8px;
-      span {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: var(--advertisement-text-color);
-      }
     }
   }
 }
