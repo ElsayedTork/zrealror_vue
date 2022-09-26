@@ -51,7 +51,7 @@ export default {
         margin-block-end: 16px;
         span {
           margin-inline-start: 15px;
-          font-size: 14px;
+          font-size: 0.875rem;
           font-weight: 500;
           text-transform: capitalize;
           color: var(--text-gray-color);
@@ -79,7 +79,7 @@ export default {
       background-color: var(--advertisement-color);
       border-radius: 8px;
       span {
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight: 700;
         color: var(--advertisement-text-color);
       }
@@ -87,7 +87,7 @@ export default {
   }
   &__center {
     h3 {
-      font-size: 24px;
+      font-size: 1.5rem;
       font-weight: 600;
       margin-block-end: 24px;
     }
@@ -99,7 +99,7 @@ export default {
         padding-block: 13px;
         h4 {
           font-weight: 600;
-          font-size: 18px;
+          font-size: 1.125rem;
         }
         button {
           background-color: var(--main-color);
@@ -116,12 +116,12 @@ export default {
         &__name {
           h3 {
             color: rgba(27, 37, 52, 1);
-            font-size: 20px;
+            font-size: 1.25rem;
             font-weight: 600;
             margin-block-end: 8px;
           }
           p {
-            font-size: 16px;
+            font-size: 1rem;
             font-weight: 400;
           }
         }
@@ -166,7 +166,7 @@ export default {
               &:last-child {
                 color: #5f666f;
                 font-weight: 400;
-                font-size: 14px;
+                font-size: 0.875rem;
               }
             }
           }
@@ -181,7 +181,7 @@ export default {
 
       h4 {
         font-weight: 600;
-        font-size: 18px;
+        font-size: 1.125rem;
         padding-inline: 32px;
         padding-block: 13px;
         color: var(--main-color);
@@ -207,7 +207,7 @@ export default {
             border-color: transparent;
             text-transform: capitalize;
             font-weight: 500;
-            font-size: 14px;
+            font-size: 0.875rem;
             display: inline-block;
             margin-inline-end: 8px;
           }
@@ -228,7 +228,7 @@ export default {
 
           h5 {
             color: rgba(73, 80, 91, 1);
-            font-size: 14px;
+            font-size: 0.875rem;
             font-weight: 500;
             &:last-child {
               width: 140px;
@@ -239,7 +239,7 @@ export default {
     }
     hr {
       color: #aaa;
-      font-size: 22px;
+      font-size: 1.375rem;
     }
   }
   .profile__end {
@@ -249,7 +249,7 @@ export default {
       background-color: var(--advertisement-color);
       border-radius: 8px;
       span {
-        font-size: 40px;
+        font-size: 2.5rem;
         font-weight: 700;
         color: var(--advertisement-text-color);
       }
@@ -276,12 +276,12 @@ export default {
     width: 50px;
   }
   .profile__center__about header h4 {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 400;
   }
   .profile__center__about header button {
     padding-inline: 2px;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 400;
   }
 }

@@ -165,7 +165,7 @@ export default {};
           background-color: transparent;
           i {
             color: var(--text-gray-color);
-            font-size: 18px;
+            font-size: 1.125rem;
           }
           span {
             font-weight: 500;
@@ -183,7 +183,7 @@ export default {};
         color-scheme: var(--white-color);
       }
       i {
-        font-size: 25px;
+        font-size: 1.5625rem;
         margin-inline-end: 20px;
       }
     }

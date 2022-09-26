@@ -260,7 +260,7 @@ export default {
       }
       h5 {
         color: #1b2534;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-weight: 600;
         padding-block-start: 6px;
       }
@@ -288,7 +288,7 @@ export default {
       margin-block-start: 56px;
       label {
         color: var(----text-edit-color);
-        font-size: 12px;
+        font-size: 0.75rem;
         font-weight: 500;
         margin-block-end: 10px;
       }
