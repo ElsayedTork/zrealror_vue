@@ -21,6 +21,11 @@ import Profile from './../../component/profile/index.vue';
 import MyProfile from './../../component/myProfile/index.vue';
 import AdvertiseMent from './../../component/advertiseMent/index.vue';
 export default {
+  data() {
+    return {
+      flage: true,
+    };
+  },
   components: {
     Profile,
     MyProfile,
