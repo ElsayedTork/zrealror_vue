@@ -10,9 +10,6 @@ import Header from './component/header/index.vue';
 import Footer from './component/footer/index.vue';
 
 export default {
-  data() {
-    return {};
-  },
   components: {
     Footer,
     Header,
@@ -38,8 +35,7 @@ html {
   --border-color: #eeeeee;
   --advertisement-color: rgba(119, 119, 119, 0.3);
   --advertisement-text-color: rgba(140, 140, 140, 1);
-  --placeholder-color: #152C5B;
-
+  --placeholder-color: #152c5b;
 }
 *,
 ul,

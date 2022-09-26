@@ -103,7 +103,6 @@
     </div>
   </footer>
 </template>
-<script></script>
 <style lang="scss" scoped>
 footer {
   background: var(--main-op-color);
