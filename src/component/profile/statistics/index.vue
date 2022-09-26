@@ -15,7 +15,7 @@
         <div class="d-flex align-items-center justify-content-start">
           <figure :class="statistic.type">
             <img
-              :src="require(`./../../assets/images/${statistic.srcImg}`)"
+              :src="require(`./../../../assets/images/${statistic.srcImg}`)"
               :alt="statistic.type"
             />
           </figure>

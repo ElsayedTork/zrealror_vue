@@ -2,12 +2,12 @@
   <div class="profile__left">
     <ul class="profile__left__list">
       <li class="active">
-        <img src="./../../assets/icons/profile/profile-circle.svg" alt="" />
+        <img src="./../../../assets/icons/profile/profile-circle.svg" alt="" />
         <span>my profile</span>
       </li>
       <li>
         <div class="dropdown">
-          <img src="./../../assets/icons/profile/wishlist.svg" alt="" />
+          <img src="./../../../assets/icons/profile/wishlist.svg" alt="" />
           <button
             class="btn px-0 pe-0 ps-1 dropdown-toggle"
             type="button"
@@ -26,11 +26,11 @@
         </div>
       </li>
       <li>
-        <img src="./../../assets/icons/profile/PaperDownload.svg" alt="" />
+        <img src="./../../../assets/icons/profile/PaperDownload.svg" alt="" />
         <span>My Requests</span>
       </li>
       <li>
-        <img src="./../../assets/icons/profile/logout.svg" alt="" />
+        <img src="./../../../assets/icons/profile/logout.svg" alt="" />
         <span>Logout</span>
       </li>
     </ul>

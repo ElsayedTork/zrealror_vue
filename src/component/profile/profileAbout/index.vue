@@ -16,11 +16,10 @@
       >
         <div class="me-4">
           <img
-            src="./../../assets/images/man.png"
+            src="./../../../assets/images/man.png"
             width="100"
             height="100"
             alt=""
-            srcset=""
           />
         </div>
         <div>

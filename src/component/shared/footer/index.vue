@@ -4,7 +4,7 @@
       <div class="footer__flex">
         <section class="footer__flex__left">
           <figure class="mb-2">
-            <img src="./../../assets/images/logo.svg" alt="" />
+            <img src="./../../../assets/images/logo.svg" alt="" />
           </figure>
           <p>
             Zrealtors is the highest rated <br />Shopify expert team in the

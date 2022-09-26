@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <section class="col-xl-2 col-md-4 col-sm-12">
-          <my-profile></my-profile>
+          <side-bar></side-bar>
         </section>
         <section class="col-xl-7 col-md-8 col-sm-12 profile__center">
           <h3>My Profile</h3>
@@ -18,7 +18,7 @@
 </template>
 <script>
 import Profile from './../../component/profile/index.vue';
-import MyProfile from './../../component/myProfile/index.vue';
+import SideBar from './../../component/shared/sideBar/index.vue';
 import AdvertiseMent from './../../component/advertiseMent/index.vue';
 export default {
   data() {
@@ -28,7 +28,7 @@ export default {
   },
   components: {
     Profile,
-    MyProfile,
+    SideBar,
     AdvertiseMent,
   },
 };

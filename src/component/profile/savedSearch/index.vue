@@ -20,7 +20,7 @@
           <figure>
             <img
               @click="handelDeleteClick(index)"
-              src="./../../assets/images/Delete.png"
+              src="./../../../assets/images/Delete.png"
               alt=""
               srcset=""
             />
@@ -51,4 +51,3 @@ export default {
   },
 };
 </script>
-<style></style>
