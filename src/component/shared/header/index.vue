@@ -2,9 +2,9 @@
   <header class="header">
     <nav class="navbar navbar-expand-xl navbar-light">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <router-link to="#" class="navbar-brand">
           <img src="./../../../assets/images/logo.svg" alt="" />
-        </a>
+        </router-link>
         <button
           class="navbar-toggler"
           type="button"
@@ -19,25 +19,27 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav m-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <router-link class="nav-link active" aria-current="page" to="#"
+                >Home</router-link
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
+              <router-link class="nav-link" to="#">About Us</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Properties</a>
+              <router-link class="nav-link" to="#">Properties</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
+              <router-link class="nav-link" to="#">Projects</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Loyalty</a>
+              <router-link class="nav-link" to="#">Loyalty</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Our Partners</a>
+              <router-link class="nav-link" to="#">Our Partners</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
+              <router-link class="nav-link" to="#">Contact Us</router-link>
             </li>
           </ul>
           <ul class="header__info">
@@ -54,16 +56,16 @@
                   width="32"
                   height="32"
                 />
-                <a
+                <router-link
                   class="dropdown-toggle"
-                  href="#"
+                  to="#"
                   role="button"
                   id="dropdownMenuLink"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Hi Ahmed
-                </a>
+                </router-link>
 
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                   <li class="dropdown-item viewProfile">

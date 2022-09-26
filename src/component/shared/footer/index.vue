@@ -12,78 +12,79 @@
           </p>
           <ul class="mt-4">
             <li>
-              <a href="#">
+              <router-link to="#">
                 <i class="fa-brands fa-facebook-f"></i>
-              </a>
+              </router-link>
             </li>
             <li>
-              <a href="#">
+              <router-link to="#">
                 <i class="fa-brands fa-twitter"></i>
-              </a>
+              </router-link>
             </li>
             <li>
-              <a href="#">
+              <router-link to="#">
                 <i class="fa-brands fa-linkedin-in"></i>
-              </a>
+              </router-link>
             </li>
             <li>
-              <a href="#">
+              <router-link to="#">
                 <i class="fa-brands fa-instagram"></i>
-              </a>
+              </router-link>
             </li>
           </ul>
         </section>
         <section class="footer__flex__right">
           <ul>
             <li>
-              <a href="#">Projects</a>
+              <router-link to="#">Projects</router-link>
             </li>
             <li>
-              <a href="#">About Us</a>
+              <router-link to="#">About Us</router-link>
             </li>
             <li>
-              <a href="#">Real Estate Guide</a>
-            </li>
-          </ul>
-        </section>
-        <section class="footer__flex__right">
-          <ul>
-            <li>
-              <a href="#">Commercial Services</a>
-            </li>
-            <li>
-              <a href="#">Partner with us</a>
-            </li>
-            <li>
-              <a href="#">Contact Us</a>
+              <router-link to="#">Real Estate Guide</router-link>
             </li>
           </ul>
         </section>
         <section class="footer__flex__right">
           <ul>
             <li>
-              <a href="#">Become A Partner</a>
+              <router-link to="#" href="#">Commercial Services</router-link>
             </li>
             <li>
-              <a href="#">Reserve Your Property</a>
+              <router-link to="#" href="#">Partner with us</router-link>
             </li>
             <li>
-              <a href="#">Contact Us</a>
+              <router-link to="#" href="#">Contact Us</router-link>
             </li>
           </ul>
         </section>
         <section class="footer__flex__right">
           <ul>
             <li>
-              <a href="#"
-                >3 Saad area, Menkaure Gate ,<br />Hadayek El ahram, Giza</a
+              <router-link to="#" href="#">Become A Partner</router-link>
+            </li>
+            <li>
+              <router-link to="#" href="#">Reserve Your Property</router-link>
+            </li>
+            <li>
+              <router-link to="#" href="#">Contact Us</router-link>
+            </li>
+          </ul>
+        </section>
+        <section class="footer__flex__right">
+          <ul>
+            <li>
+              <router-link to="#" href="#"
+                >3 Saad area, Menkaure Gate ,<br />Hadayek El ahram,
+                Giza</router-link
               >
             </li>
             <li>
-              <a href="#">+2002 15732</a>
+              <router-link to="#" href="#">+2002 15732</router-link>
             </li>
             <li>
-              <a href="#">info@zrealtors.com</a>
+              <router-link to="#" href="#">info@zrealtors.com</router-link>
             </li>
           </ul>
         </section>
