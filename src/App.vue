@@ -30,6 +30,16 @@ html {
 
 :root {
   --main-color: #220054;
+  --main-op-color: rgba(34, 0, 84, 0.9);
+  --text-gray-color: #737680;
+  --text-edit-color: #777e90;
+  --white-color: #fff;
+  --orange-color: #c8a45d;
+  --border-color: #eeeeee;
+  --advertisement-color: rgba(119, 119, 119, 0.3);
+  --advertisement-text-color: rgba(140, 140, 140, 1);
+  --placeholder-color: #152C5B;
+
 }
 *,
 ul,

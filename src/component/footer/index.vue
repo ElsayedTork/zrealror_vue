@@ -106,7 +106,7 @@
 <script></script>
 <style lang="scss" scoped>
 footer {
-  background: rgba(34, 0, 84, 0.9);
+  background: var(--main-op-color);
   padding-block-start: 5.0625rem;
   background-image: url(./../../assets/images/Rectangle.svg);
   .footer__flex {
@@ -115,7 +115,7 @@ footer {
     margin-block-end: 56px;
     .footer__flex__left {
       p {
-        color: #fff;
+        color: var(--white-color);
       }
       ul {
         li {
@@ -129,10 +129,10 @@ footer {
           text-align: center;
           transition: 0.4s background-color;
           &:hover {
-            background-color: #c8a45d;
+            background-color: var(--orange-color);
           }
           a {
-            color: #fff;
+            color: var(--white-color);
             margin-block-start: 7px;
             display: inline-block;
           }
@@ -146,26 +146,26 @@ footer {
           padding-block-end: 1.5rem;
           a {
             text-decoration: none;
-            color: #fff;
+            color: var(--white-color);
           }
         }
       }
     }
   }
   .footer__down {
-    background: rgba(34, 0, 84, 1);
+    background: var(--main-color);
     padding-block: 28px;
     .footer__down__flex {
       display: flex;
 
       p.footer__down__flex__frist {
-        color: #fff;
+        color: var(--white-color);
         span {
-          color: rgba(200, 164, 93, 1);
+          color: var(--orange-color);
         }
       }
       p.footer__down__flex__second {
-        color: #fff;
+        color: var(--white-color);
         margin-inline-start: 200px;
       }
     }
@@ -187,7 +187,7 @@ footer {
     flex-direction: column !important;
   }
   p.footer__down__flex__second {
-    color: #fff;
+    color: var(--white-color);
     margin-inline-start: 0px !important;
     margin-block-end: 10px;
   }

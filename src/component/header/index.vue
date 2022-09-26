@@ -121,20 +121,20 @@ export default {};
 </script>
 <style lang="scss" scoped>
 .header {
-  background-color: rgba(34, 0, 84, 0.9);
+  background-color: var(--main-op-color);
   background-image: url('./../../assets/images/Rectangle.svg');
   padding-block: 40px;
   ul.navbar-nav {
     li.nav-item {
       a.nav-link {
-        color: #fff;
+        color: var(--white-color);
       }
     }
   }
   ul.header__info {
     .dropdown {
       .dropdown-toggle {
-        color: #fff;
+        color: var(--white-color);
         text-decoration: none;
       }
       .dropdown-item {
@@ -155,7 +155,7 @@ export default {};
         background-color: transparent;
         margin-block-start: 27px;
         span {
-          color: #737680 !important;
+          color: var(--text-gray-color) !important;
         }
       }
       li.viewProfile {
@@ -164,7 +164,7 @@ export default {};
         p {
           background-color: transparent;
           i {
-            color: #737680;
+            color: var(--text-gray-color);
             font-size: 18px;
           }
           span {
@@ -176,11 +176,11 @@ export default {};
     li {
       list-style: none;
       display: inline-block;
-      color: #fff;
+      color: var(--white-color);
       input[type='date']::-webkit-calendar-picker-indicator {
         background-image: url('./../../assets/icons/calendar-days-solid.svg');
-        fill: #fff !important;
-        color-scheme: #fff;
+        fill: var(--white-color) !important;
+        color-scheme: var(--white-color);
       }
       i {
         font-size: 25px;

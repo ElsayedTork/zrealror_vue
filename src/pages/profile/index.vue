@@ -38,7 +38,7 @@ export default {
   padding-block-start: 40px;
   background-color: #e5e5e5;
   &__left {
-    background-color: #fff;
+    background-color: var(--white-color);
     padding-inline: 18px;
     padding-block: 24px;
     border-radius: 16px;
@@ -54,7 +54,7 @@ export default {
           font-size: 14px;
           font-weight: 500;
           text-transform: capitalize;
-          color: rgba(115, 118, 128, 1);
+          color: var(--text-gray-color);
         }
         .dropdown-toggle {
           &:hover {
@@ -65,7 +65,6 @@ export default {
       li.active,
       li:hover {
         background-color: rgba(246, 247, 251, 1);
-        //  padding: 10px 12px;
         padding-block: 10px;
         border-radius: 6px;
         padding-inline-start: 5px;
@@ -77,12 +76,12 @@ export default {
     &__advertisement {
       height: 540px;
       width: 100%;
-      background-color: rgba(119, 119, 119, 0.3);
+      background-color: var(--advertisement-color);
       border-radius: 8px;
       span {
         font-size: 24px;
         font-weight: 700;
-        color: rgba(140, 140, 140, 1);
+        color: var(--advertisement-text-color);
       }
     }
   }
@@ -93,7 +92,7 @@ export default {
       margin-block-end: 24px;
     }
     &__about {
-      background-color: #fff;
+      background-color: var(--white-color);
       border-radius: 16px;
       header {
         padding-inline: 32px;
@@ -104,7 +103,7 @@ export default {
         }
         button {
           background-color: var(--main-color);
-          color: #fff;
+          color: var(--white-color);
           border-radius: 5px;
           padding-block: 7px;
           padding-inline: 9px;
@@ -127,7 +126,7 @@ export default {
           }
         }
         &__item {
-          border: 1px solid #eee;
+          border: 1px solid var(--border-color);
           border-radius: 8px;
           padding: 20px;
           width: 200px;
@@ -175,7 +174,7 @@ export default {
       }
     }
     &__search {
-      background-color: #fff;
+      background-color: var(--white-color);
       border-radius: 16px;
       margin-block-end: 100px;
       padding-block-end: 20px;
@@ -247,12 +246,12 @@ export default {
     .profile__end__add {
       height: 640px;
       width: 100%;
-      background-color: rgba(119, 119, 119, 0.3);
+      background-color: var(--advertisement-color);
       border-radius: 8px;
       span {
         font-size: 40px;
         font-weight: 700;
-        color: rgba(140, 140, 140, 1);
+        color: var(--advertisement-text-color);
       }
     }
   }
