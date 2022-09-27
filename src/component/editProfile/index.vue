@@ -193,7 +193,7 @@ import customButton from './../../component/shared/customButton/index.vue';
 export default {
   data() {
     return {
-      fristName: this.$store.state.profileData.FristName,
+      fristName: this.$store.state.profileData.fristName,
       lastName: this.$store.state.profileData.lastName,
       email: this.$store.state.profileData.email,
       mobile: this.$store.state.profileData.mobile,
@@ -323,6 +323,7 @@ export default {
     }
   }
 }
+
 
 @media (max-width: 576px) {
   .edit__body__image {
