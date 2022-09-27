@@ -292,16 +292,6 @@ export default {
         margin-block-end: 24px;
         color: var(--placeholder-color);
       }
-      ::-webkit-input-placeholder {
-        //    color: var(--placeholder-color) !important;
-      }
-      :-ms-input-placeholder {
-        // color: var(--placeholder-color) !important;
-      }
-      ::placeholder,
-      select option {
-        //   color: var(--placeholder-color) !important;
-      }
       span.form-check-label {
         color: var(--text-edit-color);
       }
