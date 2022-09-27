@@ -135,17 +135,6 @@
                   />
                   <span class="form-check-label" for="female"> female </span>
                 </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    value="Custom"
-                    name="flexRadioDefault"
-                    id="Custom"
-                    v-model="gender"
-                  />
-                  <span class="form-check-label" for="Custom"> Custom </span>
-                </div>
               </div>
             </div>
             <div class="col-sm-6">

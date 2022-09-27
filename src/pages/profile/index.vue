@@ -3,10 +3,10 @@
     <div class="container">
       <div class="row">
         <section class="col-xl-2 col-md-4 col-sm-12">
-          <side-bar></side-bar>
+          <user-sidebar></user-sidebar>
         </section>
         <section class="col-xl-7 col-md-8 col-sm-12 profile__center">
-          <h3>My Profile</h3>
+          <h3 class="mb-3">My Profile</h3>
           <profile-container></profile-container>
         </section>
         <section class="col-xl-3 col-md-6 col-sm-12 profile__end">
@@ -18,7 +18,7 @@
 </template>
 <script>
 import ProfileContainer from './../../component/profileContainer/index.vue';
-import SideBar from './../../component/shared/sideBar/index.vue';
+import UserSidebar from './../../component/shared/userSidebar/index.vue';
 import AdvertiseMent from './../../component/advertiseMent/index.vue';
 export default {
   data() {
@@ -28,7 +28,7 @@ export default {
   },
   components: {
     ProfileContainer,
-    SideBar,
+    UserSidebar,
     AdvertiseMent,
   },
 };

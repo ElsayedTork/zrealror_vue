@@ -9,24 +9,19 @@
         <div class="dropdown">
           <img src="./../../../assets/icons/profile/wishlist.svg" alt="" />
           <button
-            class="btn px-0 pe-0 ps-1 dropdown-toggle"
+            class="py-0 pe-0 ps-1 dropdown-toggle"
             type="button"
-            id="dropdownMenuButton"
-            data-toggle="dropdown"
-            aria-haspopup="true"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
             aria-expanded="false"
           >
             <span>My Wishlists</span>
           </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <router-link class="dropdown-item" to="#">Action</router-link>
-            <router-link class="dropdown-item" to="#"
-              >Another action</router-link
-            >
-            <router-link class="dropdown-item" to="#"
-              >Another action</router-link
-            >
-          </div>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
         </div>
       </li>
       <li>
@@ -57,15 +52,18 @@
     li {
       list-style: none;
       padding-block: 10px;
-      margin-block-end: 16px;
+      margin-block-end: 6px;
+      padding-inline-start: 5px;
       span {
-        margin-inline-start: 15px;
+        margin-inline-start: 6px;
         font-size: 0.875rem;
         font-weight: 500;
         text-transform: capitalize;
         color: var(--text-gray-color);
       }
       .dropdown-toggle {
+        border: 1px solid transparent;
+        background-color: transparent;
         &:hover {
           border: 1px solid transparent;
         }
@@ -74,9 +72,8 @@
     li.active,
     li:hover {
       background-color: rgba(246, 247, 251, 1);
-      padding-block: 10px;
       border-radius: 6px;
-      padding-inline-start: 5px;
+
       span {
         color: var(--main-color);
       }
