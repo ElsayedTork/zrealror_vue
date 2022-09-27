@@ -9,9 +9,9 @@ import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 library.add(fas, faYoutube);
 
  import router from './router/router.js';
-// import store from './store/index.js';
+ import store from './store/index.js';
 const app = createApp(App);
  app.use(router);
-// app.use(store);
+ app.use(store);
 app.component('font-awesome-icon', FontAwesomeIcon);
 app.mount('#app');
