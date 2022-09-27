@@ -49,23 +49,26 @@
             <li><i class="fa-regular fa-bell"></i></li>
             <li>
               <div class="dropdown">
-                <img
-                  src="./../../../assets/images/man.png"
-                  alt=""
-                  srcset=""
-                  width="32"
-                  height="32"
-                />
-                <router-link
+                <router-link to="/profile">
+                  <img
+                    src="./../../../assets/images/man.png"
+                    alt=""
+                    srcset=""
+                    width="32"
+                    height="32"
+                  />
+                </router-link>
+
+                <a
                   class="dropdown-toggle"
-                  to="#"
+                  href="#"
                   role="button"
                   id="dropdownMenuLink"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Hi Ahmed
-                </router-link>
+                </a>
 
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                   <li class="dropdown-item viewProfile">
