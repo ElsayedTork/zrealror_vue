@@ -1,5 +1,30 @@
-<template>Prop</template>
+<template>
+  <div class="properties">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <advanced-search></advanced-search>
+        </div>
+        <div class="col-md-9">
+          <Appartments />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 <script>
-export default {};
+import AdvancedSearch from '../../component/properties/advancedSearch/index.vue';
+import Appartments from '../../component/properties/appartments/index.vue';
+export default {
+  components: {
+    AdvancedSearch,
+    Appartments,
+  },
+};
 </script>
-<style></style>
+<style lang="scss" scoped>
+.properties {
+  background-color: var(--background-color);
+  padding-block: 80px;
+}
+</style>

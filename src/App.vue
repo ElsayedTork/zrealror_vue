@@ -36,6 +36,8 @@ html {
   --advertisement-color: rgba(119, 119, 119, 0.3);
   --advertisement-text-color: rgba(140, 140, 140, 1);
   --placeholder-color: #152c5b;
+  --background-color: #e5e5e5;
+  --text-color-secondary:#1B2534;
 }
 *,
 ul,

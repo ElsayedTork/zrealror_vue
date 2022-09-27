@@ -36,7 +36,7 @@ export default {
 <style lang="scss" scoped>
 .profile {
   padding-block-start: 40px;
-  background-color: #e5e5e5;
+  background-color: var(--background-color);
   &__body {
     padding-inline: 32px;
     margin-block-start: 32px;
