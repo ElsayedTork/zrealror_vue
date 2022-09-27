@@ -135,17 +135,6 @@
                   />
                   <span class="form-check-label" for="female"> female </span>
                 </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    value="Custom"
-                    name="flexRadioDefault"
-                    id="Custom"
-                    v-model="gender"
-                  />
-                  <span class="form-check-label" for="Custom"> Custom </span>
-                </div>
               </div>
             </div>
             <div class="col-sm-6">
@@ -239,13 +228,13 @@ export default {
 </script>
 <style lang="scss" scoped>
 .edit {
-  background-color: #fff;
+  background-color: var(--white-color);
   border-radius: 16px;
   margin-block-end: 103px;
   header {
     font-size: 1.125rem;
     font-weight: 600;
-    color: #1b2534;
+    color: var(--main-op-color);
 
     padding: 16px 24px;
   }
@@ -260,35 +249,35 @@ export default {
       }
       h5 {
         color: #1b2534;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-weight: 600;
         padding-block-start: 6px;
       }
       p {
         max-width: 300px;
-        color: #777e90;
+        color: var(--text-edit-color);
         font-size: 0.875rem;
         padding-block-start: 6px;
         padding-block-end: 12px;
       }
       .upload {
-        color: #fff;
-        background-color: #220054;
+        color: var(--white-color);
+        background-color: var(--main-color);
         border-color: transparent;
         margin-block-end: 8px;
       }
       .remove {
-        color: #737680;
-        background-color: #fff;
+        color: var(--text-gray-color);
+        background-color: var(--white-color);
         border-color: transparent;
-        border-color: #737680;
+        border-color: var(--text-gray-color);
       }
     }
     &__form {
       margin-block-start: 56px;
       label {
-        color: #777e90;
-        font-size: 12px;
+        color: var(----text-edit-color);
+        font-size: 0.75rem;
         font-weight: 500;
         margin-block-end: 10px;
       }
@@ -297,23 +286,24 @@ export default {
       input[type='password'],
       input[type='date'],
       select {
-        border-color: #eeeeee;
+        border-color: var(--border-color);
         padding-block: 15px;
         padding-inline: 20px;
         margin-block-end: 24px;
+        color: var(--placeholder-color);
       }
       ::-webkit-input-placeholder {
-        color: #152c5b !important;
+        //    color: var(--placeholder-color) !important;
       }
       :-ms-input-placeholder {
-        color: #152c5b !important;
+        // color: var(--placeholder-color) !important;
       }
       ::placeholder,
       select option {
-        color: #152c5b !important;
+        //   color: var(--placeholder-color) !important;
       }
       span.form-check-label {
-        color: #777e90;
+        color: var(--text-edit-color);
       }
       input[type='radio']:checked & + span {
         color: var(--main-color) !important;
@@ -321,7 +311,7 @@ export default {
 
       .maritalStatue {
         padding-block: 14px;
-        border-color: #eeeeee;
+        border-color: var(--border-color);
       }
       ::-webkit-calendar-picker-indicator {
         background-image: url('./../../assets/icons/profile/calendar.svg');
@@ -330,13 +320,13 @@ export default {
         display: flex;
         justify-content: end;
         .cancel {
-          background-color: #fff;
+          background-color: var(--white-color);
           color: var(--main-color);
           border-color: transparent;
         }
         .save {
           background-color: var(--main-color);
-          color: #fff;
+          color: var(--white-color);
           border-color: transparent;
         }
       }

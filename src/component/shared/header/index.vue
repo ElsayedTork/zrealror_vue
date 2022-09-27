@@ -2,9 +2,9 @@
   <header class="header">
     <nav class="navbar navbar-expand-xl navbar-light">
       <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="./../../assets/images/logo.svg" alt="" />
-        </a>
+        <router-link to="#" class="navbar-brand">
+          <img src="./../../../assets/images/logo.svg" alt="" />
+        </router-link>
         <button
           class="navbar-toggler"
           type="button"
@@ -19,77 +19,46 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav m-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Properties</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Loyalty</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Our Partners</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
-            </li>
-            <!-- <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+              <router-link class="nav-link active" aria-current="page" to="#"
+                >Home</router-link
               >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li> -->
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="#">About Us</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="#">Properties</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="#">Projects</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="#">Loyalty</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="#">Our Partners</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="#">Contact Us</router-link>
+            </li>
           </ul>
           <ul class="header__info">
             <li>
-              <!-- <div class="form-group" style="position: relative"> -->
               <i class="fa-solid fa-calendar-days"></i>
-              <!-- <input
-                  type="date"
-                  class="form-control shadow-none"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                  placeholder=""
-                  style="
-                    width: 45px;
-                    opacity: 0.8;
-                    font-size: 20px;
-                    background-color: transparent;
-                    border-color: transparent;
-                  "
-                /> -->
-              <!-- </div> -->
             </li>
             <li><i class="fa-regular fa-bell"></i></li>
             <li>
               <div class="dropdown">
-                <img
-                  src="./../../assets/images/man.png"
-                  alt=""
-                  srcset=""
-                  width="32"
-                  height="32"
-                />
+                <router-link to="/profile">
+                  <img
+                    src="./../../../assets/images/man.png"
+                    alt=""
+                    srcset=""
+                    width="32"
+                    height="32"
+                  />
+                </router-link>
+
                 <a
                   class="dropdown-toggle"
                   href="#"
@@ -111,7 +80,7 @@
                   <li class="dropdown-item">
                     <p>
                       <img
-                        src="./../../assets/images/man.png"
+                        src="./../../../assets/images/man.png"
                         width="40"
                         height="40"
                         alt=""
@@ -124,7 +93,7 @@
                   <li class="dropdown-item">
                     <p>
                       <img
-                        src="./../../assets/images/woman.png"
+                        src="./../../../assets/images/woman.png"
                         width="40"
                         height="40"
                         alt=""
@@ -137,7 +106,7 @@
                   <hr />
                   <li class="dropdown-item logOut">
                     <img
-                      src="./../../assets/icons/profile/logout.svg"
+                      src="./../../../assets/icons/profile/logout.svg"
                       alt=""
                       class="me-2"
                     />
@@ -152,25 +121,23 @@
     </nav>
   </header>
 </template>
-<script>
-export default {};
-</script>
+
 <style lang="scss" scoped>
 .header {
-  background-color: rgba(34, 0, 84, 0.9);
-  background-image: url('./../../assets/images/Rectangle.svg');
+  background-color: var(--main-op-color);
+  background-image: url('./../../../assets/images/Rectangle.svg');
   padding-block: 40px;
   ul.navbar-nav {
     li.nav-item {
       a.nav-link {
-        color: #fff;
+        color: var(--white-color);
       }
     }
   }
   ul.header__info {
     .dropdown {
       .dropdown-toggle {
-        color: #fff;
+        color: var(--white-color);
         text-decoration: none;
       }
       .dropdown-item {
@@ -191,7 +158,7 @@ export default {};
         background-color: transparent;
         margin-block-start: 27px;
         span {
-          color: #737680 !important;
+          color: var(--text-gray-color) !important;
         }
       }
       li.viewProfile {
@@ -200,8 +167,8 @@ export default {};
         p {
           background-color: transparent;
           i {
-            color: #737680;
-            font-size: 18px;
+            color: var(--text-gray-color);
+            font-size: 1.125rem;
           }
           span {
             font-weight: 500;
@@ -212,14 +179,14 @@ export default {};
     li {
       list-style: none;
       display: inline-block;
-      color: #fff;
+      color: var(--white-color);
       input[type='date']::-webkit-calendar-picker-indicator {
-        background-image: url('./../../assets/icons/calendar-days-solid.svg');
-        fill: #fff !important;
-        color-scheme: #fff;
+        background-image: url('./../../../assets/icons/calendar-days-solid.svg');
+        fill: var(--white-color) !important;
+        color-scheme: var(--white-color);
       }
       i {
-        font-size: 25px;
+        font-size: 1.5625rem;
         margin-inline-end: 20px;
       }
     }

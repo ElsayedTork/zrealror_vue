@@ -6,13 +6,10 @@
 </template>
 
 <script>
-import Header from './component/header/index.vue';
-import Footer from './component/footer/index.vue';
+import Header from './component/shared/header/index.vue';
+import Footer from './component/shared/footer/index.vue';
 
 export default {
-  data() {
-    return {};
-  },
   components: {
     Footer,
     Header,
@@ -30,6 +27,15 @@ html {
 
 :root {
   --main-color: #220054;
+  --main-op-color: rgba(34, 0, 84, 0.9);
+  --text-gray-color: #737680;
+  --text-edit-color: #777e90;
+  --white-color: #fff;
+  --orange-color: #c8a45d;
+  --border-color: #eeeeee;
+  --advertisement-color: rgba(119, 119, 119, 0.3);
+  --advertisement-text-color: rgba(140, 140, 140, 1);
+  --placeholder-color: #152c5b;
 }
 *,
 ul,

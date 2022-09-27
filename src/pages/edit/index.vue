@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <section class="col-xl-2 col-md-4 col-sm-12">
-          <my-profile></my-profile>
+          <user-sidebar></user-sidebar>
         </section>
         <section class="col-xl-7 col-md-8 col-sm-12 profile__center">
           <h3>My Profile</h3>
@@ -11,7 +11,7 @@
           <router-view></router-view>
         </section>
         <section class="col-xl-3 col-md-6 col-sm-12 profile__end">
-          <AdvertiseMent />
+          <advertiseMent></advertiseMent>
         </section>
       </div>
     </div>
@@ -19,14 +19,13 @@
 </template>
 <script>
 import EditProfile from './../../component/editProfile/index.vue';
-import MyProfile from './../../component/myProfile/index.vue';
+import UserSidebar from './../../component/shared/userSidebar/index.vue';
 import AdvertiseMent from './../../component/advertiseMent/index.vue';
 export default {
   components: {
     EditProfile,
-    MyProfile,
+    UserSidebar,
     AdvertiseMent,
   },
 };
 </script>
-<style></style>

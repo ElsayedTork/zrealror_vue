@@ -16,11 +16,10 @@
       >
         <div class="me-4">
           <img
-            src="./../../assets/images/man.png"
+            src="./../../../assets/images/man.png"
             width="100"
             height="100"
             alt=""
-            srcset=""
           />
         </div>
         <div>
@@ -75,4 +74,62 @@
 <script>
 export default {};
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.profile__center__about {
+  background-color: var(--white-color);
+  border-radius: 16px;
+  header {
+    padding-inline: 32px;
+    padding-block: 13px;
+    h4 {
+      font-weight: 600;
+      font-size: 1.125rem;
+    }
+    button {
+      background-color: var(--main-color);
+      color: var(--white-color);
+      border-radius: 5px;
+      padding-block: 7px;
+      padding-inline: 9px;
+    }
+  }
+
+  &__body {
+    padding-inline: 32px;
+    margin-block-start: 32px;
+    &__name {
+      h3 {
+        color: rgba(27, 37, 52, 1);
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-block-end: 8px;
+      }
+      p {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+    }
+
+    &__data {
+      margin-block-end: 32px;
+      margin-block-start: 42px;
+      ul {
+        margin-block-end: 32px;
+        li {
+          list-style: none;
+          margin-block-end: 6px;
+          &:first-child {
+            color: #49505b;
+            font-weight: 500;
+          }
+          &:last-child {
+            color: #5f666f;
+            font-weight: 400;
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+  }
+}
+</style>

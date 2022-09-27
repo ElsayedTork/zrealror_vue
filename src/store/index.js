@@ -28,7 +28,6 @@ export default createStore({
     },
     setProfileData(state, obj) {
       state.profileData = obj;
-      console.log(state.profileData);
     },
   },
   actions: {
@@ -36,7 +35,6 @@ export default createStore({
       commit('deleteSearchMut', ele);
     },
     setProfileDataAction({ commit }, obj) {
-      console.log(obj);
       commit('setProfileData', obj);
     },
   },

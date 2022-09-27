@@ -4,7 +4,7 @@
       <div class="footer__flex">
         <section class="footer__flex__left">
           <figure class="mb-2">
-            <img src="./../../assets/images/logo.svg" alt="" />
+            <img src="./../../../assets/images/logo.svg" alt="" />
           </figure>
           <p>
             Zrealtors is the highest rated <br />Shopify expert team in the
@@ -12,78 +12,79 @@
           </p>
           <ul class="mt-4">
             <li>
-              <a href="#">
+              <router-link to="#">
                 <i class="fa-brands fa-facebook-f"></i>
-              </a>
+              </router-link>
             </li>
             <li>
-              <a href="#">
+              <router-link to="#">
                 <i class="fa-brands fa-twitter"></i>
-              </a>
+              </router-link>
             </li>
             <li>
-              <a href="#">
+              <router-link to="#">
                 <i class="fa-brands fa-linkedin-in"></i>
-              </a>
+              </router-link>
             </li>
             <li>
-              <a href="#">
+              <router-link to="#">
                 <i class="fa-brands fa-instagram"></i>
-              </a>
+              </router-link>
             </li>
           </ul>
         </section>
         <section class="footer__flex__right">
           <ul>
             <li>
-              <a href="#">Projects</a>
+              <router-link to="#">Projects</router-link>
             </li>
             <li>
-              <a href="#">About Us</a>
+              <router-link to="#">About Us</router-link>
             </li>
             <li>
-              <a href="#">Real Estate Guide</a>
-            </li>
-          </ul>
-        </section>
-        <section class="footer__flex__right">
-          <ul>
-            <li>
-              <a href="#">Commercial Services</a>
-            </li>
-            <li>
-              <a href="#">Partner with us</a>
-            </li>
-            <li>
-              <a href="#">Contact Us</a>
+              <router-link to="#">Real Estate Guide</router-link>
             </li>
           </ul>
         </section>
         <section class="footer__flex__right">
           <ul>
             <li>
-              <a href="#">Become A Partner</a>
+              <router-link to="#" href="#">Commercial Services</router-link>
             </li>
             <li>
-              <a href="#">Reserve Your Property</a>
+              <router-link to="#" href="#">Partner with us</router-link>
             </li>
             <li>
-              <a href="#">Contact Us</a>
+              <router-link to="#" href="#">Contact Us</router-link>
             </li>
           </ul>
         </section>
         <section class="footer__flex__right">
           <ul>
             <li>
-              <a href="#"
-                >3 Saad area, Menkaure Gate ,<br />Hadayek El ahram, Giza</a
+              <router-link to="#" href="#">Become A Partner</router-link>
+            </li>
+            <li>
+              <router-link to="#" href="#">Reserve Your Property</router-link>
+            </li>
+            <li>
+              <router-link to="#" href="#">Contact Us</router-link>
+            </li>
+          </ul>
+        </section>
+        <section class="footer__flex__right">
+          <ul>
+            <li>
+              <router-link to="#" href="#"
+                >3 Saad area, Menkaure Gate ,<br />Hadayek El ahram,
+                Giza</router-link
               >
             </li>
             <li>
-              <a href="#">+2002 15732</a>
+              <router-link to="#" href="#">+2002 15732</router-link>
             </li>
             <li>
-              <a href="#">info@zrealtors.com</a>
+              <router-link to="#" href="#">info@zrealtors.com</router-link>
             </li>
           </ul>
         </section>
@@ -103,19 +104,18 @@
     </div>
   </footer>
 </template>
-<script></script>
 <style lang="scss" scoped>
 footer {
-  background: rgba(34, 0, 84, 0.9);
+  background: var(--main-op-color);
   padding-block-start: 5.0625rem;
-  background-image: url(./../../assets/images/Rectangle.svg);
+  background-image: url(./../../../assets/images/Rectangle.svg);
   .footer__flex {
     display: flex;
     justify-content: space-between;
     margin-block-end: 56px;
     .footer__flex__left {
       p {
-        color: #fff;
+        color: var(--white-color);
       }
       ul {
         li {
@@ -129,10 +129,10 @@ footer {
           text-align: center;
           transition: 0.4s background-color;
           &:hover {
-            background-color: #c8a45d;
+            background-color: var(--orange-color);
           }
           a {
-            color: #fff;
+            color: var(--white-color);
             margin-block-start: 7px;
             display: inline-block;
           }
@@ -146,27 +146,26 @@ footer {
           padding-block-end: 1.5rem;
           a {
             text-decoration: none;
-            color: #fff;
+            color: var(--white-color);
           }
         }
       }
     }
   }
   .footer__down {
-    background: rgba(34, 0, 84, 1);
+    background: var(--main-color);
     padding-block: 28px;
     .footer__down__flex {
       display: flex;
 
-      //width: 50%;
       p.footer__down__flex__frist {
-        color: #fff;
+        color: var(--white-color);
         span {
-          color: rgba(200, 164, 93, 1);
+          color: var(--orange-color);
         }
       }
       p.footer__down__flex__second {
-        color: #fff;
+        color: var(--white-color);
         margin-inline-start: 200px;
       }
     }
@@ -188,7 +187,7 @@ footer {
     flex-direction: column !important;
   }
   p.footer__down__flex__second {
-    color: #fff;
+    color: var(--white-color);
     margin-inline-start: 0px !important;
     margin-block-end: 10px;
   }
