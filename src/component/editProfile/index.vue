@@ -193,7 +193,7 @@ import customButton from './../../component/shared/customButton/index.vue';
 export default {
   data() {
     return {
-      fristName: this.$store.state.profileData.FristName,
+      fristName: this.$store.state.profileData.fristName,
       lastName: this.$store.state.profileData.lastName,
       email: this.$store.state.profileData.email,
       mobile: this.$store.state.profileData.mobile,
@@ -292,16 +292,6 @@ export default {
         margin-block-end: 24px;
         color: var(--placeholder-color);
       }
-      ::-webkit-input-placeholder {
-        //    color: var(--placeholder-color) !important;
-      }
-      :-ms-input-placeholder {
-        // color: var(--placeholder-color) !important;
-      }
-      ::placeholder,
-      select option {
-        //   color: var(--placeholder-color) !important;
-      }
       span.form-check-label {
         color: var(--text-edit-color);
       }
@@ -333,6 +323,7 @@ export default {
     }
   }
 }
+
 
 @media (max-width: 576px) {
   .edit__body__image {

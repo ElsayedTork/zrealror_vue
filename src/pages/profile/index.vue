@@ -33,7 +33,7 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .profile {
   padding-block-start: 40px;
   background-color: #e5e5e5;
@@ -99,25 +99,24 @@ export default {
       }
     }
   }
+  &__end {
+    .profile__end__add {
+      height: 640px;
+      width: 100%;
+      background-color: var(--advertisement-color);
+      border-radius: 8px;
+      span {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--advertisement-text-color);
+      }
+    }
+  }
 }
 
 hr {
   color: #aaa;
   font-size: 1.375rem;
-}
-
-.profile__end {
-  .profile__end__add {
-    height: 640px;
-    width: 100%;
-    background-color: var(--advertisement-color);
-    border-radius: 8px;
-    span {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--advertisement-text-color);
-    }
-  }
 }
 
 @media (max-width: 576px) {

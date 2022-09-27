@@ -29,3 +29,9 @@ export default {
   },
 };
 </script>
+<style lang="scss" scoped>
+.profile {
+  padding-block-start: 40px;
+  background-color: #e5e5e5;
+}
+</style>
