@@ -1,107 +1,42 @@
 <template>
   <div class="search">
     <h4>Advanced Search</h4>
-    <section class="search__filter">
-      <ul>
-        <li>
-          <h6>Property Category</h6>
-          <div class="dropdown">
-            <button
-              class="dropdown-toggle d-flex justify-content-between align-items-center"
-              type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <span>5 Star</span>
-              <img src="./../../../assets/images/properties/Shape.png" />
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">5 Star</a></li>
-              <li><a class="dropdown-item" href="#">4 Star</a></li>
-              <li><a class="dropdown-item" href="#">3 Star</a></li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <h6>Property Location</h6>
-          <div class="dropdown">
-            <button
-              class="dropdown-toggle d-flex justify-content-between align-items-center"
-              type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <span>5 Star</span>
-              <img src="./../../../assets/images/properties/Shape.png" />
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">5 Star</a></li>
-              <li><a class="dropdown-item" href="#">4 Star</a></li>
-              <li><a class="dropdown-item" href="#">3 Star</a></li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <h6>Property Type</h6>
-          <div class="dropdown">
-            <button
-              class="dropdown-toggle d-flex justify-content-between align-items-center"
-              type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <span>5 Star</span>
-              <img src="./../../../assets/images/properties/Shape.png" />
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">5 Star</a></li>
-              <li><a class="dropdown-item" href="#">4 Star</a></li>
-              <li><a class="dropdown-item" href="#">3 Star</a></li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <h6>Floor</h6>
-          <div class="dropdown">
-            <button
-              class="dropdown-toggle d-flex justify-content-between align-items-center"
-              type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <span>5 Star</span>
-              <img src="./../../../assets/images/properties/Shape.png" />
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">5 Star</a></li>
-              <li><a class="dropdown-item" href="#">4 Star</a></li>
-              <li><a class="dropdown-item" href="#">3 Star</a></li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-      <div>
-        <label for="customRange3" class="form-label">Example range</label>
-        <input
-          type="range"
-          class="form-range"
-          min="0"
-          max="5"
-          step="0.5"
-          id="customRange3"
-        />
-      </div>
-    </section>
+    <div class="search__filter">
+      <section class="search__filter__data">
+        <search-item dataName="propSearch"></search-item>
+        <div>
+          <label for="customRange3" class="form-label">Example range</label>
+          <input
+            type="range"
+            class="form-range"
+            min="0"
+            max="5"
+            step="0.5"
+            id="customRange3"
+          />
+        </div>
+        <search-item dataName="propData"></search-item>
+      </section>
+
+      <section
+        class="search__filter__btns d-flex justify-content-between align-items-center"
+      >
+        <custom-button text="Reset" btnClass="resetBtn"></custom-button>
+        <custom-button text="Search" btnClass="searchBtn"></custom-button>
+      </section>
+    </div>
   </div>
 </template>
 <script>
+import CustomButton from './../../shared/customButton/index.vue';
+import SearchItem from './../searchItem/index.vue';
 export default {
   data() {
     return {};
+  },
+  components: {
+    CustomButton,
+    SearchItem,
   },
 };
 </script>
@@ -117,31 +52,27 @@ export default {
     padding-inline-start: 20px;
     padding-block: 14px;
   }
-  .search__filter {
+  &__filter {
     padding-inline: 20px;
     background-color: var(--white-color) !important;
-    ul {
-      li {
-        list-style: none;
-        padding-block-start: 24px;
-        h6 {
-          font-size: 1rem;
-          color: var(--text-color-secondary);
-          font-weight: 500;
-        }
-        .dropdown-toggle {
-          width: 100%;
-          border-color: transparent;
-          text-align: left;
-          background-image: linear-gradient(to right, #f6f7f9, #ffffff);
-          color: var(--placeholder-color);
-          border: 1px solid var(--border-color);
-          font-weight: 500;
-          font-size: 0.875rem;
-          &::after {
-            display: none;
-          }
-        }
+    padding-block-end: 40px;
+    &__btns {
+      margin-block-start: 3rem;
+      .resetBtn {
+        color: #737680;
+        background-color: #ececec;
+        border-color: transparent;
+        width: 50%;
+        display: inline-block;
+        margin-inline-end: 6px;
+      }
+      .searchBtn {
+        color: var(--white-color);
+        background-color: var(--main-color);
+        border-color: transparent;
+        width: 50%;
+        display: inline-block;
+        margin-inline-start: 10px;
       }
     }
   }

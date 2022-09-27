@@ -20,6 +20,46 @@ export default createStore({
         { id: 0, type: 'Open', srcImg: 'TickSquare.png', num: 80 },
         { id: 1, type: 'Closed', srcImg: 'CloseSquare.png', num: 72 },
       ],
+      propSearch: [
+        {
+          id: 1,
+          title: 'Property Category',
+          options: ['5 start', '4 start', '3 start'],
+        },
+        {
+          id: 2,
+          title: 'Property Location',
+          options: ['Cairo', 'Alex', 'Tanta'],
+        },
+
+        {
+          id: 3,
+          title: 'Floor',
+          options: ['Floor 1', 'Floor 2', 'Floor 3'],
+        },
+        {
+          id: 3,
+          title: 'Property Location',
+          options: ['Cairo', 'Alex', 'Tanta'],
+        },
+      ],
+      propData: [
+        {
+          id: 1,
+          title: 'View',
+          options: ['Cairo', 'London', 'Paris'],
+        },
+        {
+          id: 2,
+          title: 'Finishing',
+          options: ['Cairo', 'Alex', 'Tanta'],
+        },
+        {
+          id: 3,
+          title: 'Payment Method',
+          options: ['payPal', 'Visa', 'Wise'],
+        },
+      ],
     };
   },
   mutations: {

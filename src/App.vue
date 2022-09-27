@@ -37,7 +37,7 @@ html {
   --advertisement-text-color: rgba(140, 140, 140, 1);
   --placeholder-color: #152c5b;
   --background-color: #e5e5e5;
-  --text-color-secondary:#1B2534;
+  --text-color-secondary: #1b2534;
 }
 *,
 ul,
@@ -51,7 +51,8 @@ h5,
 h4,
 h3,
 h2,
-h1 nav {
+h1 nav,
+button {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
