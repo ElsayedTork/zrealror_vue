@@ -25,11 +25,18 @@
         <custom-button text="Search" btnClass="searchBtn"></custom-button>
       </section>
     </div>
+    <div class="mt-3">
+      <advertisement addSize="293 x 720" hight="720"></advertisement>
+    </div>
+    <div class="mt-3">
+      <advertisement addSize="293 x 540" hight="540"></advertisement>
+    </div>
   </div>
 </template>
 <script>
 import CustomButton from './../../shared/customButton/index.vue';
 import SearchItem from './../searchItem/index.vue';
+import advertisement from './../../shared/advertisement/index.vue';
 export default {
   data() {
     return {};
@@ -37,6 +44,7 @@ export default {
   components: {
     CustomButton,
     SearchItem,
+    advertisement,
   },
 };
 </script>
