@@ -26,10 +26,18 @@
       </section>
     </div>
     <div class="mt-3">
-      <advertisement addSize="293 x 720" hight="720"></advertisement>
+      <advertisement
+        addSize="293 x 720"
+        hight="720"
+        fontsize="2.5rem"
+      ></advertisement>
     </div>
     <div class="mt-3">
-      <advertisement addSize="293 x 540" hight="540"></advertisement>
+      <advertisement
+        addSize="293 x 540"
+        hight="540"
+        fontsize="2.5rem"
+      ></advertisement>
     </div>
   </div>
 </template>

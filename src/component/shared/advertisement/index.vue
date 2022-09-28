@@ -1,12 +1,12 @@
 <template>
   <div class="advertisment d-flex justify-content-center align-items-center"
-   :style="{hight : hight}">
+   :style="{hight : hight,fontSize:fontsize}">
     <span>{{ addSize }}</span>
   </div>
 </template>
 <script>
 export default {
-  props: ['addSize','hight'],
+  props: ['addSize','hight','fontsize'],
 };
 </script>
 <style lang="scss" scoped>
@@ -16,7 +16,6 @@ export default {
   background-color: var(--advertisement-color);
   border-radius: 8px;
   span {
-    font-size: 2.5rem;
     font-weight: 700;
     color: var(--advertisement-text-color);
   }

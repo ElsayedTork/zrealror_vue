@@ -33,13 +33,19 @@
         <span>Logout</span>
       </li>
     </ul>
-    <div
-      class="profile__left__advertisement d-flex justify-content-center align-items-center"
-    >
-      <span>184 x 540</span>
-    </div>
+    <advertisement
+      addSize="293 x 720"
+      hight="720"
+      fontsize="24"
+    ></advertisement>
   </div>
 </template>
+<script>
+import advertisement from './../advertisement/index.vue';
+export default {
+  components: { advertisement },
+};
+</script>
 <style lang="scss" scoped>
 .profile__left {
   background-color: var(--white-color);

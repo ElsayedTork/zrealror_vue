@@ -10,7 +10,7 @@
           <profile-container></profile-container>
         </section>
         <section class="col-xl-3 col-md-6 col-sm-12 profile__end">
-          <AdvertiseMent />
+          <AdvertiseMent addSize="293 x 540" hight="540" fontsize="2.5rem" />
         </section>
       </div>
     </div>
@@ -19,7 +19,7 @@
 <script>
 import ProfileContainer from './../../component/profileContainer/index.vue';
 import UserSidebar from './../../component/shared/userSidebar/index.vue';
-import AdvertiseMent from './../../component/advertiseMent/index.vue';
+import advertiseMent from './../../component/shared/advertisement/index.vue';
 export default {
   data() {
     return {
@@ -29,7 +29,7 @@ export default {
   components: {
     ProfileContainer,
     UserSidebar,
-    AdvertiseMent,
+    advertiseMent,
   },
 };
 </script>
