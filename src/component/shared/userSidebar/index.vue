@@ -36,7 +36,7 @@
     <advertisement
       addSize="293 x 720"
       hight="720"
-      fontsize="24"
+      fontsize="24px"
     ></advertisement>
   </div>
 </template>
