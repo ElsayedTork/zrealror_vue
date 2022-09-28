@@ -2,7 +2,10 @@
   <div class="profile">
     <div class="container">
       <div class="row">
-        <section class="col-xl-2 col-md-4 col-sm-12">
+        <section
+          class="profile__sidebar col-xl-2 p-0 col-md-4 col-sm-12"
+          style="padding: 0 !important"
+        >
           <user-sidebar></user-sidebar>
         </section>
         <section class="col-xl-7 col-md-8 col-sm-12 profile__center">
@@ -17,9 +20,9 @@
   </div>
 </template>
 <script>
-import ProfileContainer from './../../component/profileContainer/index.vue';
-import UserSidebar from './../../component/shared/userSidebar/index.vue';
-import AdvertiseMent from './../../component/advertiseMent/index.vue';
+import ProfileContainer from './../../../component/profileContainer/index.vue';
+import UserSidebar from './../../../component/shared/userSidebar/index.vue';
+import AdvertiseMent from './../../../component/advertiseMent/index.vue';
 export default {
   data() {
     return {

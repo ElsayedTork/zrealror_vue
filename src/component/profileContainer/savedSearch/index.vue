@@ -63,7 +63,7 @@ export default {
     font-size: 1.125rem;
     padding-inline: 32px;
     padding-block: 13px;
-    color: var(--main-color);
+    color: var(--heading-profile);
   }
   .profile__center__search_body {
     padding-inline: 32px;

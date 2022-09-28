@@ -49,15 +49,13 @@
             <li><i class="fa-regular fa-bell"></i></li>
             <li>
               <div class="dropdown">
-                <router-link to="/profile">
-                  <img
-                    src="./../../../assets/images/man.png"
-                    alt=""
-                    srcset=""
-                    width="32"
-                    height="32"
-                  />
-                </router-link>
+                <img
+                  src="./../../../assets/images/man.png"
+                  alt=""
+                  srcset=""
+                  width="32"
+                  height="32"
+                />
 
                 <a
                   class="dropdown-toggle"
@@ -78,17 +76,19 @@
                     </p>
                   </li>
                   <li class="dropdown-item">
-                    <p>
-                      <img
-                        src="./../../../assets/images/man.png"
-                        width="40"
-                        height="40"
-                        alt=""
-                        srcset=""
-                        class="me-1"
-                      />
-                      <span>Ahmed mohamed</span>
-                    </p>
+                    <router-link to="/profile">
+                      <p>
+                        <img
+                          src="./../../../assets/images/man.png"
+                          width="40"
+                          height="40"
+                          alt=""
+                          srcset=""
+                          class="me-1"
+                        />
+                        <span>Ahmed mohamed</span>
+                      </p>
+                    </router-link>
                   </li>
                   <li class="dropdown-item">
                     <p>
@@ -131,6 +131,7 @@
     li.nav-item {
       a.nav-link {
         color: var(--white-color);
+        text-decoration: none;
       }
     }
   }
@@ -152,6 +153,9 @@
             color: #101018;
             font-weight: 600;
           }
+        }
+        a {
+          text-decoration: none !important;
         }
       }
       li.logOut {

@@ -80,14 +80,14 @@
           <div class="row">
             <div class="col-sm-6">
               <div class="form-group">
-                <label for="exampleInputEmail1">Password</label>
+                <label for="password">Password</label>
                 <input
-                  type="Password"
+                  type="password"
                   class="form-control shadow-none"
-                  id="Password"
+                  id="password"
                   aria-describedby="emailHelp"
                   :placeholder="$store.state.profileData.password"
-                  v-model="Password"
+                  v-model="password"
                 />
               </div>
             </div>
@@ -293,7 +293,7 @@ export default {
         color: var(--placeholder-color);
       }
       span.form-check-label {
-        color: var(--text-edit-color);
+        color: var(--placeholder-color);
       }
       input[type='radio']:checked & + span {
         color: var(--main-color) !important;
@@ -323,7 +323,6 @@ export default {
     }
   }
 }
-
 
 @media (max-width: 576px) {
   .edit__body__image {

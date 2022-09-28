@@ -43,7 +43,7 @@
 <style lang="scss" scoped>
 .profile__left {
   background-color: var(--white-color);
-  padding-inline: 18px;
+  padding-inline: 12px;
   padding-block: 24px;
   border-radius: 16px;
   height: fit-content;

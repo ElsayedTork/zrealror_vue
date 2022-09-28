@@ -6,7 +6,7 @@
           <user-sidebar></user-sidebar>
         </section>
         <section class="col-xl-7 col-md-8 col-sm-12 profile__center">
-          <h3>My Profile</h3>
+          <h3 class="mb-3">My Profile</h3>
           <edit-profile></edit-profile>
           <router-view></router-view>
         </section>
@@ -18,9 +18,9 @@
   </div>
 </template>
 <script>
-import EditProfile from './../../component/editProfile/index.vue';
-import UserSidebar from './../../component/shared/userSidebar/index.vue';
-import AdvertiseMent from './../../component/advertiseMent/index.vue';
+import EditProfile from './../../../component/editProfile/index.vue';
+import UserSidebar from './../../../component/shared/userSidebar/index.vue';
+import AdvertiseMent from './../../../component/advertiseMent/index.vue';
 export default {
   components: {
     EditProfile,
