@@ -26,25 +26,24 @@
       </section>
     </div>
     <div class="mt-3">
-      <advertisement
-        addSize="293 x 720"
-        hight="720"
-        fontsize="2.5rem"
-      ></advertisement>
+      <figure
+        class="advertisment d-flex justify-content-center align-items-center"
+      >
+        <img src="./../../../assets/images/adds/addpropstartUp.png" alt="" />
+      </figure>
     </div>
     <div class="mt-3">
-      <advertisement
-        addSize="293 x 540"
-        hight="540"
-        fontsize="2.5rem"
-      ></advertisement>
+      <figure
+        class="advertisment d-flex justify-content-center align-items-center"
+      >
+        <img src="./../../../assets/images/adds/addpropstart.png" alt="" />
+      </figure>
     </div>
   </div>
 </template>
 <script>
 import CustomButton from './../../shared/customButton/index.vue';
 import SearchItem from './../searchItem/index.vue';
-import advertisement from './../../shared/advertisement/index.vue';
 export default {
   data() {
     return {};
@@ -52,7 +51,6 @@ export default {
   components: {
     CustomButton,
     SearchItem,
-    advertisement,
   },
 };
 </script>

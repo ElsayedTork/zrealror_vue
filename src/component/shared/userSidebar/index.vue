@@ -33,18 +33,15 @@
         <span>Logout</span>
       </li>
     </ul>
-    <advertisement
-      addSize="293 x 720"
-      hight="720"
-      fontsize="24px"
-    ></advertisement>
+    <figure
+      class="advertisment d-flex justify-content-center align-items-center"
+    >
+      <img src="./../../../assets/images/adds/addSideBar.png" alt="" />
+    </figure>
   </div>
 </template>
 <script>
-import advertisement from './../advertisement/index.vue';
-export default {
-  components: { advertisement },
-};
+export default {};
 </script>
 <style lang="scss" scoped>
 .profile__left {

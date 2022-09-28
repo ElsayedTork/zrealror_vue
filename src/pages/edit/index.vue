@@ -11,11 +11,11 @@
           <router-view></router-view>
         </section>
         <section class="col-xl-3 col-md-6 col-sm-12 profile__end">
-          <advertiseMent
-            addSize="293 x 640"
-            hight="640"
-            fontsize="40px"
-          ></advertiseMent>
+          <figure
+            class="advertisment d-flex justify-content-center align-items-center"
+          >
+            <img src="./../../assets/images/adds/addEndImg.png" alt="" />
+          </figure>
         </section>
       </div>
     </div>
@@ -24,12 +24,10 @@
 <script>
 import EditProfile from './../../component/editProfile/index.vue';
 import UserSidebar from './../../component/shared/userSidebar/index.vue';
-import advertiseMent from './../../component/shared/advertisement/index.vue';
 export default {
   components: {
     EditProfile,
     UserSidebar,
-    advertiseMent,
   },
 };
 </script>

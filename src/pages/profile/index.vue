@@ -10,7 +10,11 @@
           <profile-container></profile-container>
         </section>
         <section class="col-xl-3 col-md-6 col-sm-12 profile__end">
-          <AdvertiseMent addSize="293 x 540" hight="540" fontsize="2.5rem" />
+          <figure
+            class="advertisment d-flex justify-content-center align-items-center"
+          >
+            <img src="./../../assets/images/adds/addEndImg.png" alt="" />
+          </figure>
         </section>
       </div>
     </div>
@@ -19,7 +23,6 @@
 <script>
 import ProfileContainer from './../../component/profileContainer/index.vue';
 import UserSidebar from './../../component/shared/userSidebar/index.vue';
-import advertiseMent from './../../component/shared/advertisement/index.vue';
 export default {
   data() {
     return {
@@ -29,7 +32,6 @@ export default {
   components: {
     ProfileContainer,
     UserSidebar,
-    advertiseMent,
   },
 };
 </script>
