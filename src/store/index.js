@@ -1,44 +1,41 @@
-// import { createStore } from 'vuex';
-// export default createStore({
-//   state() {
-//     return {
-//       users: [],
-//       albums: [],
-//       photos: [],
-//     };
-//   },
-//   mutations: {
-//     setUsers(state, users) {
-//       state.users = users;
-//     },
-//     setAlbums(state, albums) {
-//       state.albums = albums;
-//     },
-//     setPhotos(state, photos) {
-//       state.photos = photos;
-//     },
-//   },
-//   actions: {
-//     actionUsers({ commit }) {
-//       fetch('https://jsonplaceholder.typicode.com/users')
-//         .then((response) => response.json())
-//         .then((json) => {
-//           commit('setUsers', json);
-//         });
-//     },
-//     actionAlbums({ commit }, id) {
-//       fetch(`https://jsonplaceholder.typicode.com/albums?userId=${id}`)
-//         .then((response) => response.json())
-//         .then((json) => {
-//           commit('setAlbums', json);
-//         });
-//     },
-//     actionPhotos({ commit }, id) {
-//       fetch(`https://jsonplaceholder.typicode.com/photos?albumId=${id}`)
-//         .then((response) => response.json())
-//         .then((json) => {
-//           commit('setPhotos', json);
-//         });
-//     },
-//   },
-// });
+import { createStore } from 'vuex';
+export default createStore({
+  state() {
+    return {
+      searches: ['How To Find', 'How To Search', 'he works well'],
+      profileData: {
+        fristName: 'Ahmed',
+        lastName: 'Mohamed',
+        email: 'ahmed@gmail.com',
+        password: '3242343',
+        mobile: '0122 568 5997',
+        language: 'English',
+        city: 'cairo',
+        gender: 'male',
+        dateofBirth: '17/7/1995',
+        maritalStatue: 'Married',
+        numberofChildern: 5,
+      },
+      statistics: [
+        { id: 0, type: 'Open', srcImg: 'TickSquare.png', num: 80 },
+        { id: 1, type: 'Closed', srcImg: 'CloseSquare.png', num: 72 },
+      ],
+    };
+  },
+  mutations: {
+    deleteSearchMut(state, ele) {
+      state.searches = state.searches.filter((item) => item !== ele);
+    },
+    setProfileData(state, obj) {
+      state.profileData = obj;
+    },
+  },
+  actions: {
+    deleteSearch({ commit }, ele) {
+      commit('deleteSearchMut', ele);
+    },
+    setProfileDataAction({ commit }, obj) {
+      commit('setProfileData', obj);
+    },
+  },
+});
