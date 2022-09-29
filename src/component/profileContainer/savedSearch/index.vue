@@ -143,7 +143,11 @@ export default {
     width: 50px;
   }
 }
-
+@media (max-width: 768px) {
+  .profile__center__search {
+    margin-block-end: 0;
+  }
+}
 @media (max-width: 576px) {
   .profile__center__search
     .profile__center__search_body__item-upper

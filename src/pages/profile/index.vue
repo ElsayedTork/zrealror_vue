@@ -2,7 +2,7 @@
   <div class="profile">
     <div class="container">
       <div class="row">
-        <section class="col-xl-2 col-md-4 col-sm-12">
+        <section class="profileSidbar col-xl-2 col-md-4 col-sm-12">
           <user-sidebar></user-sidebar>
         </section>
         <section class="col-xl-7 col-md-8 col-sm-12 profile__center">
@@ -121,6 +121,25 @@ hr {
   font-size: 1.375rem;
 }
 
+@media (max-width: 786px) {
+  figure {
+    img {
+      transform: rotate(90deg);
+    }
+  }
+
+  .profile__left__list {
+    margin-block-end: 30px !important;
+  }
+  .profileSidbar.col-xl-2,
+  .profileSidbar.col-md-4,
+  .profileSidbar.col-sm-12 {
+    padding: 0 !important;
+  }
+  .profileSidbar {
+    margin-block-end: 30px;
+  }
+}
 @media (max-width: 576px) {
   .profile__center__search
     .profile__center__search_body__item-upper

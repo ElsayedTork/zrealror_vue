@@ -33,10 +33,12 @@
         <span>Logout</span>
       </li>
     </ul>
-    <figure
-      class="advertisment d-flex justify-content-center align-items-center"
-    >
-      <img src="./../../../assets/images/adds/addSideBar.png" alt="" />
+    <figure class="d-flex justify-content-center align-items-center">
+      <img
+        class="img-fluid"
+        src="./../../../assets/images/adds/addSideBar.png"
+        alt=""
+      />
     </figure>
   </div>
 </template>
@@ -91,6 +93,25 @@ export default {};
       font-size: 1.5rem;
       font-weight: 700;
       color: var(--advertisement-text-color);
+    }
+  }
+}
+
+@media (max-width: 786px) {
+  .profile__left {
+    padding-inline: 10px;
+  }
+  figure {
+    position: absolute;
+    padding: 0;
+    position: relative;
+    padding-inline: 18px;
+    height: 200px;
+    img {
+      transform: rotate(90deg);
+      height: 200;
+      // padding-inline: 30px;
+      // display: inline-block;
     }
   }
 }

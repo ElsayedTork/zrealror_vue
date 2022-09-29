@@ -42,8 +42,9 @@
   </div>
 </template>
 <script>
-import CustomButton from './../../shared/customButton/index.vue';
 import SearchItem from './../searchItem/index.vue';
+import CustomButton from './../../shared/customButton/index.vue';
+
 export default {
   data() {
     return {};
