@@ -4,7 +4,6 @@
       <div class="row">
         <section
           class="profile__sidebar col-xl-2 p-0 col-md-4 col-sm-12"
-          style="padding: 0 !important"
         >
           <user-sidebar></user-sidebar>
         </section>

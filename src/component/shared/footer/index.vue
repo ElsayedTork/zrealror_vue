@@ -49,42 +49,42 @@
         <section class="footer__flex__right">
           <ul>
             <li>
-              <router-link to="#" href="#">Commercial Services</router-link>
+              <router-link to="/">Commercial Services</router-link>
             </li>
             <li>
-              <router-link to="#" href="#">Partner with us</router-link>
+              <router-link to="#">Partner with us</router-link>
             </li>
             <li>
-              <router-link to="#" href="#">Contact Us</router-link>
-            </li>
-          </ul>
-        </section>
-        <section class="footer__flex__right">
-          <ul>
-            <li>
-              <router-link to="#" href="#">Become A Partner</router-link>
-            </li>
-            <li>
-              <router-link to="#" href="#">Reserve Your Property</router-link>
-            </li>
-            <li>
-              <router-link to="#" href="#">Contact Us</router-link>
+              <router-link to="#">Contact Us</router-link>
             </li>
           </ul>
         </section>
         <section class="footer__flex__right">
           <ul>
             <li>
-              <router-link to="#" href="#"
+              <router-link to="#">Become A Partner</router-link>
+            </li>
+            <li>
+              <router-link to="#">Reserve Your Property</router-link>
+            </li>
+            <li>
+              <router-link to="#">Contact Us</router-link>
+            </li>
+          </ul>
+        </section>
+        <section class="footer__flex__right">
+          <ul>
+            <li>
+              <router-link to="#"
                 >3 Saad area, Menkaure Gate ,<br />Hadayek El ahram,
                 Giza</router-link
               >
             </li>
             <li>
-              <router-link to="#" href="#">+2002 15732</router-link>
+              <router-link to="#">+2002 15732</router-link>
             </li>
             <li>
-              <router-link to="#" href="#">info@zrealtors.com</router-link>
+              <router-link to="#">info@zrealtors.com</router-link>
             </li>
           </ul>
         </section>

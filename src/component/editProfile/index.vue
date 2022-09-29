@@ -189,11 +189,13 @@
   </div>
 </template>
 <script>
+import { mapState } from 'vuex';
 import customButton from './../../component/shared/customButton/index.vue';
+
 export default {
   data() {
     return {
-      fristName: this.$store.state.profileData.fristName,
+      fristName: '',
       lastName: this.$store.state.profileData.lastName,
       email: this.$store.state.profileData.email,
       mobile: this.$store.state.profileData.mobile,
@@ -206,6 +208,14 @@ export default {
     };
   },
   components: { customButton },
+  computed: {
+    ...mapState({
+      profileData: (state) => {
+        this.fristName = state.profileData.fristName;
+        return state.profileData;
+      },
+    }),
+  },
   methods: {
     handleEdit() {
       let datas = {
