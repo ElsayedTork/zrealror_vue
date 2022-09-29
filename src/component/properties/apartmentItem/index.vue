@@ -1,6 +1,15 @@
 <template>
   <div class="apartment__info">
+    <div class="apartment__info__Perimum">
+      <span>Perimum</span>
+      <img
+        src="./../../../assets/images/properties/Heart.png"
+        alt=""
+        srcset=""
+      />
+    </div>
     <h3>Renovated Apartment</h3>
+
     <p class="apartment__info__address">
       <img
         src="./../../../assets/images/properties/Location.svg"
@@ -62,6 +71,19 @@ export default {
 </script>
 <style scoped lang="scss">
 .apartment__info {
+  &__Perimum {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-end: 20px;
+    span {
+      background-color: var(--orange-color);
+      color: var(--white-color);
+      padding-inline: 12px;
+      padding-block: 4px;
+      border-radius: 4px;
+    }
+  }
   h3 {
     font-size: 24px;
     font-weight: 600;
