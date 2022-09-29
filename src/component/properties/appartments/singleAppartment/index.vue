@@ -1,63 +1,34 @@
 <template>
-  <section>
-    <div>slider</div>
-    <div>
-      <h3>Renovated Apartment</h3>
-      <p>
-        <i class="fa-light fa-location-dot"></i> <span>New Cairo, Egypt</span>
-      </p>
-      <ul>
-        <li>
-          <img
-            src="./../../../../assets/images/properties/bed.svg"
-            alt=""
-            srcset=""
-          />
-          <span>4 Beds</span>
-        </li>
-        <li>
-          <img
-            src="./../../../../assets/images/properties/bed.svg"
-            alt=""
-            srcset=""
-          />
-          <span>2 Baths</span>
-        </li>
-        <li>
-          <img
-            src="./../../../../assets/images/properties/bed.svg"
-            alt=""
-            srcset=""
-          />
-          <span>2500 Sqft</span>
-        </li>
-        <li>
-          <img
-            src="./../../../../assets/images/properties/bed.svg"
-            alt=""
-            srcset=""
-          />
-          <span>Wifi</span>
-        </li>
-      </ul>
-      <div>
-        <p></p>
-        <custom-button text="View Details" btnClass="details"></custom-button>
+  <section class="apartment">
+    <div class="row">
+      <div class="col-md-4">
+        <apartment-slider></apartment-slider>
+      </div>
+      <div class="col-md-8">
+        <apartment-item></apartment-item>
       </div>
     </div>
   </section>
 </template>
 <script>
-import CustomButton from './../../../shared/customButton';
+import ApartmentSlider from './../../apartmentSlider/index.vue';
+import ApartmentItem from '../../apartmentItem/index.vue';
 export default {
   components: {
-    CustomButton,
+    ApartmentSlider,
+    ApartmentItem,
   },
 };
 </script>
-<style scopd lang="details">
-.details{
-    background-color:var(--main-color) ;
-    color: var(--white-color);
+<style scopd lang="scss">
+.apartment {
+  background-color: var(--white-color);
+  margin-block-start: 20px;
+  border-radius: 20px;
+  padding: 15px;
+}
+.details {
+  background-color: var(--main-color);
+  color: var(--white-color);
 }
 </style>
