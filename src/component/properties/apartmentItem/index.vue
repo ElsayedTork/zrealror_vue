@@ -71,11 +71,13 @@ export default {
 </script>
 <style scoped lang="scss">
 .apartment__info {
+  padding-inline: 10px;
   &__Perimum {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-block-end: 20px;
+
     span {
       background-color: var(--orange-color);
       color: var(--white-color);

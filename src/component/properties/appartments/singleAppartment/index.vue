@@ -27,8 +27,5 @@ export default {
   border-radius: 20px;
   padding: 15px;
 }
-.details {
-  background-color: var(--main-color);
-  color: var(--white-color);
-}
+
 </style>

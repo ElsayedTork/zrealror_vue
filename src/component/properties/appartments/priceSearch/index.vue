@@ -25,13 +25,13 @@
         </ul>
         <img
           src="./../../../../assets/images/properties/List.svg"
-          class="img-fluid ms-5 me-2"
+          class="menu-icon img-fluid me-3"
           alt=""
           srcset=""
         />
         <img
           src="./../../../../assets/images/properties/Grid.svg"
-          class="img-fluid"
+          class="view-icon img-fluid"
           alt=""
           srcset=""
         />
@@ -78,7 +78,6 @@
   }
   &__search {
     .dropdown {
-      border: 1px solid transparent;
       a.dropdown-toggle {
         color: var(--placeholder-color);
         font-size: 1rem;
@@ -88,6 +87,15 @@
       span {
         font-size: 1rem;
         font-weight: 500;
+      }
+      .menu-icon {
+        margin-inline-start: 69px;
+
+        display: inline-block;
+      }
+      .view-icon {
+        margin-inline-start: 20x;
+        display: inline-block;
       }
     }
   }

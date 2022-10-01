@@ -14,4 +14,9 @@ button {
   font-size: 0.875rem;
   font-weight: 600;
 }
+.details {
+  background-color: var(--main-color);
+  color: var(--white-color);
+  margin-block-end: 3px;
+}
 </style>

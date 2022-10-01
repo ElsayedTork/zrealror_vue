@@ -106,8 +106,8 @@
 }
 .carousel-indicators button {
   background-color: transparent;
-  width: 6px;
-  height: 6px;
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
   transition: 0.3s transform ease-in-out;
 }
@@ -118,7 +118,7 @@
 .carousel-indicators .active {
   border: 2px solid var(--white-color);
   position: relative;
-  transform: scale(1.3);
+  transform: scale(2);
   &::after {
     width: 4px;
     height: 4px;
@@ -130,5 +130,23 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+}
+.carousel-control-prev-icon {
+  background-image: url('./../../../assets/icons/properties/cheavronLeft.svg');
+  width: 10px;
+  height: 10px;
+}
+.carousel-control-next-icon {
+  background-image: url('./../../../assets/icons/properties/cheavronRight.svg') !important;
+  background-color: transparent;
+  width: 12px;
+  height: 12px;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  width: 60%;
+  align-items: flex-end;
+  margin-block-end: 20px;
+  opacity: 1;
 }
 </style>
