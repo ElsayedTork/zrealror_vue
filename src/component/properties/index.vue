@@ -5,8 +5,8 @@
   </div>
 </template>
 <script>
-import PriceSearch from './priceSearch/index.vue';
-import SingleAppartment from './singleAppartment/index.vue';
+import PriceSearch from './priceSearch.vue';
+import SingleAppartment from './singleAppartment.vue';
 export default {
   components: {
     PriceSearch,

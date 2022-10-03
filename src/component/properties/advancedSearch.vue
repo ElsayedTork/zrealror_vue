@@ -29,21 +29,21 @@
       <figure
         class="advertisment d-flex justify-content-center align-items-center"
       >
-        <img src="./../../../assets/images/adds/addpropstartUp.png" alt="" />
+        <img src="./../../assets/images/adds/addpropstartUp.png" alt="" />
       </figure>
     </div>
     <div class="mt-3">
       <figure
         class="advertisment d-flex justify-content-center align-items-center"
       >
-        <img src="./../../../assets/images/adds/addpropstart.png" alt="" />
+        <img src="./../../assets/images/adds/addpropstart.png" alt="" />
       </figure>
     </div>
   </div>
 </template>
 <script>
-import SearchItem from './../searchItem/index.vue';
-import CustomButton from './../../shared/customButton/index.vue';
+import SearchItem from './searchItem.vue';
+import CustomButton from '../shared/customButton/index.vue';
 
 export default {
   data() {

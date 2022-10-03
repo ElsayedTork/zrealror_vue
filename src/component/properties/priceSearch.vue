@@ -24,13 +24,13 @@
           <li><a class="dropdown-item" href="#"> heigh Price</a></li>
         </ul>
         <img
-          src="./../../../../assets/images/properties/List.svg"
+          src="./../../assets/images/properties/List.svg"
           class="menu-icon img-fluid me-3"
           alt=""
           srcset=""
         />
         <img
-          src="./../../../../assets/images/properties/Grid.svg"
+          src="./../../assets/images/properties/Grid.svg"
           class="view-icon img-fluid"
           alt=""
           srcset=""
@@ -39,7 +39,6 @@
     </div>
   </div>
 </template>
-<script></script>
 <style scoped lang="scss">
 .priceContainer {
   display: flex;

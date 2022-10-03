@@ -2,17 +2,13 @@
   <div class="apartment__info">
     <div class="apartment__info__Perimum">
       <span>Perimum</span>
-      <img
-        src="./../../../assets/images/properties/Heart.png"
-        alt=""
-        srcset=""
-      />
+      <img src="./../../assets/images/properties/Heart.png" alt="" srcset="" />
     </div>
     <h3>Renovated Apartment</h3>
 
     <p class="apartment__info__address">
       <img
-        src="./../../../assets/images/properties/Location.svg"
+        src="./../../assets/images/properties/Location.svg"
         alt=""
         srcset=""
       />
@@ -20,35 +16,19 @@
     </p>
     <ul>
       <li>
-        <img
-          src="./../../../assets/images/properties/bed.svg"
-          alt=""
-          srcset=""
-        />
+        <img src="./../../assets/images/properties/bed.svg" alt="" srcset="" />
         <span>4 Beds</span>
       </li>
       <li>
-        <img
-          src="./../../../assets/images/properties/bath.svg"
-          alt=""
-          srcset=""
-        />
+        <img src="./../../assets/images/properties/bath.svg" alt="" srcset="" />
         <span>2 Baths</span>
       </li>
       <li>
-        <img
-          src="./../../../assets/images/properties/sqft.svg"
-          alt=""
-          srcset=""
-        />
+        <img src="./../../assets/images/properties/sqft.svg" alt="" srcset="" />
         <span>2500 Sqft</span>
       </li>
       <li>
-        <img
-          src="./../../../assets/images/properties/wifi.svg"
-          alt=""
-          srcset=""
-        />
+        <img src="./../../assets/images/properties/wifi.svg" alt="" srcset="" />
         <span>2500 Sqft</span>
       </li>
     </ul>
@@ -62,7 +42,7 @@
   </div>
 </template>
 <script>
-import CustomButton from './../../shared/customButton/index.vue';
+import CustomButton from './../shared/customButton/index.vue';
 export default {
   components: {
     CustomButton,

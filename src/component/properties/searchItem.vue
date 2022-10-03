@@ -11,7 +11,7 @@
           aria-expanded="false"
         >
           <span>{{ item.options[0] }}</span>
-          <img src="./../../../assets/images/properties/Shape.png" />
+          <img src="./../../assets/images/properties/Shape.png" />
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
           <li v-for="(ele, index) in item.options" :key="index">

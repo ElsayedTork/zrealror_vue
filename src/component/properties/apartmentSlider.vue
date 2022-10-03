@@ -41,35 +41,35 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img
-          src="./../../../assets/images/properties/room.png"
+          src="./../../assets/images/properties/room.png"
           class="d-block w-100"
           alt=""
         />
       </div>
       <div class="carousel-item">
         <img
-          src="./../../../assets/images/properties/room1.png"
+          src="./../../assets/images/properties/room1.png"
           class="d-block w-100"
           alt="..."
         />
       </div>
       <div class="carousel-item">
         <img
-          src="./../../../assets/images/properties/room.png"
+          src="./../../assets/images/properties/room.png"
           class="d-block w-100"
           alt="..."
         />
       </div>
       <div class="carousel-item">
         <img
-          src="./../../../assets/images/properties/room.png"
+          src="./../../assets/images/properties/room.png"
           class="d-block w-100"
           alt="..."
         />
       </div>
       <div class="carousel-item">
         <img
-          src="./../../../assets/images/properties/room.png"
+          src="./../../assets/images/properties/room.png"
           class="d-block w-100"
           alt="..."
         />
@@ -132,12 +132,12 @@
   }
 }
 .carousel-control-prev-icon {
-  background-image: url('./../../../assets/icons/properties/cheavronLeft.svg');
+  background-image: url('./../../assets/icons/properties/cheavronLeft.svg');
   width: 10px;
   height: 10px;
 }
 .carousel-control-next-icon {
-  background-image: url('./../../../assets/icons/properties/cheavronRight.svg') !important;
+  background-image: url('./../../assets/icons/properties/cheavronRight.svg') !important;
   background-color: transparent;
   width: 12px;
   height: 12px;

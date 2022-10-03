@@ -11,8 +11,8 @@
   </section>
 </template>
 <script>
-import ApartmentSlider from './../../apartmentSlider/index.vue';
-import ApartmentItem from '../../apartmentItem/index.vue';
+import ApartmentSlider from './apartmentSlider.vue';
+import ApartmentItem from './apartmentItem.vue';
 export default {
   components: {
     ApartmentSlider,
@@ -27,5 +27,4 @@ export default {
   border-radius: 20px;
   padding: 15px;
 }
-
 </style>

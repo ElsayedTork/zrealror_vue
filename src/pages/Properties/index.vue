@@ -13,8 +13,8 @@
   </div>
 </template>
 <script>
-import AdvancedSearch from '../../component/properties/advancedSearch/index.vue';
-import Appartments from '../../component/properties/appartments/index.vue';
+import AdvancedSearch from '../../component/properties/advancedSearch.vue';
+import Appartments from '../../component/properties/index.vue';
 export default {
   components: {
     AdvancedSearch,
