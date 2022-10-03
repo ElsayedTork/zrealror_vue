@@ -89,11 +89,12 @@
       }
       .menu-icon {
         margin-inline-start: 69px;
-
+        cursor: pointer;
         display: inline-block;
       }
       .view-icon {
         margin-inline-start: 20x;
+        cursor: pointer;
         display: inline-block;
       }
     }

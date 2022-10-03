@@ -60,6 +60,35 @@ export default createStore({
           options: ['payPal', 'Visa', 'Wise'],
         },
       ],
+      propInformations: [
+        {
+          id: 0,
+          title: 'Renovated Apartment',
+          location: '',
+          Bed: 4,
+          Baths: 2,
+          sqrt: 2500,
+          wifi: true,
+        },
+        {
+          id: 1,
+          title: 'Amazing Apartment',
+          location: '',
+          Bed: 4,
+          Baths: 2,
+          sqrt: 2500,
+          wifi: true,
+        },
+        {
+          id: 2,
+          title: 'Renovated Apartment',
+          location: '',
+          Bed: 4,
+          Baths: 2,
+          sqrt: 2500,
+          wifi: true,
+        },
+      ],
     };
   },
   mutations: {

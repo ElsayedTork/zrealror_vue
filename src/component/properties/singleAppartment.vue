@@ -1,11 +1,16 @@
 <template>
+  {{ this.$store.state.propInformations }}
   <section class="apartment">
     <div class="row">
-      <div class="col-md-4">
-        <apartment-slider></apartment-slider>
-      </div>
-      <div class="col-md-8">
-        <apartment-item></apartment-item>
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-md-4">
+            <apartment-slider></apartment-slider>
+          </div>
+          <div class="col-md-8">
+            <apartment-item></apartment-item>
+          </div>
+        </div>
       </div>
     </div>
   </section>
