@@ -53,7 +53,7 @@
       </li>
     </ul>
     <div class="apartment__info__price">
-      <p>
+      <p class="d-flex align-items-center">
         <b>$10,000</b>
         <span>50% off</span>
       </p>

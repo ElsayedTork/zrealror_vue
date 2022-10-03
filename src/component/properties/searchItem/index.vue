@@ -27,16 +27,11 @@ export default {
   props: ['dataName'],
   data() {
     return {
-      // propCategory: this.$store.state.propCategory,
-      // options: this.$store.state.propCategory.options,
       propSearch:
         this.dataName == 'propSearch'
           ? this.$store.state.propSearch
           : this.$store.state.propData,
     };
-  },
-  created() {
-    console.log('dataName', this.dataName);
   },
 };
 </script>
