@@ -38,7 +38,6 @@ export default {
   computed: {
     ...mapState({
       propInformations: (state) => {
-        console.log(state.propInformations);
         return state.propInformations;
       },
     }),
@@ -50,9 +49,10 @@ export default {
   margin-block-start: 20px;
   .apartment_element {
     border-radius: 20px;
-    padding: 15px;
+    padding-block: 15px;
     margin-block-end: 20px;
     background-color: var(--white-color);
+    padding-inline-start: 2px;
   }
 }
 </style>

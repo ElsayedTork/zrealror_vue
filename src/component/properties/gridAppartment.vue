@@ -1,18 +1,20 @@
 <template>
   <section class="apartment">
-    <section :v-if="grid === true">
-      <div
-        class="apartment_element row"
-        v-for="item in propInformations"
-        :key="item.id"
-      >
-        <div class="col-sm-4">
-          <div class="row">
-            <div class="col-md-4">
-              <apartment-slider></apartment-slider>
-            </div>
-            <div class="col-md-8">
-              <apartment-item :item="item"></apartment-item>
+    <section>
+      <div class="row row-cols-2">
+        <div
+          class="col-sm-4 apartment__element"
+          v-for="item in propInformations"
+          :key="item.id"
+        >
+          <div class="apartment__element__Child">
+            <div class="row">
+              <div class="col-md-12">
+                <apartment-slider></apartment-slider>
+              </div>
+              <div class="col-md-12">
+                <grid-item :item="item"></grid-item>
+              </div>
             </div>
           </div>
         </div>
@@ -22,7 +24,7 @@
 </template>
 <script>
 import ApartmentSlider from './apartmentSlider.vue';
-import ApartmentItem from './apartmentItem.vue';
+import GridItem from './gridItem.vue';
 import { mapState } from 'vuex';
 export default {
   data() {
@@ -32,13 +34,12 @@ export default {
   },
   components: {
     ApartmentSlider,
-    ApartmentItem,
+    GridItem,
   },
 
   computed: {
     ...mapState({
       propInformations: (state) => {
-        console.log(state.propInformations);
         return state.propInformations;
       },
     }),
@@ -47,12 +48,15 @@ export default {
 </script>
 <style scopd lang="scss">
 .apartment {
-  margin-block-start: 20px;
-  .apartment_element {
-    border-radius: 20px;
-    padding: 15px;
+  padding-block-start: 20px;
+  &__element {
     margin-block-end: 20px;
-    background-color: var(--white-color);
+    .apartment__element__Child {
+      background-color: var(--white-color) !important;
+      border-radius: 20px;
+      padding-inline: 10px;
+      padding-block: 10px 20px;
+    }
   }
 }
 </style>

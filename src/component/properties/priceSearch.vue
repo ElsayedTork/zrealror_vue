@@ -45,10 +45,10 @@
 export default {
   methods: {
     viewList() {
-      console.log('viewList');
+      this.$emit('view-list', 'SingleAppartment');
     },
     viewGrid() {
-      console.log('viewGrid');
+      this.$emit('view-grid', 'GridAppartment');
     },
   },
 };

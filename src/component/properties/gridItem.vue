@@ -1,9 +1,9 @@
 <template>
   <div class="apartment__info">
-    <div class="apartment__info__heading">
-      <h3>{{ item.title }}</h3>
-      <img src="./../../assets/images/properties/Heart.png" alt="" srcset="" />
+    <div class="apartment__info__Perimum">
+      <span>Perimum</span>
     </div>
+    <h3>{{ item.title }}</h3>
 
     <p class="apartment__info__address">
       <img
@@ -26,62 +26,64 @@
         <img src="./../../assets/images/properties/sqft.svg" alt="" srcset="" />
         <span>{{ item.sqft }} Sqft</span>
       </li>
-      <li v-if="item.wifi">
-        <img src="./../../assets/images/properties/wifi.svg" alt="" srcset="" />
-        <span> Wifi</span>
-      </li>
     </ul>
     <div class="apartment__info__price">
       <p class="d-flex align-items-center">
         <b>$10,000</b>
         <span>$12,000</span>
       </p>
-      <custom-button text="View Details" btnClass="details"></custom-button>
+      <img src="./../../assets/images/properties/Heart.png" alt="" srcset="" />
     </div>
   </div>
 </template>
 <script>
-import CustomButton from './../shared/customButton/index.vue';
 export default {
   props: ['item'],
-  components: {
-    CustomButton,
-  },
+  components: {},
 };
 </script>
 <style scoped lang="scss">
 .apartment__info {
   padding-inline: 10px;
-  &__heading {
+  &__Perimum {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    h3 {
-      font-size: 24px;
-      font-weight: 600;
-      color: var(--text-color-secondary);
-    }
-    margin-block-end: 12px;
-  }
+    margin-block-end: 20px;
 
-  &__address {
-    margin-block-end: 30px;
     span {
-      font-size: 1rem;
+      background-color: var(--orange-color);
+      color: var(--white-color);
+      padding-inline: 12px;
+      padding-block: 4px;
+      border-radius: 4px;
+    }
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    font-weight: 600;
+    color: var(--text-color-secondary);
+    margin-block-end: 10px;
+  }
+  &__address {
+    margin-block-end: 28px;
+    span {
+      font-size: 0.875rem;
       color: var(--text-gray-color);
       margin-inline-start: 8px;
     }
   }
   ul {
-    margin-block-end: 50px;
+    margin-block-end: 44px;
     li {
       list-style: none;
       display: inline-block;
       margin-inline-end: 16px;
       span {
-        font-size: 14px;
+        font-size: 0.75rem;
         color: var(--text-gray-color);
-        margin-inline-start: 7px;
+        margin-inline-start: 4px;
         color: var(--text-gray-color);
       }
     }
@@ -95,11 +97,10 @@ export default {
         color: var(--text-color-secondary);
         font-size: 22px;
         margin-inline-end: 8px;
-        font-weight: 700;
       }
       span {
         color: var(--text-gray-color);
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 500;
         display: inline-block;
         text-decoration: line-through;

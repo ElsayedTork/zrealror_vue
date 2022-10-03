@@ -93,9 +93,30 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
+    <span class="Perimum">Perimum</span>
   </div>
 </template>
 <style scoped lang="scss">
+.carousel-inner {
+  .carousel-item {
+    img {
+      height: 220px;
+      width: 100%;
+    }
+  }
+}
+.Perimum {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--orange-color);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--white-color);
+  padding-inline: 12px;
+  padding-block: 4px;
+  border-radius: 4px;
+}
 .carousel-indicators {
   background-color: rgba(255, 255, 255, 0.5);
   width: fit-content;
