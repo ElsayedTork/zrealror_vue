@@ -6,7 +6,7 @@
         v-for="item in propInformations"
         :key="item.id"
       >
-        <div class="col-sm-12">
+        <div class="col-sm-4">
           <div class="row">
             <div class="col-md-4">
               <apartment-slider></apartment-slider>

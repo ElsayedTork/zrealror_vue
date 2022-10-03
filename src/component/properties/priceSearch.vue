@@ -28,17 +28,31 @@
           class="menu-icon img-fluid me-3"
           alt=""
           srcset=""
+          @click="viewList"
         />
         <img
           src="./../../assets/images/properties/Grid.svg"
           class="view-icon img-fluid"
           alt=""
           srcset=""
+          @click="viewGrid"
         />
       </div>
     </div>
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    viewList() {
+      console.log('viewList');
+    },
+    viewGrid() {
+      console.log('viewGrid');
+    },
+  },
+};
+</script>
 <style scoped lang="scss">
 .priceContainer {
   display: flex;
