@@ -3,7 +3,7 @@
     <section>
       <div class="row row-cols-2">
         <div
-          class="col-sm-4 apartment__element"
+          class="col-md-6 col-lg-4 col-12 apartment__element"
           v-for="item in propInformations"
           :key="item.id"
         >

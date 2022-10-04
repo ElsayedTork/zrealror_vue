@@ -2,11 +2,11 @@
   <div class="properties">
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-xl-3">
           <advanced-search></advanced-search>
         </div>
-        <div class="col-md-9">
-          <Appartments />
+        <div class="col-xl-9">
+          <appartments />
         </div>
       </div>
     </div>
@@ -14,11 +14,11 @@
 </template>
 <script>
 import AdvancedSearch from '../../component/properties/advancedSearch.vue';
-import Appartments from '../../component/properties/index.vue';
+import appartments from '../../component/properties/index.vue';
 export default {
   components: {
     AdvancedSearch,
-    Appartments,
+    appartments,
   },
 };
 </script>

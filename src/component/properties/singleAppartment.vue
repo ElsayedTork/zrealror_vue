@@ -69,4 +69,10 @@ export default {
     }
   }
 }
+
+@media (max-width: 576px) {
+  .apartment__element__discound {
+    top: 100px !important;
+  }
+}
 </style>

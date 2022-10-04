@@ -19,4 +19,11 @@ button {
   color: var(--white-color);
   margin-block-end: 3px;
 }
+@media (max-width: 576px) {
+  .details {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 7px 14px 7px 14px;
+  }
+}
 </style>

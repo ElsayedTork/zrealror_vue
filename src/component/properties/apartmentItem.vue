@@ -108,4 +108,12 @@ export default {
     }
   }
 }
+@media (max-width: 576px) {
+  .apartment__info__heading {
+    h3 {
+      margin-block-start: 20px;
+      font-size: 20px;
+    }
+  }
+}
 </style>

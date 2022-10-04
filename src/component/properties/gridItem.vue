@@ -123,4 +123,10 @@ export default {
     }
   }
 }
+
+@media (max-width: 578px) {
+  .discound {
+    top: 100px;
+  }
+}
 </style>

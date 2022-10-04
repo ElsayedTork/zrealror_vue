@@ -24,7 +24,7 @@
           <li><a class="dropdown-item" href="#"> heigh Price</a></li>
         </ul>
         <img
-          src="./../../assets/images/properties/List.svg"
+          src="./../../assets/images/properties/single.png"
           class="menu-icon img-fluid me-3"
           alt=""
           srcset=""
@@ -43,6 +43,12 @@
 </template>
 <script>
 export default {
+  data() {
+    return {
+      activeGride: false,
+      activeAppartment: true,
+    };
+  },
   methods: {
     viewList() {
       this.$emit('view-list', 'SingleAppartment');
@@ -112,6 +118,12 @@ export default {
         display: inline-block;
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .priceContainer {
+    display: block;
   }
 }
 </style>

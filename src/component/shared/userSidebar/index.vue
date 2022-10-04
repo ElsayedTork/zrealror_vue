@@ -109,9 +109,7 @@ export default {};
     height: 200px;
     img {
       transform: rotate(90deg);
-      height: 200;
-      // padding-inline: 30px;
-      // display: inline-block;
+      height: 200px;
     }
   }
 }
