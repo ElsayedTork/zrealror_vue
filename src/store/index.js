@@ -70,6 +70,7 @@ export default createStore({
           sqft: 2500,
           wifi: false,
           page: 1,
+          price: 10000,
         },
         {
           id: 1,
@@ -80,6 +81,7 @@ export default createStore({
           sqft: 2500,
           wifi: true,
           page: 1,
+          price: 9000,
         },
         {
           id: 2,
@@ -90,6 +92,7 @@ export default createStore({
           sqft: 2500,
           wifi: true,
           page: 1,
+          price: 1000,
         },
         {
           id: 3,
@@ -100,6 +103,7 @@ export default createStore({
           sqft: 2500,
           wifi: false,
           page: 2,
+          price: 5000,
         },
         {
           id: 4,
@@ -110,6 +114,7 @@ export default createStore({
           sqft: 2500,
           wifi: true,
           page: 2,
+          price: 20000,
         },
         {
           id: 5,
@@ -119,6 +124,7 @@ export default createStore({
           baths: 2,
           sqft: 2500,
           wifi: true,
+          price: 6000,
           page: 2,
         },
         {

@@ -16,12 +16,16 @@
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          Lowest Price
+          {{ selectedPrice }}
         </a>
 
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#"> Lowest Price</a></li>
-          <li><a class="dropdown-item" href="#"> heigh Price</a></li>
+          <li @click="lowPrices">
+            <a class="dropdown-item" href="#"> {{ lowPrice }}</a>
+          </li>
+          <li @click="heighPrices">
+            <a class="dropdown-item" href="#">{{ heighPrice }}</a>
+          </li>
         </ul>
         <img
           src="./../../assets/images/properties/single.png"
@@ -50,6 +54,9 @@ export default {
     return {
       activeGride: false,
       activeAppartment: true,
+      lowPrice: 'Lowest Price',
+      heighPrice: 'heigh Price',
+      selectedPrice: 'Lowest Price',
     };
   },
   methods: {
@@ -62,6 +69,12 @@ export default {
       this.activeGride = true;
       this.activeAppartment = false;
       this.$emit('view-grid', 'GridAppartment');
+    },
+    lowPrices() {
+      this.selectedPrice = this.lowPrice;
+    },
+    heighPrices() {
+      this.selectedPrice = this.heighPrice;
     },
   },
 };
@@ -126,14 +139,14 @@ export default {
         display: inline-block;
         padding: 8px;
       }
+      .active {
+        background-color: var(--main-color);
+        border-radius: 10px;
+      }
     }
   }
 }
 
-.active {
-  background-color: var(--main-color);
-  border-radius: 10px;
-}
 @media (max-width: 768px) {
   .priceContainer {
     display: block;

@@ -33,7 +33,7 @@
     </ul>
     <div class="apartment__info__price">
       <p class="d-flex align-items-center">
-        <b>$10,000</b>
+        <b>${{ item.price }}</b>
         <span>$12,000</span>
       </p>
       <custom-button text="View Details" btnClass="details"></custom-button>
