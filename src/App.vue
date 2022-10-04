@@ -37,6 +37,7 @@ html {
   --placeholder-color: #152c5b;
   --background-color: #e5e5e5;
   --text-color-secondary: #1b2534;
+  --discound_color: #012257;
 }
 *,
 ul,

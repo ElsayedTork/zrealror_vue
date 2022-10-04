@@ -1,8 +1,7 @@
 <template>
   <div class="apartment__info">
-    <div class="apartment__info__Perimum">
-      <span>Perimum</span>
-    </div>
+    <span class="discound">15 % OFF</span>
+    <div class="apartment__info__Perimum"></div>
     <h3>{{ item.title }}</h3>
 
     <p class="apartment__info__address">
@@ -45,6 +44,21 @@ export default {
 <style scoped lang="scss">
 .apartment__info {
   padding-inline: 10px;
+  position: relative;
+  .discound {
+    position: absolute;
+    right: -10px;
+    top: 45px;
+    background-color: var(--discound_color);
+    color: var(--white-color);
+    display: inline;
+    width: fit-content;
+    padding-inline: 8px;
+    padding-block: 4px;
+    border-radius: 6px 0 0 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
   &__Perimum {
     display: flex;
     justify-content: space-between;
