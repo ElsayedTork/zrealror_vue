@@ -25,14 +25,17 @@
         </ul>
         <img
           src="./../../assets/images/properties/single.png"
-          class="menu-icon img-fluid me-3"
+          :class="[
+            activeAppartment ? 'active' : '',
+            'menu-icon img-fluid me-3',
+          ]"
           alt=""
           srcset=""
           @click="viewList"
         />
         <img
           src="./../../assets/images/properties/Grid.svg"
-          class="view-icon img-fluid"
+          :class="[activeGride ? 'active' : '', 'view-icon img-fluid']"
           alt=""
           srcset=""
           @click="viewGrid"
@@ -51,9 +54,13 @@ export default {
   },
   methods: {
     viewList() {
+      this.activeGride = false;
+      this.activeAppartment = true;
       this.$emit('view-list', 'SingleAppartment');
     },
     viewGrid() {
+      this.activeGride = true;
+      this.activeAppartment = false;
       this.$emit('view-grid', 'GridAppartment');
     },
   },
@@ -111,16 +118,22 @@ export default {
         margin-inline-start: 69px;
         cursor: pointer;
         display: inline-block;
+        padding: 8px;
       }
       .view-icon {
         margin-inline-start: 20x;
         cursor: pointer;
         display: inline-block;
+        padding: 8px;
       }
     }
   }
 }
 
+.active {
+  background-color: var(--main-color);
+  border-radius: 10px;
+}
 @media (max-width: 768px) {
   .priceContainer {
     display: block;
