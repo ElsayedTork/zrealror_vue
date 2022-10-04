@@ -70,7 +70,7 @@ export default createStore({
           sqft: 2500,
           wifi: false,
           page: 1,
-          price: 10000,
+          price: 8700,
         },
         {
           id: 1,
@@ -124,8 +124,8 @@ export default createStore({
           baths: 2,
           sqft: 2500,
           wifi: true,
-          price: 6000,
           page: 2,
+          price: 6000,
         },
         {
           id: 6,
@@ -136,6 +136,7 @@ export default createStore({
           sqft: 2500,
           wifi: false,
           page: 3,
+          price: 3300,
         },
         {
           id: 7,
@@ -146,6 +147,7 @@ export default createStore({
           sqft: 2500,
           wifi: true,
           page: 3,
+          price: 5500,
         },
         {
           id: 8,
@@ -156,6 +158,7 @@ export default createStore({
           sqft: 2500,
           wifi: true,
           page: 3,
+          price: 7200,
         },
         {
           id: 9,
@@ -166,6 +169,7 @@ export default createStore({
           sqft: 2500,
           wifi: true,
           page: 4,
+          price: 9800,
         },
       ],
     };
@@ -284,6 +288,17 @@ export default createStore({
         (item) => item.page === index
       );
     },
+    priceFilter(state, selectedPrice) {
+      const byMatss = state.propInformations.sort((a, b) => {
+        if (selectedPrice == 'Lowest Price') {
+          return a.price - b.price;
+        } else {
+          return b.price - a.price;
+        }
+      });
+
+      state.propInformations = byMatss;
+    },
   },
   actions: {
     deleteSearch({ commit }, ele) {
@@ -293,8 +308,10 @@ export default createStore({
       commit('setProfileData', obj);
     },
     filterItems({ commit }, index) {
-      console.log('vuex', index);
       commit('filterItems', index);
+    },
+    priceFilter({ commit }, selectedPrice) {
+      commit('priceFilter', selectedPrice);
     },
   },
 });
