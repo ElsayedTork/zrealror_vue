@@ -19,6 +19,15 @@ button {
   color: var(--white-color);
   margin-block-end: 3px;
 }
+.saveSearch {
+  background-color: transparent;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  width: 100%;
+  margin-block-start: 16px;
+  padding-block: 10px;
+  border-radius: 8px;
+}
 @media (max-width: 576px) {
   .details {
     font-size: 12px;

@@ -3,11 +3,13 @@
   <div>
     <component :is="appartmentValue" />
   </div>
+  <paganation-items></paganation-items>
 </template>
 <script>
 import PriceSearch from './priceSearch.vue';
 import SingleAppartment from './singleAppartment.vue';
 import GridAppartment from './gridAppartment.vue';
+import PaganationItems from './paganationItems.vue';
 export default {
   data() {
     return {
@@ -18,6 +20,7 @@ export default {
     PriceSearch,
     SingleAppartment,
     GridAppartment,
+    PaganationItems,
   },
   methods: {
     viewList(el) {

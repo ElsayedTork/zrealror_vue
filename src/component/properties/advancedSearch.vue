@@ -18,26 +18,18 @@
         <search-item dataName="propData"></search-item>
       </section>
 
-      <section
-        class="search__filter__btns d-flex justify-content-between align-items-center"
-      >
-        <custom-button text="Reset" btnClass="resetBtn"></custom-button>
-        <custom-button text="Search" btnClass="searchBtn"></custom-button>
+      <section class="search__filter__btns">
+        <div class="d-flex justify-content-between align-items-center">
+          <custom-button text="Reset" btnClass="resetBtn"></custom-button>
+          <custom-button text="Search" btnClass="searchBtn"></custom-button>
+        </div>
+        <div>
+          <custom-button
+            text="Save Search"
+            btnClass="saveSearch"
+          ></custom-button>
+        </div>
       </section>
-    </div>
-    <div class="mt-3">
-      <figure
-        class="advertisment d-flex justify-content-center align-items-center"
-      >
-        <img src="./../../assets/images/adds/addpropstartUp.png" alt="" />
-      </figure>
-    </div>
-    <div class="mt-3">
-      <figure
-        class="advertisment d-flex justify-content-center align-items-center"
-      >
-        <img src="./../../assets/images/adds/addpropstart.png" alt="" />
-      </figure>
     </div>
   </div>
 </template>
