@@ -32,22 +32,26 @@ export default createStore({
           id: 1,
           title: 'Property Category',
           options: ['5 start', '4 start', '3 start'],
+          vModel: 'aaa',
         },
         {
           id: 2,
           title: 'Property Location',
           options: ['Cairo', 'Alex', 'Tanta'],
+          vModel: 'bbb',
         },
 
         {
           id: 3,
           title: 'Floor',
           options: ['Floor 1', 'Floor 2', 'Floor 3'],
+          vModel: 'ccc',
         },
         {
-          id: 3,
+          id: 4,
           title: 'Property Location',
           options: ['Cairo', 'Alex', 'Tanta'],
+          vModel: 'ddd',
         },
       ],
       propData: [
