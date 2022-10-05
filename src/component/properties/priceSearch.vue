@@ -27,8 +27,9 @@
             <a class="dropdown-item" href="#">{{ heighPrice }}</a>
           </li>
         </ul>
+
         <img
-          src="./../../assets/images/properties/single.png"
+          :src="require(`./../../assets/images/properties/${image}.svg`)"
           :class="[
             activeAppartment ? 'active' : '',
             'menu-icon img-fluid me-3',
@@ -37,8 +38,9 @@
           srcset=""
           @click="viewList"
         />
+
         <img
-          src="./../../assets/images/properties/Grid.svg"
+          :src="require(`./../../assets/images/properties/${imageGrid}.svg`)"
           :class="[activeGride ? 'active' : '', 'view-icon img-fluid']"
           alt=""
           srcset=""
@@ -57,15 +59,21 @@ export default {
       lowPrice: 'Lowest Price',
       heighPrice: 'heigh Price',
       selectedPrice: 'Lowest Price',
+      image: 'ListIcon',
+      imageGrid: 'Grid',
     };
   },
   methods: {
     viewList() {
+      this.image = 'ListIcon';
+      this.imageGrid = 'Grid';
       this.activeGride = false;
       this.activeAppartment = true;
       this.$emit('view-list', 'SingleAppartment');
     },
     viewGrid() {
+      this.image = 'single';
+      this.imageGrid = 'GridIcon';
       this.activeGride = true;
       this.activeAppartment = false;
       this.$emit('view-grid', 'GridAppartment');
@@ -129,11 +137,12 @@ export default {
         font-size: 1rem;
         font-weight: 500;
       }
-      .menu-icon {
+      img.menu-icon {
         margin-inline-start: 69px;
         cursor: pointer;
         display: inline-block;
         padding: 8px;
+        fill: green !important;
       }
       .view-icon {
         margin-inline-start: 20x;
