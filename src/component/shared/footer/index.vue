@@ -122,7 +122,7 @@ footer {
           list-style: none;
           display: inline-block;
           margin-inline-end: 0.75rem;
-          background-color: rgba(255, 255, 255, 0.5);
+          background-color: var(--opacityWhite-color);
           width: 40px;
           height: 40px;
           border-radius: 50%;

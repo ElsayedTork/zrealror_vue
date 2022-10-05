@@ -38,6 +38,9 @@ html {
   --background-color: #e5e5e5;
   --text-color-secondary: #1b2534;
   --discound_color: #012257;
+  --heading-color: #eef2f3;
+  --resetBtn-color: #ececec;
+  --opacityWhite-color:rgba(255, 255, 255, 0.5);
 }
 *,
 ul,

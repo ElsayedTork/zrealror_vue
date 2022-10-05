@@ -118,7 +118,7 @@
   border-radius: 4px;
 }
 .carousel-indicators {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: var(--opacityWhite-color);
   width: fit-content;
   margin-inline: auto;
   padding-inline: 8px;

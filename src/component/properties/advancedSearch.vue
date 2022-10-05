@@ -55,7 +55,7 @@ export default {
     font-size: 1.25rem;
     color: var(--text-color-secondary);
     font-weight: 700;
-    background-color: #eef2f3;
+    background-color: var(--heading-color);
     padding-inline-start: 20px;
     padding-block: 14px;
   }
@@ -64,10 +64,10 @@ export default {
     background-color: var(--white-color) !important;
     padding-block-end: 40px;
     &__btns {
-      margin-block-start: 3rem;
+      margin-block-start: 48px;
       .resetBtn {
-        color: #737680;
-        background-color: #ececec;
+        color: var(--text-gray-color);
+        background-color: var(--resetBtn-color);
         border-color: transparent;
         width: 50%;
         display: inline-block;
