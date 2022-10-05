@@ -72,11 +72,11 @@ export default {
     },
     lowPrices() {
       this.selectedPrice = this.lowPrice;
-      this.$store.dispatch('priceFilter', this.selectedPrice);
+      this.$store.dispatch('priceFl/priceFilter', this.selectedPrice);
     },
     heighPrices() {
       this.selectedPrice = this.heighPrice;
-      this.$store.dispatch('priceFilter', this.selectedPrice);
+      this.$store.dispatch('priceFl/priceFilter', this.selectedPrice);
     },
   },
 };

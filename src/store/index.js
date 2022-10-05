@@ -1,5 +1,12 @@
 import { createStore } from 'vuex';
+
+import priceFliter from './modules/priceFliter';
+import paginationFilter from './modules/paginationFilter'
 export default createStore({
+  modules: {
+    priceFl: priceFliter,
+    paginationFl:paginationFilter
+  },
   state() {
     return {
       searches: ['How To Find', 'How To Search', 'he works well'],
@@ -181,124 +188,6 @@ export default createStore({
     setProfileData(state, obj) {
       state.profileData = obj;
     },
-    filterItems(state, index) {
-      state.propInformations = [
-        {
-          id: 0,
-          title: 'Renovated Apartment 1',
-          location: 'Tanat ,Egypt',
-          bed: 2,
-          baths: 1,
-          sqft: 2500,
-          wifi: false,
-          page: 1,
-        },
-        {
-          id: 1,
-          title: 'Amazing Apartment 2',
-          location: 'Alex,Egypt',
-          bed: 4,
-          baths: 2,
-          sqft: 2500,
-          wifi: true,
-          page: 1,
-        },
-        {
-          id: 2,
-          title: 'Renovated Apartment 3',
-          location: 'october, Egypt',
-          bed: 5,
-          baths: 2,
-          sqft: 2500,
-          wifi: true,
-          page: 1,
-        },
-        {
-          id: 3,
-          title: 'Renovated Apartment 4',
-          location: 'Tanat ,Egypt',
-          bed: 2,
-          baths: 1,
-          sqft: 2500,
-          wifi: false,
-          page: 2,
-        },
-        {
-          id: 4,
-          title: 'Amazing Apartment 5',
-          location: 'Alex,Egypt',
-          bed: 4,
-          baths: 2,
-          sqft: 2500,
-          wifi: true,
-          page: 2,
-        },
-        {
-          id: 5,
-          title: 'Renovated Apartment 6',
-          location: 'october, Egypt',
-          bed: 5,
-          baths: 2,
-          sqft: 2500,
-          wifi: true,
-          page: 2,
-        },
-        {
-          id: 6,
-          title: 'Renovated Apartment 7',
-          location: 'Tanat ,Egypt',
-          bed: 2,
-          baths: 1,
-          sqft: 2500,
-          wifi: false,
-          page: 3,
-        },
-        {
-          id: 7,
-          title: 'Amazing Apartment 8',
-          location: 'Alex,Egypt',
-          bed: 4,
-          baths: 2,
-          sqft: 2500,
-          wifi: true,
-          page: 3,
-        },
-        {
-          id: 8,
-          title: 'Renovated Apartment 9',
-          location: 'october, Egypt',
-          bed: 5,
-          baths: 2,
-          sqft: 2500,
-          wifi: true,
-          page: 3,
-        },
-        {
-          id: 9,
-          title: 'Renovated Apartment 10',
-          location: 'october, Egypt',
-          bed: 5,
-          baths: 2,
-          sqft: 2500,
-          wifi: true,
-          page: 4,
-        },
-      ];
-      state.propInformations = state.propInformations.filter(
-        (item) => item.page === index
-      );
-    },
-    priceFilter(state, selectedPrice) {
-      const byMatss = state.propInformations.sort((a, b) => {
-        if (selectedPrice == 'Lowest Price') {
-          return a.price - b.price;
-        } else {
-          return b.price - a.price;
-        }
-      });
-
-      state.propInformations = byMatss;
-    },
   },
   actions: {
     deleteSearch({ commit }, ele) {
@@ -307,11 +196,6 @@ export default createStore({
     setProfileDataAction({ commit }, obj) {
       commit('setProfileData', obj);
     },
-    filterItems({ commit }, index) {
-      commit('filterItems', index);
-    },
-    priceFilter({ commit }, selectedPrice) {
-      commit('priceFilter', selectedPrice);
-    },
+
   },
 });

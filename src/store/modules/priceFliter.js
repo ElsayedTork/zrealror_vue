@@ -1,36 +1,8 @@
-<template>
-  <div>
-    <nav aria-label="Page navigation example">
-      <ul class="pagination">
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
-            <i class="fa-solid fa-chevron-left"></i>
-          </a>
-        </li>
-        <!-- Math.ceil(propInformations.length / itemPerPage) -->
-        <li class="page-item" v-for="index in 4" :key="index">
-          <router-link class="page-link" to="/prop" @click="sendIndex(index)">{{
-            index
-          }}</router-link>
-        </li>
-
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
-            <i class="fa-solid fa-chevron-right"></i>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</template>
-<script>
-import { mapState } from 'vuex';
-
 export default {
-  data() {
+  namespaced: true,
+  state() {
     return {
-      itemPerPage: 3,
-      dataArr: [
+      propInformations: [
         {
           id: 0,
           title: 'Renovated Apartment 1',
@@ -40,6 +12,7 @@ export default {
           sqft: 2500,
           wifi: false,
           page: 1,
+          price: 8700,
         },
         {
           id: 1,
@@ -50,6 +23,7 @@ export default {
           sqft: 2500,
           wifi: true,
           page: 1,
+          price: 9000,
         },
         {
           id: 2,
@@ -60,6 +34,7 @@ export default {
           sqft: 2500,
           wifi: true,
           page: 1,
+          price: 1000,
         },
         {
           id: 3,
@@ -70,6 +45,7 @@ export default {
           sqft: 2500,
           wifi: false,
           page: 2,
+          price: 5000,
         },
         {
           id: 4,
@@ -80,6 +56,7 @@ export default {
           sqft: 2500,
           wifi: true,
           page: 2,
+          price: 20000,
         },
         {
           id: 5,
@@ -90,6 +67,7 @@ export default {
           sqft: 2500,
           wifi: true,
           page: 2,
+          price: 6000,
         },
         {
           id: 6,
@@ -100,6 +78,7 @@ export default {
           sqft: 2500,
           wifi: false,
           page: 3,
+          price: 3300,
         },
         {
           id: 7,
@@ -110,6 +89,7 @@ export default {
           sqft: 2500,
           wifi: true,
           page: 3,
+          price: 5500,
         },
         {
           id: 8,
@@ -120,6 +100,7 @@ export default {
           sqft: 2500,
           wifi: true,
           page: 3,
+          price: 7200,
         },
         {
           id: 9,
@@ -130,55 +111,27 @@ export default {
           sqft: 2500,
           wifi: true,
           page: 4,
+          price: 9800,
         },
       ],
     };
   },
-  computed: {
-    ...mapState({
-      propInformations: (state) => {
-        return state.propInformations;
-      },
-    }),
+  mutations: {
+    priceFilter(state, selectedPrice) {
+      const byMatss = state.propInformations.sort((a, b) => {
+        if (selectedPrice == 'Lowest Price') {
+          return a.price - b.price;
+        } else {
+          return b.price - a.price;
+        }
+      });
+      console.log(byMatss);
+      this.state.propInformations = byMatss;
+    },
   },
-  methods: {
-    sendIndex(index) {
-      this.$store.dispatch('paginationFl/filterItems', index, this.dataArr);
+  actions: {
+    priceFilter({ commit }, selectedPrice) {
+      commit('priceFilter', selectedPrice);
     },
   },
 };
-</script>
-<style lang="scss" scoped>
-.pagination {
-  width: fit-content;
-  margin-inline: auto;
-  .page-item {
-    margin-inline-end: 10px;
-    .page-link {
-      background-color: transparent;
-      color: var(--text-edit-color);
-      &:focus {
-        color: var(--white-color);
-        background-color: var(--main-color);
-        padding-inline: 13px;
-        padding-block: 10px;
-        box-shadow: none !important;
-        border-radius: 8px;
-      }
-    }
-    &:first-of-type,
-    &:last-of-type {
-      .page-link {
-        background-color: var(--white-color);
-        padding-inline: 13px;
-        padding-block: 10px;
-        border-radius: 8px;
-        &:focus {
-          background-color: var(--white-color);
-          color: var(--text-edit-color);
-        }
-      }
-    }
-  }
-}
-</style>
