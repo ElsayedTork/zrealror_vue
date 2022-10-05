@@ -28,6 +28,23 @@ button {
   padding-block: 10px;
   border-radius: 8px;
 }
+.canselingSearch {
+  background-color: transparent;
+  border: 1px solid var(--text-gray-color);
+  padding-block: 10px;
+  padding-inline: 35px;
+  border-radius: 8px;
+  color: var(--text-gray-color);
+}
+.savingSearch {
+  color: var(--white-color);
+  background-color: var(--main-color);
+  padding-block: 10px;
+  padding-inline: 44px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  margin-inline-start: 12px;
+}
 @media (max-width: 576px) {
   .details {
     font-size: 12px;

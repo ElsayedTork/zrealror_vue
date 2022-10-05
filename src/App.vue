@@ -41,6 +41,8 @@ html {
   --heading-color: #eef2f3;
   --resetBtn-color: #ececec;
   --opacityWhite-color:rgba(255, 255, 255, 0.5);
+  --close-color:#828A9D;
+  --modal-color:rgba(36, 39, 49,.8)
 }
 *,
 ul,

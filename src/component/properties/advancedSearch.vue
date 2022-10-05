@@ -23,7 +23,7 @@
           <custom-button text="Reset" btnClass="resetBtn"></custom-button>
           <custom-button text="Search" btnClass="searchBtn"></custom-button>
         </div>
-        <div>
+        <div @click="showModal">
           <custom-button
             text="Save Search"
             btnClass="saveSearch"
@@ -32,18 +32,36 @@
       </section>
     </div>
   </div>
+
+  <!-- Start Test -->
+  <section v-if="flag">
+    <prop-modal @close-modal="closeModal"></prop-modal>
+  </section>
+
+  <!-- End Test -->
 </template>
 <script>
 import SearchItem from './searchItem.vue';
 import CustomButton from '../shared/customButton/index.vue';
-
+import PropModal from './propModal.vue';
 export default {
   data() {
-    return {};
+    return {
+      flag: false,
+    };
   },
   components: {
     CustomButton,
     SearchItem,
+    PropModal,
+  },
+  methods: {
+    showModal() {
+      this.flag = true;
+    },
+    closeModal() {
+      this.flag = false;
+    },
   },
 };
 </script>

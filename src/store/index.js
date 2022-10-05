@@ -1,11 +1,11 @@
 import { createStore } from 'vuex';
 
 import priceFliter from './modules/priceFliter';
-import paginationFilter from './modules/paginationFilter'
+import paginationFilter from './modules/paginationFilter';
 export default createStore({
   modules: {
     priceFl: priceFliter,
-    paginationFl:paginationFilter
+    paginationFl: paginationFilter,
   },
   state() {
     return {
@@ -188,6 +188,10 @@ export default createStore({
     setProfileData(state, obj) {
       state.profileData = obj;
     },
+    addSearch(state, saveSearch) {
+      console.log(saveSearch, 'mutation');
+      state.searches = [...state.searches, saveSearch];
+    },
   },
   actions: {
     deleteSearch({ commit }, ele) {
@@ -196,6 +200,8 @@ export default createStore({
     setProfileDataAction({ commit }, obj) {
       commit('setProfileData', obj);
     },
-
+    addSearch({ commit }, saveSearch) {
+      commit('addSearch', saveSearch);
+    },
   },
 });
