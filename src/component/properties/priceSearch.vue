@@ -142,7 +142,6 @@ export default {
         cursor: pointer;
         display: inline-block;
         padding: 8px;
-        fill: green !important;
       }
       .view-icon {
         margin-inline-start: 20x;
@@ -161,6 +160,11 @@ export default {
 @media (max-width: 768px) {
   .priceContainer {
     display: block;
+  }
+}
+@media (max-width: 1200px) {
+  .priceContainer {
+    margin-block-start: 20px;
   }
 }
 </style>

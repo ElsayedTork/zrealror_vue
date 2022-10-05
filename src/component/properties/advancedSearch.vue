@@ -50,6 +50,7 @@ export default {
 <style lang="scss" scoped>
 .search {
   border-radius: 8px;
+  margin-block-start: 92px;
 
   h4 {
     font-size: 1.25rem;

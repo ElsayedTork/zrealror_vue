@@ -49,6 +49,7 @@ export default {
 <style scopd lang="scss">
 .apartment {
   padding-block-start: 20px;
+  margin-block-start: 0;
   &__element {
     margin-block-end: 20px;
     .apartment__element__Child {

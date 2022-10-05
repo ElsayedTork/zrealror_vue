@@ -47,7 +47,7 @@ export default {
 </script>
 <style scopd lang="scss" scoped>
 .apartment {
-  margin-block-start: 20px;
+  margin-block-start: 0;
   &__element {
     border-radius: 20px;
     padding-block: 15px;
