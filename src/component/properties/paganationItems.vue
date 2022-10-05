@@ -137,8 +137,6 @@ export default {
   computed: {
     ...mapState({
       propInformations: (state) => {
-        //this.propInformations = state.propInformations;
-        //  console.log(this.propInformations);
         return state.propInformations;
       },
     }),
