@@ -1,16 +1,5 @@
 <template>
   <ul>
-    <!-- <li v-for="item in propSearch" :key="item.id">
-      <h6>{{ item.title }}</h6>
-      <select
-        class="form-select shadow-none"
-        aria-label="Default select example"
-      >
-        <option value="1" v-for="(ele, index) in item.options" :key="index">
-          {{ ele }}
-        </option>
-      </select>
-    </li> -->
     <li>
       <h6>Property Category</h6>
       <select
@@ -18,9 +7,9 @@
         class="form-select shadow-none"
         aria-label="Default select example"
       >
-        <option value="5 start">5 start</option>
-        <option value="4 start">4 start</option>
-        <option value="3 start">3 start</option>
+        <option value="5 star">5 star</option>
+        <option value="4 star">4 star</option>
+        <option value="3 star">3 start</option>
       </select>
     </li>
 
@@ -44,8 +33,8 @@
         class="form-select shadow-none"
         aria-label="Default select example"
       >
-        <option value="Appartment">Appartment</option>
-        <option value="Villa">Villa</option>
+        <option value="appartment">Appartment</option>
+        <option value="villa">Villa</option>
         <option value="room">Room</option>
       </select>
     </li>
@@ -144,8 +133,28 @@ export default {
   },
   methods: {
     itemSearch() {
-      this.$store.dispatch('propFl/itemSearch', this.location);
-      console.log(this.category, this.location, this.type, this.floor);
+      if (this.location !== '' && this.category == '' && this.type == '') {
+        this.$store.dispatch('propFl/itemSearch', this.location);
+      } else if (
+        this.location == '' &&
+        this.category !== '' &&
+        this.type == ''
+      ) {
+        this.$store.dispatch('propFl/itemSearch', this.category);
+      } else if (
+        this.location == '' &&
+        this.category == '' &&
+        this.type !== ''
+      ) {
+        this.$store.dispatch('propFl/itemSearch', this.type);
+      } else if (this.location !== '' && this.category !== '') {
+        this.$store.dispatch('propFl/categoryLocation', [
+          this.category,
+          this.location,
+        ]);
+      }
+
+      // console.log(this.category, this.location, this.type, this.floor);
     },
   },
 };
