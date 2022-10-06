@@ -1,11 +1,9 @@
 import { createStore } from 'vuex';
 
-import priceFliter from './modules/priceFliter';
-import paginationFilter from './modules/paginationFilter';
+import propFilter from './modules/propFilter';
 export default createStore({
   modules: {
-    priceFl: priceFliter,
-    paginationFl: paginationFilter,
+    propFl: propFilter,
   },
   state() {
     return {
@@ -75,7 +73,7 @@ export default createStore({
         {
           id: 0,
           title: 'Renovated Apartment 1',
-          location: 'Tanat ,Egypt',
+          location: 'tanta',
           bed: 2,
           baths: 1,
           sqft: 2500,
@@ -86,7 +84,7 @@ export default createStore({
         {
           id: 1,
           title: 'Amazing Apartment 2',
-          location: 'Alex,Egypt',
+          location: 'alex',
           bed: 4,
           baths: 2,
           sqft: 2500,
@@ -97,7 +95,7 @@ export default createStore({
         {
           id: 2,
           title: 'Renovated Apartment 3',
-          location: 'october, Egypt',
+          location: 'tanta',
           bed: 5,
           baths: 2,
           sqft: 2500,
@@ -108,7 +106,7 @@ export default createStore({
         {
           id: 3,
           title: 'Renovated Apartment 4',
-          location: 'Tanat ,Egypt',
+          location: 'tanta',
           bed: 2,
           baths: 1,
           sqft: 2500,
@@ -119,7 +117,7 @@ export default createStore({
         {
           id: 4,
           title: 'Amazing Apartment 5',
-          location: 'Alex,Egypt',
+          location: 'alex',
           bed: 4,
           baths: 2,
           sqft: 2500,
@@ -130,7 +128,7 @@ export default createStore({
         {
           id: 5,
           title: 'Renovated Apartment 6',
-          location: 'october, Egypt',
+          location: 'cairo',
           bed: 5,
           baths: 2,
           sqft: 2500,
@@ -141,7 +139,7 @@ export default createStore({
         {
           id: 6,
           title: 'Renovated Apartment 7',
-          location: 'Tanat ,Egypt',
+          location: 'tanta',
           bed: 2,
           baths: 1,
           sqft: 2500,
@@ -152,7 +150,7 @@ export default createStore({
         {
           id: 7,
           title: 'Amazing Apartment 8',
-          location: 'Alex,Egypt',
+          location: 'alex',
           bed: 4,
           baths: 2,
           sqft: 2500,
@@ -163,7 +161,7 @@ export default createStore({
         {
           id: 8,
           title: 'Renovated Apartment 9',
-          location: 'october, Egypt',
+          location: 'cairo',
           bed: 5,
           baths: 2,
           sqft: 2500,
@@ -174,7 +172,7 @@ export default createStore({
         {
           id: 9,
           title: 'Renovated Apartment 10',
-          location: 'october, Egypt',
+          location: 'cairo',
           bed: 5,
           baths: 2,
           sqft: 2500,
@@ -193,7 +191,6 @@ export default createStore({
       state.profileData = obj;
     },
     addSearch(state, saveSearch) {
-      console.log(saveSearch, 'mutation');
       state.searches = [...state.searches, saveSearch];
     },
   },

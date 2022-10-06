@@ -6,7 +6,7 @@ export default {
         {
           id: 0,
           title: 'Renovated Apartment 1',
-          location: 'Tanat ,Egypt',
+          location: 'tanta',
           bed: 2,
           baths: 1,
           sqft: 2500,
@@ -17,7 +17,7 @@ export default {
         {
           id: 1,
           title: 'Amazing Apartment 2',
-          location: 'Alex,Egypt',
+          location: 'alex',
           bed: 4,
           baths: 2,
           sqft: 2500,
@@ -28,7 +28,7 @@ export default {
         {
           id: 2,
           title: 'Renovated Apartment 3',
-          location: 'october, Egypt',
+          location: 'tanta',
           bed: 5,
           baths: 2,
           sqft: 2500,
@@ -39,7 +39,7 @@ export default {
         {
           id: 3,
           title: 'Renovated Apartment 4',
-          location: 'Tanat ,Egypt',
+          location: 'tanta',
           bed: 2,
           baths: 1,
           sqft: 2500,
@@ -50,7 +50,7 @@ export default {
         {
           id: 4,
           title: 'Amazing Apartment 5',
-          location: 'Alex,Egypt',
+          location: 'alex',
           bed: 4,
           baths: 2,
           sqft: 2500,
@@ -61,7 +61,7 @@ export default {
         {
           id: 5,
           title: 'Renovated Apartment 6',
-          location: 'october, Egypt',
+          location: 'cairo',
           bed: 5,
           baths: 2,
           sqft: 2500,
@@ -72,7 +72,7 @@ export default {
         {
           id: 6,
           title: 'Renovated Apartment 7',
-          location: 'Tanat ,Egypt',
+          location: 'tanta',
           bed: 2,
           baths: 1,
           sqft: 2500,
@@ -83,7 +83,7 @@ export default {
         {
           id: 7,
           title: 'Amazing Apartment 8',
-          location: 'Alex,Egypt',
+          location: 'alex',
           bed: 4,
           baths: 2,
           sqft: 2500,
@@ -94,7 +94,7 @@ export default {
         {
           id: 8,
           title: 'Renovated Apartment 9',
-          location: 'october, Egypt',
+          location: 'cairo',
           bed: 5,
           baths: 2,
           sqft: 2500,
@@ -105,7 +105,7 @@ export default {
         {
           id: 9,
           title: 'Renovated Apartment 10',
-          location: 'october, Egypt',
+          location: 'cairo',
           bed: 5,
           baths: 2,
           sqft: 2500,
@@ -117,6 +117,12 @@ export default {
     };
   },
   mutations: {
+    itemSearch(state, location) {
+      console.log(location);
+      this.state.propInformations = state.propInformations.filter(
+        (item) => item.location === location
+      );
+    },
     filterItems(state, index) {
       state.propInformations = [
         {
@@ -224,8 +230,22 @@ export default {
         (item) => item.page === index
       );
     },
+    priceFilter(state, selectedPrice) {
+      const byMatss = state.propInformations.sort((a, b) => {
+        if (selectedPrice == 'Lowest Price') {
+          return a.price - b.price;
+        } else {
+          return b.price - a.price;
+        }
+      });
+      console.log(byMatss);
+      this.state.propInformations = byMatss;
+    },
   },
   actions: {
+    itemSearch({ commit }, location) {
+      commit('itemSearch', location);
+    },
     priceFilter({ commit }, selectedPrice) {
       commit('priceFilter', selectedPrice);
     },

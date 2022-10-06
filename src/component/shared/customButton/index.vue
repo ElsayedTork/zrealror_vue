@@ -45,6 +45,22 @@ button {
   border-radius: 8px;
   margin-inline-start: 12px;
 }
+.resetBtn {
+  color: var(--text-gray-color);
+  background-color: var(--resetBtn-color);
+  border-color: transparent;
+  width: 50%;
+  display: inline-block;
+  margin-inline-end: 6px;
+}
+.searchBtn {
+  color: var(--white-color);
+  background-color: var(--main-color);
+  border-color: transparent;
+  width: 50%;
+  display: inline-block;
+  margin-inline-start: 10px;
+}
 @media (max-width: 576px) {
   .details {
     font-size: 12px;

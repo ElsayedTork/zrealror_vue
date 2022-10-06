@@ -143,7 +143,7 @@ export default {
   },
   methods: {
     sendIndex(index) {
-      this.$store.dispatch('paginationFl/filterItems', index, this.dataArr);
+      this.$store.dispatch('propFl/filterItems', index, this.dataArr);
     },
   },
 };
