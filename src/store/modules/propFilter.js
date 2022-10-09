@@ -15,6 +15,7 @@ export default {
           price: 8700,
           category: '5 star',
           propType: 'appartment',
+          floor: 'ground',
         },
         {
           id: 1,
@@ -28,6 +29,7 @@ export default {
           price: 9000,
           category: '5 star',
           propType: 'appartment',
+          floor: 'ground',
         },
         {
           id: 2,
@@ -41,6 +43,7 @@ export default {
           price: 1000,
           category: '3 star',
           propType: 'appartment',
+          floor: 'ground',
         },
         {
           id: 3,
@@ -54,6 +57,7 @@ export default {
           price: 5000,
           category: '4 star',
           propType: 'villa',
+          floor: 'upper',
         },
         {
           id: 4,
@@ -66,7 +70,8 @@ export default {
           page: 2,
           price: 20000,
           category: '5 star',
-          propType: 'villa',
+          propType: 'room',
+          floor: 'upper',
         },
         {
           id: 5,
@@ -80,6 +85,7 @@ export default {
           price: 6000,
           category: '4 star',
           propType: 'villa',
+          floor: 'frist',
         },
         {
           id: 6,
@@ -93,6 +99,7 @@ export default {
           price: 3300,
           category: '3 star',
           propType: 'villa',
+          floor: 'frist',
         },
         {
           id: 7,
@@ -106,6 +113,7 @@ export default {
           price: 5500,
           category: '4 star',
           propType: 'room',
+          floor: 'second',
         },
         {
           id: 8,
@@ -119,6 +127,7 @@ export default {
           price: 7200,
           category: '5 star',
           propType: 'room',
+          floor: 'second',
         },
         {
           id: 9,
@@ -132,49 +141,68 @@ export default {
           price: 9800,
           category: '5 star',
           propType: 'room',
+          floor: 'frist',
         },
       ],
     };
   },
   mutations: {
-    itemSearch(state, location) {
-      console.log(location);
+    itemSearch(state, arr) {
+      //  let propArr = ['item.category', 'location', 'propType', 'floor'];
+      console.log(arr, 'Mutation');
       this.state.propInformations = state.propInformations.filter((item) => {
-        if (location == 'cairo' || location == 'alex' || location == 'tanta')
-          return item.location === location;
-        else if (
-          location == '5 star' ||
-          location == '4 star' ||
-          location == '3 star'
-        )
-          return item.category === location;
-        else if (
-          location == 'appartment' ||
-          location == 'villa' ||
-          location == 'room'
-        )
-          return item.propType === location;
+        if (arr[0] == '' && arr[1] == '') {
+          return item.propType === arr[2] && item.floor === arr[3];
+        } else if (arr[0] == '' && arr[2] == '') {
+          return item.location === arr[1] && item.floor === arr[3];
+        } else if (arr[0] == '' && arr[3] == '') {
+          return item.location === arr[1] && item.propType === arr[2];
+        } else if (arr[0] == '') {
+          return (
+            item.location === arr[1] &&
+            item.propType === arr[2] &&
+            item.floor === arr[3]
+          );
+        } else if (arr[1] == '') {
+          return (
+            item.category === arr[0] &&
+            item.propType === arr[2] &&
+            item.floor === arr[3]
+          );
+        } else if (arr[2] == '') {
+          return (
+            item.category === arr[0] &&
+            item.location === arr[1] &&
+            item.floor === arr[3]
+          );
+        } else if (arr[3] == '') {
+          return (
+            item.category === arr[0] &&
+            item.location === arr[1] &&
+            item.propType === arr[2]
+          );
+        } else {
+          return (
+            item.category === arr[0] &&
+            item.location === arr[1] &&
+            item.propType === arr[2] &&
+            item.floor === arr[3]
+          );
+        }
       });
     },
-    categoryLocation(state, arr) {
-      console.log(...arr);
-      this.state.propInformations = state.propInformations.filter((item) => {
-        return item.category === arr[0] && item.location === arr[1];
-      });
-    },
-    categoryType(state, arr) {
-      console.log(...arr);
-      this.state.propInformations = state.propInformations.filter((item) => {
-        return item.category === arr[0] && item.type === arr[1];
-      });
-    },
-    locationType(state, arr) {
-      console.log(...arr, 'locationType');
-      this.state.propInformations = state.propInformations.filter((item) => {
-        return item.location === arr[0] && item.type === arr[1];
-      });
-      console.log(this.state.propInformations);
-    },
+    // categorySearch(state, category) {
+    //   console.log(category);
+    //   this.state.propInformations = state.propInformations.filter((item) => {
+    //     return item.category === category;
+    //   });
+    // },
+    // typeSearch(state, type) {
+    //   console.log(type);
+    //   this.state.propInformations = state.propInformations.filter((item) => {
+    //     return item.propType === type;
+    //   });
+    // },
     filterItems(state, index) {
       state.propInformations = [
         {
@@ -294,23 +322,15 @@ export default {
     },
   },
   actions: {
-    itemSearch({ commit }, location) {
-      commit('itemSearch', location);
+    itemSearch({ commit }, arr) {
+      commit('itemSearch', arr);
     },
+
     priceFilter({ commit }, selectedPrice) {
       commit('priceFilter', selectedPrice);
     },
     filterItems({ commit }, index) {
       commit('filterItems', index);
-    },
-    categoryLocation({ commit }, arr) {
-      commit('categoryLocation', arr);
-    },
-    categoryType({ commit }, arr) {
-      commit('categoryType', arr);
-    },
-    locationType({ commit }, arr) {
-      commit('locationType', arr);
     },
   },
 };

@@ -33,9 +33,9 @@
         class="form-select shadow-none"
         aria-label="Default select example"
       >
-        <option value="appartment">Appartment</option>
-        <option value="villa">Villa</option>
-        <option value="room">Room</option>
+        <option value="appartment">appartment</option>
+        <option value="villa">villa</option>
+        <option value="room">room</option>
       </select>
     </li>
 
@@ -46,9 +46,10 @@
         class="form-select shadow-none"
         aria-label="Default select example"
       >
-        <option value="Ground">Ground Floor</option>
-        <option value="Upper">Upper Floor</option>
-        <option value="Frist">Frist Floor</option>
+        <option value="ground">Ground Floor</option>
+        <option value="upper">Upper Floor</option>
+        <option value="frist">Frist Floor</option>
+        <option value="second">Second Floor</option>
       </select>
     </li>
   </ul>
@@ -133,40 +134,45 @@ export default {
   },
   methods: {
     itemSearch() {
-      if (this.location !== '' && this.category == '' && this.type == '') {
-        this.$store.dispatch('propFl/itemSearch', this.location);
-      } else if (
-        this.location == '' &&
-        this.category !== '' &&
-        this.type == ''
-      ) {
-        this.$store.dispatch('propFl/itemSearch', this.category);
-      } else if (
-        this.location == '' &&
-        this.category == '' &&
-        this.type !== ''
-      ) {
-        this.$store.dispatch('propFl/itemSearch', this.type);
-      } 
-      else if (this.location !== '' && this.category !== '') {
-        this.$store.dispatch('propFl/categoryLocation', [
-          this.category,
-          this.location,
-        ]);
-      }
-      else if (this.location !== '' && this.category !== '') {
-        this.$store.dispatch('propFl/categoryType', [
-          this.category,
-          this.type,
-        ]);
-      }
-      else if (this.location !== '' && this.type !== '') {
-        this.$store.dispatch('propFl/locationType', [
-          this.location,
-          this.type,
-        ]);
-      }
-      
+      let arr = [];
+      arr.push(this.category);
+      arr.push(this.location);
+      arr.push(this.type);
+      arr.push(this.floor);
+      console.log(arr);
+      this.$store.dispatch('propFl/itemSearch', arr);
+      // if (this.location !== '' && this.category == '' && this.type == '') {
+      //   this.$store.dispatch('propFl/locationSearch', this.location);
+      // } else if (
+      //   this.location == '' &&
+      //   this.category !== '' &&
+      //   this.type == ''
+      // ) {
+      //   this.$store.dispatch('propFl/categorySearch', this.category);
+      // } else if (
+      //   this.location == '' &&
+      //   this.category == '' &&
+      //   this.type !== ''
+      // ) {
+      //   this.$store.dispatch('propFl/typeSearch', this.type);
+      // } else if (
+      //   this.location !== '' &&
+      //   this.category !== '' &&
+      //   this.type == ''
+      // ) {
+      //   this.$store.dispatch('propFl/locationSearch', this.location);
+      //   this.$store.dispatch('propFl/categorySearch', this.category);
+      // }
+      // //else if (this.location !== '' && this.category !== '') {
+      //   this.$store.dispatch('propFl/categoryLocation', [
+      //     this.category,
+      //     this.location,
+      //   ]);
+      // } else if (this.location !== '' && this.category !== '') {
+      //   this.$store.dispatch('propFl/categoryType', [this.category, this.type]);
+      // } else if (this.location !== '' && this.type !== '') {
+      //   this.$store.dispatch('propFl/locationType', [this.location, this.type]);
+      // }
 
       // console.log(this.category, this.location, this.type, this.floor);
     },
