@@ -4,7 +4,6 @@
     <div class="search__filter">
       <section class="search__filter__data">
         <search-item dataName="propSearch"></search-item>
-
       </section>
 
       <section class="search__filter__btns">

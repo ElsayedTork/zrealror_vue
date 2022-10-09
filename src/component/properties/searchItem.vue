@@ -147,12 +147,26 @@ export default {
         this.type !== ''
       ) {
         this.$store.dispatch('propFl/itemSearch', this.type);
-      } else if (this.location !== '' && this.category !== '') {
+      } 
+      else if (this.location !== '' && this.category !== '') {
         this.$store.dispatch('propFl/categoryLocation', [
           this.category,
           this.location,
         ]);
       }
+      else if (this.location !== '' && this.category !== '') {
+        this.$store.dispatch('propFl/categoryType', [
+          this.category,
+          this.type,
+        ]);
+      }
+      else if (this.location !== '' && this.type !== '') {
+        this.$store.dispatch('propFl/locationType', [
+          this.location,
+          this.type,
+        ]);
+      }
+      
 
       // console.log(this.category, this.location, this.type, this.floor);
     },

@@ -162,6 +162,19 @@ export default {
         return item.category === arr[0] && item.location === arr[1];
       });
     },
+    categoryType(state, arr) {
+      console.log(...arr);
+      this.state.propInformations = state.propInformations.filter((item) => {
+        return item.category === arr[0] && item.type === arr[1];
+      });
+    },
+    locationType(state, arr) {
+      console.log(...arr, 'locationType');
+      this.state.propInformations = state.propInformations.filter((item) => {
+        return item.location === arr[0] && item.type === arr[1];
+      });
+      console.log(this.state.propInformations);
+    },
     filterItems(state, index) {
       state.propInformations = [
         {
@@ -277,7 +290,6 @@ export default {
           return b.price - a.price;
         }
       });
-      console.log(byMatss);
       this.state.propInformations = byMatss;
     },
   },
@@ -293,6 +305,12 @@ export default {
     },
     categoryLocation({ commit }, arr) {
       commit('categoryLocation', arr);
+    },
+    categoryType({ commit }, arr) {
+      commit('categoryType', arr);
+    },
+    locationType({ commit }, arr) {
+      commit('locationType', arr);
     },
   },
 };
