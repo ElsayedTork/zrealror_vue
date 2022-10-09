@@ -5,7 +5,7 @@ export default {
       propInformations: [
         {
           id: 0,
-          title: 'Renovated Apartment 1',
+          title: 'Renovated Apartment 0',
           location: 'tanta',
           bed: 2,
           baths: 1,
@@ -19,7 +19,7 @@ export default {
         },
         {
           id: 1,
-          title: 'Amazing Apartment 2',
+          title: 'Amazing Apartment 1',
           location: 'alex',
           bed: 4,
           baths: 2,
@@ -33,7 +33,7 @@ export default {
         },
         {
           id: 2,
-          title: 'Renovated Apartment 3',
+          title: 'Renovated Apartment 2',
           location: 'tanta',
           bed: 5,
           baths: 2,
@@ -47,7 +47,7 @@ export default {
         },
         {
           id: 3,
-          title: 'Renovated Apartment 4',
+          title: 'Renovated Apartment 3',
           location: 'tanta',
           bed: 2,
           baths: 1,
@@ -61,7 +61,7 @@ export default {
         },
         {
           id: 4,
-          title: 'Amazing Apartment 5',
+          title: 'Amazing Apartment 4',
           location: 'alex',
           bed: 4,
           baths: 2,
@@ -75,7 +75,7 @@ export default {
         },
         {
           id: 5,
-          title: 'Renovated Apartment 6',
+          title: 'Renovated Apartment 5',
           location: 'cairo',
           bed: 5,
           baths: 2,
@@ -89,7 +89,7 @@ export default {
         },
         {
           id: 6,
-          title: 'Renovated Apartment 7',
+          title: 'Renovated Apartment 6',
           location: 'tanta',
           bed: 2,
           baths: 1,
@@ -103,7 +103,7 @@ export default {
         },
         {
           id: 7,
-          title: 'Amazing Apartment 8',
+          title: 'Amazing Apartment 7',
           location: 'alex',
           bed: 4,
           baths: 2,
@@ -117,7 +117,7 @@ export default {
         },
         {
           id: 8,
-          title: 'Renovated Apartment 9',
+          title: 'Renovated Apartment 8',
           location: 'cairo',
           bed: 5,
           baths: 2,
@@ -131,7 +131,7 @@ export default {
         },
         {
           id: 9,
-          title: 'Renovated Apartment 10',
+          title: 'Renovated Apartment 9',
           location: 'cairo',
           bed: 5,
           baths: 2,
@@ -151,43 +151,27 @@ export default {
       //  let propArr = ['item.category', 'location', 'propType', 'floor'];
       console.log(arr, 'Mutation');
       this.state.propInformations = state.propInformations.filter((item) => {
-        if (arr[0] == '' && arr[1] == '') {
-          return item.propType === arr[2] && item.floor === arr[3];
-        } else if (arr[0] == '' && arr[2] == '') {
-          return item.location === arr[1] && item.floor === arr[3];
-        } else if (arr[0] == '' && arr[3] == '') {
-          return item.location === arr[1] && item.propType === arr[2];
-        } else if (arr[0] == '') {
-          return (
-            item.location === arr[1] &&
-            item.propType === arr[2] &&
-            item.floor === arr[3]
-          );
-        } else if (arr[1] == '') {
-          return (
-            item.category === arr[0] &&
-            item.propType === arr[2] &&
-            item.floor === arr[3]
-          );
-        } else if (arr[2] == '') {
-          return (
-            item.category === arr[0] &&
-            item.location === arr[1] &&
-            item.floor === arr[3]
-          );
-        } else if (arr[3] == '') {
-          return (
-            item.category === arr[0] &&
-            item.location === arr[1] &&
-            item.propType === arr[2]
-          );
-        } else {
-          return (
-            item.category === arr[0] &&
-            item.location === arr[1] &&
-            item.propType === arr[2] &&
-            item.floor === arr[3]
-          );
+        switch (arr.length) {
+          case 4:
+            return (
+              item[arr[0].key] === arr[0].value &&
+              item[arr[1].key] === arr[1].value &&
+              item[arr[2].key] === arr[2].value &&
+              item[arr[3].key] === arr[3].value
+            );
+          case 3:
+            return (
+              item[arr[0].key] === arr[0].value &&
+              item[arr[1].key] === arr[1].value &&
+              item[arr[2].key] === arr[2].value
+            );
+          case 2:
+            return (
+              item[arr[0].key] === arr[0].value &&
+              item[arr[1].key] === arr[1].value
+            );
+          case 1:
+            return item[arr[0].key] === arr[0].value;
         }
       });
     },

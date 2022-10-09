@@ -103,7 +103,11 @@
     </li>
   </ul>
   <div class="d-flex justify-content-between align-items-center mt-2">
-    <custom-button text="Reset" btnClass="resetBtn"></custom-button>
+    <custom-button
+      text="Reset"
+      btnClass="resetBtn"
+      @click="reserSearch"
+    ></custom-button>
     <custom-button
       text="Search"
       btnClass="searchBtn"
@@ -135,46 +139,21 @@ export default {
   methods: {
     itemSearch() {
       let arr = [];
-      arr.push(this.category);
-      arr.push(this.location);
-      arr.push(this.type);
-      arr.push(this.floor);
-      console.log(arr);
+      if (this.category !== '')
+        arr.push({ key: 'category', value: this.category });
+      if (this.location !== '')
+        arr.push({ key: 'location', value: this.location });
+      if (this.type !== '') arr.push({ key: 'propType', value: this.type });
+      if (this.floor !== '') arr.push({ key: 'floor', value: this.floor });
       this.$store.dispatch('propFl/itemSearch', arr);
-      // if (this.location !== '' && this.category == '' && this.type == '') {
-      //   this.$store.dispatch('propFl/locationSearch', this.location);
-      // } else if (
-      //   this.location == '' &&
-      //   this.category !== '' &&
-      //   this.type == ''
-      // ) {
-      //   this.$store.dispatch('propFl/categorySearch', this.category);
-      // } else if (
-      //   this.location == '' &&
-      //   this.category == '' &&
-      //   this.type !== ''
-      // ) {
-      //   this.$store.dispatch('propFl/typeSearch', this.type);
-      // } else if (
-      //   this.location !== '' &&
-      //   this.category !== '' &&
-      //   this.type == ''
-      // ) {
-      //   this.$store.dispatch('propFl/locationSearch', this.location);
-      //   this.$store.dispatch('propFl/categorySearch', this.category);
-      // }
-      // //else if (this.location !== '' && this.category !== '') {
-      //   this.$store.dispatch('propFl/categoryLocation', [
-      //     this.category,
-      //     this.location,
-      //   ]);
-      // } else if (this.location !== '' && this.category !== '') {
-      //   this.$store.dispatch('propFl/categoryType', [this.category, this.type]);
-      // } else if (this.location !== '' && this.type !== '') {
-      //   this.$store.dispatch('propFl/locationType', [this.location, this.type]);
-      // }
-
-      // console.log(this.category, this.location, this.type, this.floor);
+    },
+    reserSearch() {
+      this.category = '';
+      this.location = '';
+      this.type = '';
+      this.floor = '';
+      this.view = '';
+      this.payment = '';
     },
   },
 };
