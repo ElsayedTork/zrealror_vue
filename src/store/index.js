@@ -1,9 +1,11 @@
 import { createStore } from 'vuex';
 
 import propFilter from './modules/propFilter';
+import units from './modules/unitType';
 export default createStore({
   modules: {
     propFl: propFilter,
+    units: units,
   },
   state() {
     return {
@@ -73,7 +75,7 @@ export default createStore({
         {
           id: 0,
           title: 'Renovated Apartment 1',
-          location: 'tanta',
+          location: 'tantaaa',
           bed: 2,
           baths: 1,
           sqft: 2500,
@@ -84,7 +86,7 @@ export default createStore({
         {
           id: 1,
           title: 'Amazing Apartment 2',
-          location: 'alex',
+          location: 'alexxx',
           bed: 4,
           baths: 2,
           sqft: 2500,
@@ -95,7 +97,7 @@ export default createStore({
         {
           id: 2,
           title: 'Renovated Apartment 3',
-          location: 'tanta',
+          location: 'tantaaa',
           bed: 5,
           baths: 2,
           sqft: 2500,
@@ -106,7 +108,7 @@ export default createStore({
         {
           id: 3,
           title: 'Renovated Apartment 4',
-          location: 'tanta',
+          location: 'tantaaa',
           bed: 2,
           baths: 1,
           sqft: 2500,
@@ -117,7 +119,7 @@ export default createStore({
         {
           id: 4,
           title: 'Amazing Apartment 5',
-          location: 'alex',
+          location: 'alexxx',
           bed: 4,
           baths: 2,
           sqft: 2500,
@@ -128,7 +130,7 @@ export default createStore({
         {
           id: 5,
           title: 'Renovated Apartment 6',
-          location: 'cairo',
+          location: 'cairoo',
           bed: 5,
           baths: 2,
           sqft: 2500,
@@ -139,7 +141,7 @@ export default createStore({
         {
           id: 6,
           title: 'Renovated Apartment 7',
-          location: 'tanta',
+          location: 'tantaaa',
           bed: 2,
           baths: 1,
           sqft: 2500,
@@ -150,7 +152,7 @@ export default createStore({
         {
           id: 7,
           title: 'Amazing Apartment 8',
-          location: 'alex',
+          location: 'alexxx',
           bed: 4,
           baths: 2,
           sqft: 2500,
@@ -161,7 +163,7 @@ export default createStore({
         {
           id: 8,
           title: 'Renovated Apartment 9',
-          location: 'cairo',
+          location: 'cairooo',
           bed: 5,
           baths: 2,
           sqft: 2500,
@@ -172,7 +174,7 @@ export default createStore({
         {
           id: 9,
           title: 'Renovated Apartment 10',
-          location: 'cairo',
+          location: 'cairooo',
           bed: 5,
           baths: 2,
           sqft: 2500,

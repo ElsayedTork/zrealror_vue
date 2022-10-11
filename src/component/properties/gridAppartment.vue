@@ -17,6 +17,7 @@
               </div>
             </div>
           </div>
+          
         </div>
       </div>
     </section>
@@ -46,7 +47,7 @@ export default {
   },
 };
 </script>
-<style scopd lang="scss">
+<style lang="scss">
 .apartment {
   padding-block-start: 20px;
   margin-block-start: 0;

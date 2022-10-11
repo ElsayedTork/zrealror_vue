@@ -40,9 +40,11 @@ html {
   --discound_color: #012257;
   --heading-color: #eef2f3;
   --resetBtn-color: #ececec;
-  --opacityWhite-color:rgba(255, 255, 255, 0.5);
-  --close-color:#828A9D;
-  --modal-color:rgba(36, 39, 49,.8)
+  --opacityWhite-color: rgba(255, 255, 255, 0.5);
+  --close-color: #828a9d;
+  --modal-color: rgba(36, 39, 49, 0.8);
+  --bgFilter: #eceff1;
+  --colorFilter:#394456;
 }
 *,
 ul,

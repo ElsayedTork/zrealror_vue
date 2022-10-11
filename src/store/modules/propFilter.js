@@ -6,7 +6,7 @@ export default {
         {
           id: 0,
           title: 'Renovated Apartment 0',
-          location: 'tanta',
+          location: 'cairo',
           bed: 2,
           baths: 1,
           sqft: 2500,
@@ -174,9 +174,18 @@ export default {
       });
     },
     filterItems(state, index) {
-      this.state.propInformations = state.propInformations.filter(
-        (item) => item.page === index
-      );
+      let ar = state.propInformations;
+      if (index == 1) {
+        this.state.propInformations = [ar[0], ar[1], ar[2]];
+      } else if (index == 2) {
+        this.state.propInformations = [ar[3], ar[4], ar[5]];
+      } else if (index == 3) {
+        this.state.propInformations = [ar[6], ar[7], ar[8]];
+      } else if (index == 4) {
+        this.state.propInformations = [ar[9]];
+      } else {
+        this.state.propInformations = ar;
+      }
     },
     priceFilter(state, selectedPrice) {
       state.propInformations = this.state.propInformations.sort((a, b) => {

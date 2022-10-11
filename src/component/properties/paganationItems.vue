@@ -7,8 +7,7 @@
             <i class="fa-solid fa-chevron-left"></i>
           </a>
         </li>
-        <!-- Math.ceil(propInformations.length / itemPerPage) -->
-        <li class="page-item" v-for="index in 4" :key="index">
+        <li class="page-item" v-for="index in len" :key="index">
           <router-link class="page-link" to="/prop" @click="sendIndex(index)">{{
             index
           }}</router-link>
@@ -30,6 +29,7 @@ export default {
   data() {
     return {
       itemPerPage: 3,
+      len: Math.ceil(this.$store.state.propInformations.length / 3),
     };
   },
   computed: {
