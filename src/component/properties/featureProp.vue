@@ -2,11 +2,21 @@
   <section class="unit">
     <h3 class="unit__heading">Featured Properties in this Location</h3>
     <ul class="unit__filter">
-      <li :class="{ active: isActive }" @click="unitFlitering('residential')">
+      <li
+        :class="{ active: isActive[0] }"
+        @click="unitFlitering('residential')"
+      >
         Residential
       </li>
-      <li @click="unitFlitering('commercial')">Commercial</li>
-      <li @click="unitFlitering('adminstrative')">Adminstrative</li>
+      <li :class="{ active: isActive[1] }" @click="unitFlitering('commercial')">
+        Commercial
+      </li>
+      <li
+        :class="{ active: isActive[2] }"
+        @click="unitFlitering('adminstrative')"
+      >
+        Adminstrative
+      </li>
     </ul>
     <section class="unit__items row">
       <div
@@ -35,7 +45,7 @@ import GridItem from './../../component/properties/gridItem.vue';
 export default {
   data() {
     return {
-      isActive: false,
+      isActive: [true, false, false],
     };
   },
   components: {
@@ -54,7 +64,11 @@ export default {
   },
   methods: {
     unitFlitering(selectedUnit) {
-      this.isActive = true;
+      if (selectedUnit === 'residential') this.isActive = [true, false, false];
+      if (selectedUnit === 'commercial') this.isActive = [false, true, false];
+      if (selectedUnit === 'adminstrative')
+        this.isActive = [false, false, true];
+
       this.$store.dispatch('units/unitsFilter', selectedUnit);
     },
   },
