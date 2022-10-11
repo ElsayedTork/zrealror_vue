@@ -24,7 +24,7 @@
         v-for="item in units"
         :key="item.id"
       >
-        <div class="apartment__element__Child">
+        <div class="apartment__element__Child hideFeature">
           <div class="row">
             <div class="col-md-12">
               <apartment-slider></apartment-slider>
@@ -74,7 +74,7 @@ export default {
   },
 };
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 .unit {
   margin-block-start: 48px;
   &__heading {
@@ -103,6 +103,16 @@ export default {
     li.active {
       background-color: var(--main-color);
       color: #fff;
+    }
+  }
+}
+.hideFeature {
+  .Perimum {
+    display: none;
+  }
+  .apartment__info {
+    .discound {
+      display: none;
     }
   }
 }
