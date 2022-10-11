@@ -97,7 +97,6 @@
         aria-label="Default select example"
       >
         <option value="paypal">paypal</option>
-        <option value="visa">visa</option>
         <option value="wise">wise</option>
       </select>
     </li>
@@ -145,6 +144,8 @@ export default {
         arr.push({ key: 'location', value: this.location });
       if (this.type !== '') arr.push({ key: 'propType', value: this.type });
       if (this.floor !== '') arr.push({ key: 'floor', value: this.floor });
+      if (this.payment !== '')
+        arr.push({ key: 'payment', value: this.payment });
       this.$store.dispatch('propFl/itemSearch', arr);
     },
     reserSearch() {
@@ -152,8 +153,8 @@ export default {
       this.location = '';
       this.type = '';
       this.floor = '';
-      this.view = '';
       this.payment = '';
+      this.view = '';
     },
   },
 };

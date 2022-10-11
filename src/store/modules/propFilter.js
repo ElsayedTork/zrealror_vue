@@ -16,6 +16,7 @@ export default {
           category: '5 star',
           propType: 'appartment',
           floor: 'ground',
+          payment: 'paypal',
         },
         {
           id: 1,
@@ -30,6 +31,7 @@ export default {
           category: '5 star',
           propType: 'appartment',
           floor: 'ground',
+          payment: 'paypal',
         },
         {
           id: 2,
@@ -44,6 +46,7 @@ export default {
           category: '3 star',
           propType: 'appartment',
           floor: 'ground',
+          payment: 'paypal',
         },
         {
           id: 3,
@@ -58,6 +61,7 @@ export default {
           category: '4 star',
           propType: 'villa',
           floor: 'upper',
+          payment: 'paypal',
         },
         {
           id: 4,
@@ -72,6 +76,7 @@ export default {
           category: '5 star',
           propType: 'room',
           floor: 'upper',
+          payment: 'paypal',
         },
         {
           id: 5,
@@ -86,6 +91,7 @@ export default {
           category: '4 star',
           propType: 'villa',
           floor: 'frist',
+          payment: 'paypal',
         },
         {
           id: 6,
@@ -100,6 +106,7 @@ export default {
           category: '3 star',
           propType: 'villa',
           floor: 'frist',
+          payment: 'paypal',
         },
         {
           id: 7,
@@ -114,6 +121,7 @@ export default {
           category: '4 star',
           propType: 'room',
           floor: 'second',
+          payment: 'wise',
         },
         {
           id: 8,
@@ -128,6 +136,7 @@ export default {
           category: '5 star',
           propType: 'room',
           floor: 'second',
+          payment: 'wise',
         },
         {
           id: 9,
@@ -142,6 +151,7 @@ export default {
           category: '5 star',
           propType: 'room',
           floor: 'frist',
+          payment: 'wise',
         },
       ],
     };
@@ -149,7 +159,16 @@ export default {
   mutations: {
     itemSearch(state, arr) {
       this.state.propInformations = state.propInformations.filter((item) => {
+        console.log(arr);
         switch (arr.length) {
+          case 5:
+            return (
+              item[arr[0].key] === arr[0].value &&
+              item[arr[1].key] === arr[1].value &&
+              item[arr[2].key] === arr[2].value &&
+              item[arr[3].key] === arr[3].value &&
+              item[arr[4].key] === arr[4].value
+            );
           case 4:
             return (
               item[arr[0].key] === arr[0].value &&
