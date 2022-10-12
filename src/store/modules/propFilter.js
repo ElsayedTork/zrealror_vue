@@ -16,6 +16,8 @@ export default {
           category: '5 star',
           propType: 'appartment',
           floor: 'ground',
+          view: 'pool',
+          finishing: 'finishing1',
           payment: 'paypal',
         },
         {
@@ -31,6 +33,8 @@ export default {
           category: '5 star',
           propType: 'appartment',
           floor: 'ground',
+          view: 'pool',
+          finishing: 'finishing1',
           payment: 'paypal',
         },
         {
@@ -46,6 +50,8 @@ export default {
           category: '3 star',
           propType: 'appartment',
           floor: 'ground',
+          view: 'pool',
+          finishing: 'finishing1',
           payment: 'paypal',
         },
         {
@@ -61,6 +67,8 @@ export default {
           category: '4 star',
           propType: 'villa',
           floor: 'upper',
+          view: 'pool',
+          finishing: 'finishing1',
           payment: 'paypal',
         },
         {
@@ -76,6 +84,8 @@ export default {
           category: '5 star',
           propType: 'room',
           floor: 'upper',
+          view: 'pool',
+          finishing: 'finishing1',
           payment: 'paypal',
         },
         {
@@ -91,6 +101,8 @@ export default {
           category: '4 star',
           propType: 'villa',
           floor: 'frist',
+          view: 'pool',
+          finishing: 'finishing1',
           payment: 'paypal',
         },
         {
@@ -106,6 +118,8 @@ export default {
           category: '3 star',
           propType: 'villa',
           floor: 'frist',
+          view: 'garden',
+          finishing: 'finishing1',
           payment: 'paypal',
         },
         {
@@ -121,6 +135,8 @@ export default {
           category: '4 star',
           propType: 'room',
           floor: 'second',
+          view: 'pool',
+          finishing: 'finishing2',
           payment: 'wise',
         },
         {
@@ -136,6 +152,8 @@ export default {
           category: '5 star',
           propType: 'room',
           floor: 'second',
+          view: 'garden',
+          finishing: 'finishing2',
           payment: 'wise',
         },
         {
@@ -151,6 +169,8 @@ export default {
           category: '5 star',
           propType: 'room',
           floor: 'frist',
+          view: 'garden',
+          finishing: 'finishing2',
           payment: 'wise',
         },
       ],
@@ -159,8 +179,26 @@ export default {
   mutations: {
     itemSearch(state, arr) {
       this.state.propInformations = state.propInformations.filter((item) => {
-        console.log(arr);
         switch (arr.length) {
+          case 7:
+            return (
+              item[arr[0].key] === arr[0].value &&
+              item[arr[1].key] === arr[1].value &&
+              item[arr[2].key] === arr[2].value &&
+              item[arr[3].key] === arr[3].value &&
+              item[arr[4].key] === arr[4].value &&
+              item[arr[5].key] === arr[5].value &&
+              item[arr[6].key] === arr[6].value
+            );
+          case 6:
+            return (
+              item[arr[0].key] === arr[0].value &&
+              item[arr[1].key] === arr[1].value &&
+              item[arr[2].key] === arr[2].value &&
+              item[arr[3].key] === arr[3].value &&
+              item[arr[4].key] === arr[4].value &&
+              item[arr[5].key] === arr[5].value
+            );
           case 5:
             return (
               item[arr[0].key] === arr[0].value &&

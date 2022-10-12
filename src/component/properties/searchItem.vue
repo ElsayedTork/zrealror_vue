@@ -74,7 +74,6 @@
       >
         <option value="pool">pool</option>
         <option value="garden">garden</option>
-        <option value="sea">sea</option>
       </select>
     </li>
     <li>
@@ -84,9 +83,8 @@
         class="form-select shadow-none"
         aria-label="Default select example"
       >
-        <option value="cairo1">cairo1</option>
-        <option value="cairo2">cairo2</option>
-        <option value="cairo3">cairo3</option>
+        <option value="finishing1">Finishing1</option>
+        <option value="finishing2">Finishing2</option>
       </select>
     </li>
     <li>
@@ -99,6 +97,17 @@
         <option value="paypal">paypal</option>
         <option value="wise">wise</option>
       </select>
+    </li>
+    <li>
+      <h6>Delivery Date</h6>
+      <div class="mb-3">
+        <input
+          type="date"
+          class="form-control shadow-none"
+          id="exampleInputdate1"
+          aria-describedby="dateHelp"
+        />
+      </div>
     </li>
   </ul>
   <div class="d-flex justify-content-between align-items-center mt-2">
@@ -128,6 +137,7 @@ export default {
       location: '',
       type: '',
       floor: '',
+      finishing: '',
       view: '',
       payment: '',
     };
@@ -144,6 +154,9 @@ export default {
         arr.push({ key: 'location', value: this.location });
       if (this.type !== '') arr.push({ key: 'propType', value: this.type });
       if (this.floor !== '') arr.push({ key: 'floor', value: this.floor });
+      if (this.view !== '') arr.push({ key: 'view', value: this.view });
+      if (this.finishing !== '')
+        arr.push({ key: 'finishing', value: this.finishing });
       if (this.payment !== '')
         arr.push({ key: 'payment', value: this.payment });
       this.$store.dispatch('propFl/itemSearch', arr);
@@ -153,8 +166,9 @@ export default {
       this.location = '';
       this.type = '';
       this.floor = '';
-      this.payment = '';
       this.view = '';
+      this.finishing = '';
+      this.payment = '';
     },
   },
 };
@@ -179,6 +193,16 @@ li {
     border: 1px solid var(--border-color);
     font-weight: 500;
     font-size: 0.875rem;
+    position: relative;
+    &:after {
+      content: 'ww';
+      position: absolute;
+      background-color: red;
+      width: 10px;
+      height: 10px;
+      left: 0;
+      right: 0;
+    }
   }
   .dropdown-toggle {
     width: 100%;
@@ -192,6 +216,9 @@ li {
     &::after {
       display: none;
     }
+  }
+  input[type='date']::-webkit-calendar-picker-indicator {
+    background-image: url('./../../assets/images/properties/calendar.svg');
   }
 }
 </style>

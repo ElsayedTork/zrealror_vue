@@ -81,7 +81,7 @@ export default {
     margin-block-end: 10px;
   }
   &__address {
-    margin-block-end: 28px;
+    margin-block-end: 20px;
     span {
       font-size: 0.875rem;
       color: var(--text-gray-color);
@@ -89,7 +89,7 @@ export default {
     }
   }
   ul {
-    margin-block-end: 44px;
+    margin-block-end: 25px;
     li {
       list-style: none;
       display: inline-block;
