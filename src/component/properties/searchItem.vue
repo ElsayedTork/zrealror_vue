@@ -110,6 +110,9 @@
       </div>
     </li>
   </ul>
+  <div>
+    <price-range></price-range>
+  </div>
   <div class="d-flex justify-content-between align-items-center mt-2">
     <custom-button
       text="Reset"
@@ -124,6 +127,7 @@
   </div>
 </template>
 <script>
+import PriceRange from './priceRange.vue';
 import CustomButton from './../shared/customButton/index.vue';
 export default {
   props: ['dataName'],
@@ -144,6 +148,7 @@ export default {
   },
   components: {
     CustomButton,
+    PriceRange,
   },
   methods: {
     itemSearch() {
