@@ -45,6 +45,7 @@ export default {
     return {
       itemPerPage: 3,
       len: Math.ceil(this.$store.state.propInformations.length / 3),
+      indx: 1,
     };
   },
   computed: {
@@ -56,15 +57,23 @@ export default {
   },
   methods: {
     sendIndex(index) {
+      this.indx = index;
       this.isActive == true;
 
       this.$store.dispatch('propFl/filterItems', index);
     },
     moveLeft() {
-      console.log('moveLeft');
+      if (this.indx > 1) {
+        this.indx--;
+        this.$store.dispatch('propFl/filterItems', this.indx);
+      }
     },
     moveRight() {
-      console.log('moveRight');
+      if (this.indx < 4) {
+        this.indx++;
+        this.$store.dispatch('propFl/filterItems', this.indx);
+        console.log('this.indx', this.indx);
+      }
     },
   },
   created() {

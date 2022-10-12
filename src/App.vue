@@ -45,6 +45,7 @@ html {
   --modal-color: rgba(36, 39, 49, 0.8);
   --bgFilter: #eceff1;
   --colorFilter:#394456;
+  --rang-color:#484B50
 }
 *,
 ul,

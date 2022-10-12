@@ -19,6 +19,10 @@ export default {
           view: 'pool',
           finishing: 'finishing1',
           payment: 'paypal',
+          valueBedrooms: 4,
+          valueBathroom: 2,
+          valueArea: 200,
+          value: 3000,
         },
         {
           id: 1,
@@ -36,6 +40,10 @@ export default {
           view: 'pool',
           finishing: 'finishing1',
           payment: 'paypal',
+          valueBedrooms: 3,
+          valueBathroom: 2,
+          valueArea: 300,
+          value: 4000,
         },
         {
           id: 2,
@@ -53,6 +61,10 @@ export default {
           view: 'pool',
           finishing: 'finishing1',
           payment: 'paypal',
+          valueBedrooms: 6,
+          valueBathroom: 1,
+          valueArea: 300,
+          value: 5000,
         },
         {
           id: 3,
@@ -70,6 +82,10 @@ export default {
           view: 'pool',
           finishing: 'finishing1',
           payment: 'paypal',
+          valueBedrooms: 4,
+          valueBathroom: 1,
+          valueArea: 400,
+          value: 5000,
         },
         {
           id: 4,
@@ -87,6 +103,10 @@ export default {
           view: 'pool',
           finishing: 'finishing1',
           payment: 'paypal',
+          valueBedrooms: 2,
+          valueBathroom: 1,
+          valueArea: 400,
+          value: 10000,
         },
         {
           id: 5,
@@ -104,6 +124,10 @@ export default {
           view: 'pool',
           finishing: 'finishing1',
           payment: 'paypal',
+          valueBedrooms: 4,
+          valueBathroom: 4,
+          valueArea: 300,
+          value: 3000,
         },
         {
           id: 6,
@@ -121,6 +145,10 @@ export default {
           view: 'garden',
           finishing: 'finishing1',
           payment: 'paypal',
+          valueBedrooms: 2,
+          valueBathroom: 4,
+          valueArea: 400,
+          value: 10000,
         },
         {
           id: 7,
@@ -138,6 +166,10 @@ export default {
           view: 'pool',
           finishing: 'finishing2',
           payment: 'wise',
+          valueBedrooms: 5,
+          valueBathroom: 3,
+          valueArea: 300,
+          value: 10000,
         },
         {
           id: 8,
@@ -155,6 +187,10 @@ export default {
           view: 'garden',
           finishing: 'finishing2',
           payment: 'wise',
+          valueBedrooms: 3,
+          valueBathroom: 3,
+          valueArea: 400,
+          value: 10000,
         },
         {
           id: 9,
@@ -172,6 +208,10 @@ export default {
           view: 'garden',
           finishing: 'finishing2',
           payment: 'wise',
+          valueBedrooms: 6,
+          valueBathroom: 3,
+          valueArea: 300,
+          value: 12000,
         },
       ],
     };
@@ -180,53 +220,122 @@ export default {
     itemSearch(state, arr) {
       this.state.propInformations = state.propInformations.filter((item) => {
         switch (arr.length) {
+          case 11:
+            return (
+              item.value >= arr[0].value[0] &&
+              item.value <= arr[0].value[1] &&
+              item.valueArea >= arr[1].value[0] &&
+              item.valueArea <= arr[1].value[1] &&
+              item.valueBedrooms >= arr[2].value[0] &&
+              item.valueBedrooms <= arr[2].value[1] &&
+              item.valueBathroom >= arr[3].value[0] &&
+              item.valueBathroom <= arr[3].value[1] &&
+              item[arr[4].key] === arr[4].value &&
+              item[arr[5].key] === arr[5].value &&
+              item[arr[6].key] === arr[6].value &&
+              item[arr[7].key] === arr[7].value &&
+              item[arr[8].key] === arr[8].value &&
+              item[arr[9].key] === arr[9].value &&
+              item[arr[10].key] === arr[10].value
+            );
+          case 10:
+            return (
+              item.value >= arr[0].value[0] &&
+              item.value <= arr[0].value[1] &&
+              item.valueArea >= arr[1].value[0] &&
+              item.valueArea <= arr[1].value[1] &&
+              item.valueBedrooms >= arr[2].value[0] &&
+              item.valueBedrooms <= arr[2].value[1] &&
+              item.valueBathroom >= arr[3].value[0] &&
+              item.valueBathroom <= arr[3].value[1] &&
+              item[arr[4].key] === arr[4].value &&
+              item[arr[5].key] === arr[5].value &&
+              item[arr[6].key] === arr[6].value &&
+              item[arr[7].key] === arr[7].value &&
+              item[arr[8].key] === arr[8].value &&
+              item[arr[9].key] === arr[9].value
+            );
+          case 9:
+            return (
+              item.value >= arr[0].value[0] &&
+              item.value <= arr[0].value[1] &&
+              item.valueArea >= arr[1].value[0] &&
+              item.valueArea <= arr[1].value[1] &&
+              item.valueBedrooms >= arr[2].value[0] &&
+              item.valueBedrooms <= arr[2].value[1] &&
+              item.valueBathroom >= arr[3].value[0] &&
+              item.valueBathroom <= arr[3].value[1] &&
+              item[arr[4].key] === arr[4].value &&
+              item[arr[5].key] === arr[5].value &&
+              item[arr[6].key] === arr[6].value &&
+              item[arr[7].key] === arr[7].value &&
+              item[arr[8].key] === arr[8].value
+            );
+          case 8:
+            return (
+              item.value >= arr[0].value[0] &&
+              item.value <= arr[0].value[1] &&
+              item.valueArea >= arr[1].value[0] &&
+              item.valueArea <= arr[1].value[1] &&
+              item.valueBedrooms >= arr[2].value[0] &&
+              item.valueBedrooms <= arr[2].value[1] &&
+              item.valueBathroom >= arr[3].value[0] &&
+              item.valueBathroom <= arr[3].value[1] &&
+              item[arr[4].key] === arr[4].value &&
+              item[arr[5].key] === arr[5].value &&
+              item[arr[6].key] === arr[6].value &&
+              item[arr[7].key] === arr[7].value
+            );
           case 7:
             return (
-              item[arr[0].key] === arr[0].value &&
-              item[arr[1].key] === arr[1].value &&
-              item[arr[2].key] === arr[2].value &&
-              item[arr[3].key] === arr[3].value &&
+              item.value >= arr[0].value[0] &&
+              item.value <= arr[0].value[1] &&
+              item.valueArea >= arr[1].value[0] &&
+              item.valueArea <= arr[1].value[1] &&
+              item.valueBedrooms >= arr[2].value[0] &&
+              item.valueBedrooms <= arr[2].value[1] &&
+              item.valueBathroom >= arr[3].value[0] &&
+              item.valueBathroom <= arr[3].value[1] &&
               item[arr[4].key] === arr[4].value &&
               item[arr[5].key] === arr[5].value &&
               item[arr[6].key] === arr[6].value
             );
           case 6:
             return (
-              item[arr[0].key] === arr[0].value &&
-              item[arr[1].key] === arr[1].value &&
-              item[arr[2].key] === arr[2].value &&
-              item[arr[3].key] === arr[3].value &&
+              item.value >= arr[0].value[0] &&
+              item.value <= arr[0].value[1] &&
+              item.valueArea >= arr[1].value[0] &&
+              item.valueArea <= arr[1].value[1] &&
+              item.valueBedrooms >= arr[2].value[0] &&
+              item.valueBedrooms <= arr[2].value[1] &&
+              item.valueBathroom >= arr[3].value[0] &&
+              item.valueBathroom <= arr[3].value[1] &&
               item[arr[4].key] === arr[4].value &&
               item[arr[5].key] === arr[5].value
             );
           case 5:
             return (
-              item[arr[0].key] === arr[0].value &&
-              item[arr[1].key] === arr[1].value &&
-              item[arr[2].key] === arr[2].value &&
-              item[arr[3].key] === arr[3].value &&
+              item.value >= arr[0].value[0] &&
+              item.value <= arr[0].value[1] &&
+              item.valueArea >= arr[1].value[0] &&
+              item.valueArea <= arr[1].value[1] &&
+              item.valueBedrooms >= arr[2].value[0] &&
+              item.valueBedrooms <= arr[2].value[1] &&
+              item.valueBathroom >= arr[3].value[0] &&
+              item.valueBathroom <= arr[3].value[1] &&
               item[arr[4].key] === arr[4].value
             );
           case 4:
             return (
-              item[arr[0].key] === arr[0].value &&
-              item[arr[1].key] === arr[1].value &&
-              item[arr[2].key] === arr[2].value &&
-              item[arr[3].key] === arr[3].value
+              item.value >= arr[0].value[0] &&
+              item.value <= arr[0].value[1] &&
+              item.valueArea >= arr[1].value[0] &&
+              item.valueArea <= arr[1].value[1] &&
+              item.valueBedrooms >= arr[2].value[0] &&
+              item.valueBedrooms <= arr[2].value[1] &&
+              item.valueBathroom >= arr[3].value[0] &&
+              item.valueBathroom <= arr[3].value[1]
             );
-          case 3:
-            return (
-              item[arr[0].key] === arr[0].value &&
-              item[arr[1].key] === arr[1].value &&
-              item[arr[2].key] === arr[2].value
-            );
-          case 2:
-            return (
-              item[arr[0].key] === arr[0].value &&
-              item[arr[1].key] === arr[1].value
-            );
-          case 1:
-            return item[arr[0].key] === arr[0].value;
         }
       });
     },

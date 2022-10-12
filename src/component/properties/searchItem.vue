@@ -53,17 +53,46 @@
       </select>
     </li>
   </ul>
+
   <div>
-    <label for="customRange3" class="form-label">Example range</label>
-    <input
-      type="range"
-      class="form-range"
-      min="0"
-      max="5"
-      step="0.5"
-      id="customRange3"
-    />
+    <div class="range">
+      <div
+        class="range__header d-flex justify-content-between align-items-sm-center"
+      >
+        <p>Price Range</p>
+        <p>{{ value[0] }} - {{ value[1] }} $</p>
+      </div>
+      <Slider v-model="value" :min="0" :max="20000" />
+    </div>
+    <div class="range">
+      <div
+        class="range__header d-flex justify-content-between align-items-sm-center"
+      >
+        <p>Area</p>
+        <p>{{ valueArea[0] }} - {{ valueArea[1] }} Sqrt</p>
+      </div>
+      <Slider v-model="valueArea" :min="0" :max="600" />
+    </div>
+    <div class="range">
+      <div
+        class="range__header d-flex justify-content-between align-items-sm-center"
+      >
+        <p>Bedrooms</p>
+        <p>{{ valueBedrooms[0] }} - {{ valueBedrooms[1] }}</p>
+      </div>
+      <Slider v-model="valueBedrooms" :min="1" :max="10" />
+    </div>
+    <div class="range">
+      <div
+        class="range__header d-flex justify-content-between align-items-sm-center"
+      >
+        <p>Bathroom</p>
+        <p>{{ valueBathroom[0] }} - {{ valueBathroom[1] }}</p>
+      </div>
+      <Slider v-model="valueBathroom" :min="1" :max="10" />
+    </div>
   </div>
+
   <ul>
     <li>
       <h6>View</h6>
@@ -110,9 +139,7 @@
       </div>
     </li>
   </ul>
-  <div>
-    <price-range></price-range>
-  </div>
+
   <div class="d-flex justify-content-between align-items-center mt-2">
     <custom-button
       text="Reset"
@@ -127,8 +154,8 @@
   </div>
 </template>
 <script>
-import PriceRange from './priceRange.vue';
 import CustomButton from './../shared/customButton/index.vue';
+import Slider from '@vueform/slider';
 export default {
   props: ['dataName'],
   data() {
@@ -144,15 +171,24 @@ export default {
       finishing: '',
       view: '',
       payment: '',
+      value: [100, 15000],
+      valueArea: [1, 550],
+      valueBedrooms: [1, 8],
+      valueBathroom: [1, 8],
+      tooltips: true,
     };
   },
   components: {
     CustomButton,
-    PriceRange,
+    Slider,
   },
   methods: {
     itemSearch() {
       let arr = [];
+      arr.push({ key: 'value', value: this.value });
+      arr.push({ key: 'valueArea', value: this.valueArea });
+      arr.push({ key: 'valueBedrooms', value: this.valueBedrooms });
+      arr.push({ key: 'valueBathroom', value: this.valueBathroom });
       if (this.category !== '')
         arr.push({ key: 'category', value: this.category });
       if (this.location !== '')
@@ -164,6 +200,7 @@ export default {
         arr.push({ key: 'finishing', value: this.finishing });
       if (this.payment !== '')
         arr.push({ key: 'payment', value: this.payment });
+
       this.$store.dispatch('propFl/itemSearch', arr);
       // this.$store.dispatch('propFl/filterItems', 1);
     },
@@ -179,7 +216,8 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
+<style src="@vueform/slider/themes/default.css"></style>
+<style lang="scss">
 li {
   list-style: none;
   padding-block-start: 24px;
@@ -225,6 +263,53 @@ li {
   }
   input[type='date']::-webkit-calendar-picker-indicator {
     background-image: url('./../../assets/images/properties/calendar.svg');
+  }
+}
+.range {
+  padding-block: 28px;
+  &__header {
+    padding-block-end: 12px;
+    p {
+      &:first-child {
+        color: var(--text-color-secondary);
+        font-weight: 500;
+        font-size: 14px;
+      }
+      &:last-child {
+        color: var(--rang-color);
+        font-weight: 500;
+        font-size: 12px;
+      }
+    }
+  }
+  .slider-touch-area {
+    background-color: #fff;
+    border: 4px solid var(--main-color);
+    border-radius: 50%;
+    // position: relative;
+  }
+  .slider-connects {
+    .slider-connect {
+      background-color: var(--main-color);
+    }
+  }
+
+  .slider-horizontal .slider-tooltip-top {
+    bottom: -30px !important;
+    left: 50%;
+    transform: translate(-50%);
+    &::before {
+      content: none;
+    }
+    background-color: var(--main-color);
+    border-color: transparent;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  &:hover {
+    .slider-horizontal .slider-tooltip-top {
+      opacity: 1;
+    }
   }
 }
 </style>
