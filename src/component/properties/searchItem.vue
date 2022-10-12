@@ -160,6 +160,7 @@ export default {
       if (this.payment !== '')
         arr.push({ key: 'payment', value: this.payment });
       this.$store.dispatch('propFl/itemSearch', arr);
+      // this.$store.dispatch('propFl/filterItems', 1);
     },
     reserSearch() {
       this.category = '';

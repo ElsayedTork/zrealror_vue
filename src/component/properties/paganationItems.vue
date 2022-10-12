@@ -3,20 +3,35 @@
     <nav aria-label="Page navigation example">
       <ul class="pagination">
         <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
+          <router-link
+            class="page-link"
+            to="/prop"
+            aria-label="Previous"
+            @click="moveLeft"
+          >
             <i class="fa-solid fa-chevron-left"></i>
-          </a>
+          </router-link>
         </li>
         <li class="page-item" v-for="index in len" :key="index">
-          <router-link class="page-link" to="/prop" @click="sendIndex(index)">{{
-            index
-          }}</router-link>
+          <router-link
+            :class="[
+              isActive && index == 1 ? 'activeMe page-link' : 'page-link',
+            ]"
+            to="/prop"
+            @click="sendIndex(index)"
+            >{{ index }}</router-link
+          >
         </li>
 
         <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
+          <router-link
+            @click="moveRight"
+            class="page-link"
+            to="/prop"
+            aria-label="Next"
+          >
             <i class="fa-solid fa-chevron-right"></i>
-          </a>
+          </router-link>
         </li>
       </ul>
     </nav>
@@ -41,7 +56,15 @@ export default {
   },
   methods: {
     sendIndex(index) {
+      this.isActive == true;
+
       this.$store.dispatch('propFl/filterItems', index);
+    },
+    moveLeft() {
+      console.log('moveLeft');
+    },
+    moveRight() {
+      console.log('moveRight');
     },
   },
   created() {
@@ -80,6 +103,14 @@ export default {
         }
       }
     }
+  }
+  .activeMe {
+    color: var(--white-color) !important;
+    background-color: var(--main-color) !important;
+    padding-inline: 13px;
+    padding-block: 10px;
+    box-shadow: none !important;
+    border-radius: 8px;
   }
 }
 </style>
