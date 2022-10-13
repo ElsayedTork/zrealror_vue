@@ -341,6 +341,7 @@ export default {
     },
     filterItems(state, index) {
       let ar = state.propInformations;
+
       if (index == 1) {
         this.state.propInformations = [ar[0], ar[1], ar[2]];
       } else if (index == 2) {
