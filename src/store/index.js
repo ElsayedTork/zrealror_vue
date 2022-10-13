@@ -10,6 +10,7 @@ export default createStore({
   state() {
     return {
       searches: ['How To Find', 'How To Search', 'he works well'],
+      savedSearches: [],
       profileData: {
         fristName: 'Ahmed',
         lastName: 'Mohamed',
@@ -195,6 +196,11 @@ export default createStore({
     addSearch(state, saveSearch) {
       state.searches = [...state.searches, saveSearch];
     },
+    savedSerch(state, newSavedSerch) {
+      // state.searches = [...state.searches, saveSearch];
+      state.savedSearches = [...state.savedSearches, newSavedSerch];
+      console.log(state.savedSearches);
+    },
   },
   actions: {
     deleteSearch({ commit }, ele) {
@@ -205,6 +211,9 @@ export default createStore({
     },
     addSearch({ commit }, saveSearch) {
       commit('addSearch', saveSearch);
+    },
+    savedSerch({ commit }, newSavedSerch) {
+      commit('savedSerch', newSavedSerch);
     },
   },
 });

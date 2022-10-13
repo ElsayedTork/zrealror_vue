@@ -202,7 +202,8 @@ export default {
         arr.push({ key: 'payment', value: this.payment });
 
       this.$store.dispatch('propFl/itemSearch', arr);
-      // this.$store.dispatch('propFl/filterItems', 1);
+
+      this.$emit('data-search', arr);
     },
     reserSearch() {
       this.category = '';
@@ -212,6 +213,10 @@ export default {
       this.view = '';
       this.finishing = '';
       this.payment = '';
+      this.value = [100, 15000];
+      this.valueArea = [1, 550];
+      this.valueBedrooms = [1, 8];
+      this.valueBathroom = [1, 8];
     },
   },
 };

@@ -47,6 +47,7 @@
 <script>
 import CustomButton from './../shared/customButton/index.vue';
 export default {
+  props: ['arrSave'],
   data() {
     return {
       saveSerch: '',
@@ -60,7 +61,10 @@ export default {
       this.$emit('close-modal');
     },
     sendSearch() {
-      this.$store.dispatch('addSearch', this.saveSerch);
+      console.log('this.arrSave', this.arrSave);
+      // this.$store.dispatch('addSearch', this.saveSerch);
+      let newSavedSerch = { name: this.saveSerch, dataSearch: this.arrSave };
+      this.$store.dispatch('savedSerch', newSavedSerch);
       this.closeModal();
     },
   },

@@ -3,7 +3,10 @@
     <h4>Advanced Search</h4>
     <div class="search__filter">
       <section class="search__filter__data">
-        <search-item dataName="propSearch"></search-item>
+        <search-item
+          @data-search="dataSearch"
+          dataName="propSearch"
+        ></search-item>
       </section>
 
       <section class="search__filter__btns">
@@ -19,7 +22,7 @@
 
   <!-- Start Test -->
   <section v-if="flag">
-    <prop-modal @close-modal="closeModal"></prop-modal>
+    <prop-modal @close-modal="closeModal" :arrSave="arrSave"></prop-modal>
   </section>
 
   <!-- End Test -->
@@ -32,6 +35,7 @@ export default {
   data() {
     return {
       flag: false,
+      arrSave: [],
     };
   },
   components: {
@@ -45,6 +49,10 @@ export default {
     },
     closeModal() {
       this.flag = false;
+    },
+    dataSearch(arr) {
+      this.arrSave = arr;
+      console.log('arr from parent', this.arrSave);
     },
   },
 };
