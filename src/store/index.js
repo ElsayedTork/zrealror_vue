@@ -10,7 +10,11 @@ export default createStore({
   state() {
     return {
       searches: ['How To Find', 'How To Search', 'he works well'],
-      savedSearches: [],
+      savedSearches: [
+        { name: 'sss', dataSearch: [1, 2, 's'] },
+        { name: 'eee', dataSearch: [1, 2, 's'] },
+        { name: 'rrr', dataSearch: [1, 2, 'x'] },
+      ],
       profileData: {
         fristName: 'Ahmed',
         lastName: 'Mohamed',
@@ -187,8 +191,10 @@ export default createStore({
     };
   },
   mutations: {
-    deleteSearchMut(state, ele) {
-      state.searches = state.searches.filter((item) => item !== ele);
+    deleteSearch(state, index) {
+      console.log('index', index);
+      state.savedSearches.splice(index, 1);
+      console.log(this.state.savedSearches);
     },
     setProfileData(state, obj) {
       state.profileData = obj;
@@ -197,14 +203,13 @@ export default createStore({
       state.searches = [...state.searches, saveSearch];
     },
     savedSerch(state, newSavedSerch) {
-      // state.searches = [...state.searches, saveSearch];
       state.savedSearches = [...state.savedSearches, newSavedSerch];
       console.log(state.savedSearches);
     },
   },
   actions: {
-    deleteSearch({ commit }, ele) {
-      commit('deleteSearchMut', ele);
+    deleteSearch({ commit }, index) {
+      commit('deleteSearch', index);
     },
     setProfileDataAction({ commit }, obj) {
       commit('setProfileData', obj);

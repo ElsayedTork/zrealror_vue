@@ -14,7 +14,7 @@
         v-for="(search, index) in searches"
         :key="index"
       >
-        <p>{{ search }}</p>
+        <p>{{ search.name }}</p>
         <div class="profile__center__search_body__item-container">
           <button>apply search</button>
           <figure>
@@ -40,13 +40,13 @@ export default {
 
   computed: {
     searches() {
-      return this.$store.state.searches;
+      return this.$store.state.savedSearches;
     },
   },
   methods: {
     handelDeleteClick(index) {
-      let ele = this.searches[index];
-      this.$store.dispatch('deleteSearch', ele);
+      // let ele = this.searches[index];
+      this.$store.dispatch('deleteSearch', index);
     },
   },
 };
