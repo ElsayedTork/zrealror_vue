@@ -109,7 +109,7 @@ export default {
   }
   i {
     color: var(--close-color);
-    font-size: 18px;
+    font-size: 1.125rem;
     cursor: pointer;
   }
 }

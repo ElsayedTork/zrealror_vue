@@ -286,12 +286,12 @@ li.serch-date {
       &:first-child {
         color: var(--text-color-secondary);
         font-weight: 500;
-        font-size: 14px;
+        font-size: 0.875rem;
       }
       &:last-child {
         color: var(--rang-color);
         font-weight: 500;
-        font-size: 12px;
+        font-size: 0.75rem;
       }
     }
   }

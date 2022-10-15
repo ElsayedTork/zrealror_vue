@@ -107,7 +107,7 @@ export default {
     }
     &__total {
       font-family: Inter;
-      font-size: 12px;
+      font-size: 0.75rem;
       font-weight: 500;
       color: var(--text-color-secondary);
     }
@@ -120,7 +120,7 @@ export default {
     }
     &__numbers {
       font-family: Open Sans;
-      font-size: 12px;
+      font-size: 0.75rem;
       font-weight: 600;
       color: var(--placeholder-color);
     }

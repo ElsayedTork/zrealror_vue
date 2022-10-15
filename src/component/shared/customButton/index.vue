@@ -63,7 +63,7 @@ button {
 }
 @media (max-width: 576px) {
   .details {
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 500;
     padding: 7px 14px 7px 14px;
   }

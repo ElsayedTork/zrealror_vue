@@ -57,7 +57,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     h3 {
-      font-size: 24px;
+      font-size: 1.5rem;
       font-weight: 600;
       color: var(--text-color-secondary);
     }
@@ -79,7 +79,7 @@ export default {
       display: inline-block;
       margin-inline-end: 16px;
       span {
-        font-size: 14px;
+        font-size: 0.875rem;
         color: var(--text-gray-color);
         margin-inline-start: 7px;
         color: var(--text-gray-color);
@@ -99,7 +99,7 @@ export default {
       }
       span {
         color: var(--text-gray-color);
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 500;
         display: inline-block;
         text-decoration: line-through;
@@ -112,7 +112,7 @@ export default {
   .apartment__info__heading {
     h3 {
       margin-block-start: 20px;
-      font-size: 20px;
+      font-size: 1.25rem;
     }
   }
 }

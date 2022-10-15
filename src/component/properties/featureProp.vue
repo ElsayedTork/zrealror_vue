@@ -93,7 +93,7 @@ export default {
       list-style: none;
       display: inline-block;
       color: var(--colorFilter);
-      font-size: 600;
+      font-weight: 600;
       font-size: 1rem;
       padding-inline: 20px;
       padding-block: 10px;

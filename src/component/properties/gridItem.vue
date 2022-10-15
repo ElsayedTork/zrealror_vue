@@ -74,7 +74,7 @@ export default {
     }
   }
   h3 {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
     font-weight: 600;
     color: var(--text-color-secondary);
@@ -109,12 +109,12 @@ export default {
     p {
       b {
         color: var(--text-color-secondary);
-        font-size: 22px;
+        font-size: 1.375rem;
         margin-inline-end: 8px;
       }
       span {
         color: var(--text-gray-color);
-        font-size: 14px;
+        font-size: 0.875rem;
         font-weight: 500;
         display: inline-block;
         text-decoration: line-through;
