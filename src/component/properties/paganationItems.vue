@@ -73,7 +73,6 @@ export default {
       if (this.indx < 4) {
         this.indx++;
         this.$store.dispatch('propFl/filterItems', this.indx);
-        console.log('this.indx', this.indx);
       }
     },
   },

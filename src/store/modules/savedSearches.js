@@ -8,12 +8,9 @@ export default {
   mutations: {
     savedSerch(state, newSavedSerch) {
       state.savedSearches = [...state.savedSearches, newSavedSerch];
-      console.log(state.savedSearches);
     },
     deleteSearch(state, index) {
-      console.log('index', index);
       state.savedSearches.splice(index, 1);
-      console.log(this.state.savedSearches);
     },
   },
   actions: {

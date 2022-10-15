@@ -52,7 +52,6 @@ export default {
     },
     dataSearch(arr) {
       this.arrSave = arr;
-      console.log('arr from parent', this.arrSave);
     },
   },
 };
@@ -69,13 +68,16 @@ export default {
     background-color: var(--heading-color);
     padding-inline-start: 20px;
     padding-block: 14px;
+    border: 1px solid var(--heading-color);
+    border-radius: 5px 5px 0 0;
+    margin-block: 0;
   }
   &__filter {
     padding-inline: 20px;
     background-color: var(--white-color) !important;
     padding-block-end: 40px;
     &__btns {
-      margin-block-start: 48px;
+      margin-block-start: 0;
     }
   }
 }

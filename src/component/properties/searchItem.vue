@@ -2,17 +2,19 @@
   <ul>
     <li>
       <h6>Property Category</h6>
-      <select
-        v-model="category"
-        class="form-select shadow-none"
-        aria-label="Default select example"
-      >
-        <option value="5 star">5 star</option>
-        <option value="4 star">4 star</option>
-        <option value="3 star">3 start</option>
-      </select>
+      <div class="select-container">
+        <select
+          v-model="category"
+          class="form-select shadow-none"
+          aria-label="Default select example"
+        >
+          <option value="" selected hidden>Please Choose...</option>
+          <option value="5 star">5 star</option>
+          <option value="4 star">4 star</option>
+          <option value="3 star">3 start</option>
+        </select>
+      </div>
     </li>
-
     <li>
       <h6>Property Location</h6>
       <select
@@ -20,12 +22,12 @@
         class="form-select shadow-none"
         aria-label="Default select example"
       >
+        <option value="" selected hidden>Please Choose...</option>
         <option value="cairo">Cairo</option>
         <option value="alex">Alex</option>
         <option value="tanta">tanta</option>
       </select>
     </li>
-
     <li>
       <h6>Property Type</h6>
       <select
@@ -33,12 +35,12 @@
         class="form-select shadow-none"
         aria-label="Default select example"
       >
+        <option value="" selected hidden>Please Choose...</option>
         <option value="appartment">appartment</option>
         <option value="villa">villa</option>
         <option value="room">room</option>
       </select>
     </li>
-
     <li>
       <h6>Floor</h6>
       <select
@@ -46,6 +48,7 @@
         class="form-select shadow-none"
         aria-label="Default select example"
       >
+        <option value="" selected hidden>Please Choose...</option>
         <option value="ground">Ground Floor</option>
         <option value="upper">Upper Floor</option>
         <option value="frist">Frist Floor</option>
@@ -101,6 +104,7 @@
         class="form-select shadow-none"
         aria-label="Default select example"
       >
+        <option value="" selected hidden>Please Choose...</option>
         <option value="pool">pool</option>
         <option value="garden">garden</option>
       </select>
@@ -112,6 +116,7 @@
         class="form-select shadow-none"
         aria-label="Default select example"
       >
+        <option value="" selected hidden>Please Choose...</option>
         <option value="finishing1">Finishing1</option>
         <option value="finishing2">Finishing2</option>
       </select>
@@ -123,20 +128,14 @@
         class="form-select shadow-none"
         aria-label="Default select example"
       >
+        <option value="" selected hidden>Please Choose...</option>
         <option value="paypal">paypal</option>
         <option value="wise">wise</option>
       </select>
     </li>
-    <li>
+    <li class="serch-date">
       <h6>Delivery Date</h6>
-      <div class="mb-3">
-        <input
-          type="date"
-          class="form-control shadow-none"
-          id="exampleInputdate1"
-          aria-describedby="dateHelp"
-        />
-      </div>
+      <serch-date></serch-date>
     </li>
   </ul>
 
@@ -156,6 +155,7 @@
 <script>
 import CustomButton from './../shared/customButton/index.vue';
 import Slider from '@vueform/slider';
+import SerchDate from './serchDate.vue';
 export default {
   props: ['dataName'],
   data() {
@@ -181,6 +181,7 @@ export default {
   components: {
     CustomButton,
     Slider,
+    SerchDate,
   },
   methods: {
     itemSearch() {
@@ -233,7 +234,6 @@ li {
   }
   .form-select {
     width: 100%;
-    border-color: transparent;
     text-align: left;
     background-image: url('./../../assets/images/properties/Shape.svg'),
       linear-gradient(to right, #f6f7f9, #ffffff);
@@ -243,14 +243,19 @@ li {
     font-weight: 500;
     font-size: 0.875rem;
     position: relative;
-    &:after {
-      content: 'ww';
+    z-index: 1;
+    padding-block: 9px;
+    &:before {
+      content: 'sss';
       position: absolute;
       background-color: red;
-      width: 10px;
-      height: 10px;
+      color: red;
+      width: 100%;
+      height: 100%;
       left: 0;
       right: 0;
+      top: 0;
+      z-index: 2000;
     }
   }
   .dropdown-toggle {
@@ -269,6 +274,9 @@ li {
   input[type='date']::-webkit-calendar-picker-indicator {
     background-image: url('./../../assets/images/properties/calendar.svg');
   }
+}
+li.serch-date {
+  margin-block-end: 40px;
 }
 .range {
   padding-block: 28px;

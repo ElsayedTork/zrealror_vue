@@ -44,8 +44,8 @@ html {
   --close-color: #828a9d;
   --modal-color: rgba(36, 39, 49, 0.8);
   --bgFilter: #eceff1;
-  --colorFilter:#394456;
-  --rang-color:#484B50
+  --colorFilter: #394456;
+  --rang-color: #484b50;
 }
 *,
 ul,
@@ -69,5 +69,46 @@ button {
 @font-face {
   font-family: 'Inter';
   src: url('./assets/fonts/Inter-Medium.ttf');
+}
+.ant-picker {
+  border-radius: 5px;
+  border-color: var(--border-color) !important;
+}
+.ant-picker .ant-picker-input input {
+  color: var(--placeholder-color) !important;
+  padding-block: 6px;
+}
+.ant-picker .ant-picker-input input:first-child {
+}
+.ant-calendar-range-picker-separator {
+  position: relative;
+  color: transparent;
+  top: -18px;
+}
+.ant-calendar-range-picker-separator:after {
+  content: 'to';
+}
+.anticon.anticon-swap-right {
+  opacity: 0 !important;
+  position: relative;
+}
+
+.anticon.anticon-swap-right::after {
+  content: '-';
+  position: absolute;
+  color: var(--placeholder-color);
+  width: 30px;
+  height: 1px;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+.ant-picker-suffix {
+  position: absolute;
+  right: 6px;
+  content: url('./assets/images/properties/calendar.svg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
 }
 </style>

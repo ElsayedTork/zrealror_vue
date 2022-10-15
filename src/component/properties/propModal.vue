@@ -61,7 +61,6 @@ export default {
       this.$emit('close-modal');
     },
     sendSearch() {
-      console.log('this.arrSave', this.arrSave);
       let newSavedSerch = { name: this.saveSerch, dataSearch: this.arrSave };
       this.$store.dispatch('savedSerch', newSavedSerch);
       this.closeModal();

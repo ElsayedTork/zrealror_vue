@@ -8,7 +8,7 @@
         <div class="col-xl-9">
           <appartments />
           <img
-            class="properties__propAdd"
+            class="properties__propAdd img-fluid"
             src="./../../assets/images/properties/propAdd.png"
             alt=""
           />

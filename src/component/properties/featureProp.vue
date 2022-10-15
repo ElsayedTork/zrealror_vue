@@ -102,7 +102,7 @@ export default {
     }
     li.active {
       background-color: var(--main-color);
-      color: #fff;
+      color: var(--white-color);
     }
   }
 }
