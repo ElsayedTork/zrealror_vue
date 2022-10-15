@@ -21,10 +21,14 @@
 
         <ul class="dropdown-menu">
           <li @click="lowPrices">
-            <a class="dropdown-item" href="#"> {{ lowPrice }}</a>
+            <router-link to="/prop" class="dropdown-item" href="#">
+              {{ lowPrice }}</router-link
+            >
           </li>
           <li @click="heighPrices">
-            <a class="dropdown-item" href="#">{{ heighPrice }}</a>
+            <router-link to="/prop" class="dropdown-item" href="#">{{
+              heighPrice
+            }}</router-link>
           </li>
         </ul>
 

@@ -19,13 +19,9 @@
       </section>
     </div>
   </div>
-
-  <!-- Start Test -->
   <section v-if="flag">
     <prop-modal @close-modal="closeModal" :arrSave="arrSave"></prop-modal>
   </section>
-
-  <!-- End Test -->
 </template>
 <script>
 import SearchItem from './searchItem.vue';

@@ -124,13 +124,13 @@
   padding-inline: 8px;
   padding-block: 6px;
   border-radius: 10px;
-}
-.carousel-indicators button {
-  background-color: transparent;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  transition: 0.3s transform ease-in-out;
+  button {
+    background-color: transparent;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    transition: 0.3s transform ease-in-out;
+  }
 }
 .carousel-indicators [data-bs-target] {
   border: 2px solid var(--white-color);
