@@ -2,19 +2,15 @@ import { createStore } from 'vuex';
 
 import propFilter from './modules/propFilter';
 import units from './modules/unitType';
+import savedSearches from './modules/savedSearches';
 export default createStore({
   modules: {
     propFl: propFilter,
     units: units,
+    savSearch: savedSearches,
   },
   state() {
     return {
-      searches: ['How To Find', 'How To Search', 'he works well'],
-      savedSearches: [
-        { name: 'sss', dataSearch: [1, 2, 's'] },
-        { name: 'eee', dataSearch: [1, 2, 's'] },
-        { name: 'rrr', dataSearch: [1, 2, 'x'] },
-      ],
       profileData: {
         fristName: 'Ahmed',
         lastName: 'Mohamed',
@@ -191,34 +187,19 @@ export default createStore({
     };
   },
   mutations: {
-    deleteSearch(state, index) {
-      console.log('index', index);
-      state.savedSearches.splice(index, 1);
-      console.log(this.state.savedSearches);
-    },
     setProfileData(state, obj) {
       state.profileData = obj;
     },
     addSearch(state, saveSearch) {
       state.searches = [...state.searches, saveSearch];
     },
-    savedSerch(state, newSavedSerch) {
-      state.savedSearches = [...state.savedSearches, newSavedSerch];
-      console.log(state.savedSearches);
-    },
   },
   actions: {
-    deleteSearch({ commit }, index) {
-      commit('deleteSearch', index);
-    },
     setProfileDataAction({ commit }, obj) {
       commit('setProfileData', obj);
     },
     addSearch({ commit }, saveSearch) {
       commit('addSearch', saveSearch);
-    },
-    savedSerch({ commit }, newSavedSerch) {
-      commit('savedSerch', newSavedSerch);
     },
   },
 });

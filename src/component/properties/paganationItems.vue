@@ -46,6 +46,7 @@ export default {
       itemPerPage: 3,
       len: Math.ceil(this.$store.state.propInformations.length / 3),
       indx: 1,
+      isActive: true,
     };
   },
   computed: {
@@ -57,9 +58,9 @@ export default {
   },
   methods: {
     sendIndex(index) {
+      this.isActive = false;
       this.indx = index;
       this.isActive == true;
-
       this.$store.dispatch('propFl/filterItems', index);
     },
     moveLeft() {
@@ -113,6 +114,7 @@ export default {
       }
     }
   }
+
   .activeMe {
     color: var(--white-color) !important;
     background-color: var(--main-color) !important;

@@ -16,7 +16,7 @@
       >
         <p>{{ search.name }}</p>
         <div class="profile__center__search_body__item-container">
-          <button>apply search</button>
+          <button @click="applySearch(index)">apply search</button>
           <figure>
             <img
               @click="handelDeleteClick(index)"
@@ -40,13 +40,15 @@ export default {
 
   computed: {
     searches() {
-      return this.$store.state.savedSearches;
+      return this.$store.state.savSearch.savedSearches;
     },
   },
   methods: {
     handelDeleteClick(index) {
-      // let ele = this.searches[index];
-      this.$store.dispatch('deleteSearch', index);
+      this.$store.dispatch('savSearch/deleteSearch', index);
+    },
+    applySearch(index) {
+      this.$store.dispatch('savSearch/applySearch', index);
     },
   },
 };
