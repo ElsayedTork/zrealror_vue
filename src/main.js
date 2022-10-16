@@ -7,11 +7,13 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 library.add(fas, faYoutube);
-
- import router from './router/router.js';
-// import store from './store/index.js';
+import { DatePicker } from 'ant-design-vue';
+import router from './router/router.js';
+import store from './store/index.js';
+import 'ant-design-vue/dist/antd.css';
 const app = createApp(App);
- app.use(router);
-// app.use(store);
+app.use(router);
+app.use(store);
+app.use(DatePicker);
 app.component('font-awesome-icon', FontAwesomeIcon);
 app.mount('#app');

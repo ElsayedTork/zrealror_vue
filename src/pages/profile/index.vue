@@ -1,12 +1,159 @@
 <template>
-  <Profile />
+  <div class="profile">
+    <div class="container">
+      <div class="row">
+        <section class="profileSidbar col-xl-2 col-md-4 col-sm-12">
+          <user-sidebar></user-sidebar>
+        </section>
+        <section class="col-xl-7 col-md-8 col-sm-12 profile__center">
+          <h3 class="mb-3">My Profile</h3>
+          <profile-container></profile-container>
+        </section>
+        <section class="col-xl-3 col-md-6 col-sm-12 profile__end">
+          <figure
+            class="advertisment d-flex justify-content-center align-items-center"
+          >
+            <img src="./../../assets/images/adds/addEndImg.png" alt="" />
+          </figure>
+        </section>
+      </div>
+    </div>
+  </div>
 </template>
 <script>
-import Profile from './../../component/profile/index.vue';
+import ProfileContainer from './../../component/profileContainer/index.vue';
+import UserSidebar from './../../component/shared/userSidebar/index.vue';
 export default {
+  data() {
+    return {
+      flage: true,
+    };
+  },
   components: {
-    Profile,
+    ProfileContainer,
+    UserSidebar,
   },
 };
 </script>
-<style></style>
+<style lang="scss" scoped>
+.profile {
+  padding-block-start: 40px;
+  background-color: var(--background-color);
+  &__body {
+    padding-inline: 32px;
+    margin-block-start: 32px;
+    &__name {
+      h3 {
+        color: rgba(27, 37, 52, 1);
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-block-end: 8px;
+      }
+      p {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+    }
+    &__item {
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 20px;
+      width: 200px;
+      span {
+        font-weight: 500;
+      }
+      div {
+        margin-block-start: 20px;
+        figure {
+          padding: 14px !important;
+          border-radius: 8px;
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+        figure.Open {
+          background-color: rgba(127, 186, 122, 0.12);
+        }
+        figure.Closed {
+          background-color: rgba(255, 117, 76, 0.12);
+        }
+      }
+    }
+    &__data {
+      margin-block-end: 32px;
+      margin-block-start: 42px;
+      ul {
+        margin-block-end: 32px;
+        li {
+          list-style: none;
+          margin-block-end: 6px;
+          &:first-child {
+            color: #49505b;
+            font-weight: 500;
+          }
+          &:last-child {
+            color: #5f666f;
+            font-weight: 400;
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+  }
+  &__end {
+    .profile__end__add {
+      height: 640px;
+      width: 100%;
+      background-color: var(--advertisement-color);
+      border-radius: 8px;
+      span {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--advertisement-text-color);
+      }
+    }
+  }
+}
+
+hr {
+  color: #aaa;
+  font-size: 1.375rem;
+}
+
+@media (max-width: 786px) {
+  figure {
+    img {
+      transform: rotate(90deg);
+    }
+  }
+
+  .profile__left__list {
+    margin-block-end: 30px !important;
+  }
+  .profileSidbar.col-xl-2,
+  .profileSidbar.col-md-4,
+  .profileSidbar.col-sm-12 {
+    padding: 0 !important;
+  }
+  .profileSidbar {
+    margin-block-end: 30px;
+  }
+}
+@media (max-width: 576px) {
+  .profile__center__search
+    .profile__center__search_body__item-upper
+    h5:last-child {
+    width: 50px;
+  }
+  .profile__center__about header h4 {
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+  .profile__center__about header button {
+    padding-inline: 2px;
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+}
+</style>

@@ -1,13 +1,22 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from './../pages/home/index.vue';
 import Profile from './../pages/profile/index.vue';
-// import Alumbs from './../pages/albums/index.vue';
-// import Photos from './../pages/photos/index.vue';
+import Edit from './../pages/edit/index.vue';
+import Properties from './../pages/Properties/index.vue';
 const routes = [
   { path: '/', component: Home },
-  { path: '/profile', component: Profile },
-  //   { path: '/users/:userId', component: Alumbs },
-  //   { path: '/albums/:albumId', component: Photos },
+  {
+    path: '/edit',
+    component: Edit,
+  },
+  {
+    path: '/profile',
+    component: Profile,
+  },
+  {
+    path: '/prop',
+    component: Properties,
+  },
 ];
 
 const router = createRouter({
