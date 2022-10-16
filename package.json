@@ -17,7 +17,6 @@
     "ant-design-vue": "^3.2.13",
     "bootstrap": "^5.2.0",
     "core-js": "^3.6.5",
-    "v-pagination-3": "^0.1.7",
     "vue": "^3.0.0",
     "vue-router": "^4.0.13",
     "vue3-slider": "^1.8.0",

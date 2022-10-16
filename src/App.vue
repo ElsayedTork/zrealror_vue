@@ -17,7 +17,7 @@ export default {
 };
 </script>
 
-<style class="scoped">
+<style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 html {
@@ -110,5 +110,51 @@ button {
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
+}
+.range {
+  padding-block: 28px;
+  &__header {
+    padding-block-end: 12px;
+    p {
+      &:first-child {
+        color: var(--text-color-secondary);
+        font-weight: 500;
+        font-size: 0.875rem;
+      }
+      &:last-child {
+        color: var(--rang-color);
+        font-weight: 500;
+        font-size: 0.75rem;
+      }
+    }
+  }
+  .slider-touch-area {
+    background-color: #fff;
+    border: 4px solid var(--main-color);
+    border-radius: 50%;
+  }
+  .slider-connects {
+    .slider-connect {
+      background-color: var(--main-color);
+    }
+  }
+
+  .slider-horizontal .slider-tooltip-top {
+    bottom: -30px !important;
+    left: 50%;
+    transform: translate(-50%);
+    &::before {
+      content: none;
+    }
+    background-color: var(--main-color);
+    border-color: transparent;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  &:hover {
+    .slider-horizontal .slider-tooltip-top {
+      opacity: 1;
+    }
+  }
 }
 </style>

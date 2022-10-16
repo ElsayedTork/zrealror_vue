@@ -223,7 +223,7 @@ export default {
 };
 </script>
 <style src="@vueform/slider/themes/default.css"></style>
-<style lang="scss">
+<style lang="scss" scoped>
 li {
   list-style: none;
   padding-block-start: 24px;
@@ -275,54 +275,8 @@ li {
     background-image: url('./../../assets/images/properties/calendar.svg');
   }
 }
+
 li.serch-date {
   margin-block-end: 40px;
-}
-.range {
-  padding-block: 28px;
-  &__header {
-    padding-block-end: 12px;
-    p {
-      &:first-child {
-        color: var(--text-color-secondary);
-        font-weight: 500;
-        font-size: 0.875rem;
-      }
-      &:last-child {
-        color: var(--rang-color);
-        font-weight: 500;
-        font-size: 0.75rem;
-      }
-    }
-  }
-  .slider-touch-area {
-    background-color: #fff;
-    border: 4px solid var(--main-color);
-    border-radius: 50%;
-    // position: relative;
-  }
-  .slider-connects {
-    .slider-connect {
-      background-color: var(--main-color);
-    }
-  }
-
-  .slider-horizontal .slider-tooltip-top {
-    bottom: -30px !important;
-    left: 50%;
-    transform: translate(-50%);
-    &::before {
-      content: none;
-    }
-    background-color: var(--main-color);
-    border-color: transparent;
-    opacity: 0;
-    transition: opacity 0.5s;
-  }
-  &:hover {
-    .slider-horizontal .slider-tooltip-top {
-      opacity: 1;
-    }
-  }
 }
 </style>
