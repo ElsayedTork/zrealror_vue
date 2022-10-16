@@ -3,6 +3,7 @@ import Home from './../pages/home/index.vue';
 import Profile from './../pages/profile/index.vue';
 import Edit from './../pages/edit/index.vue';
 import Properties from './../pages/Properties/index.vue';
+import Withlist from './../pages/wishlists/index.vue';
 const routes = [
   { path: '/', component: Home },
   {
@@ -16,6 +17,10 @@ const routes = [
   {
     path: '/prop',
     component: Properties,
+  },
+  {
+    path: '/wish',
+    component: Withlist,
   },
 ];
 

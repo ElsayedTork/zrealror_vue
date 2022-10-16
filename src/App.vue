@@ -46,6 +46,8 @@ html {
   --bgFilter: #eceff1;
   --colorFilter: #394456;
   --rang-color: #484b50;
+  --hr-color: #e4e9ef;
+  --scrool-color: rgba(115, 118, 128, 0.2);
 }
 *,
 ul,

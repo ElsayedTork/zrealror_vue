@@ -3,11 +3,13 @@ import { createStore } from 'vuex';
 import propFilter from './modules/propFilter';
 import units from './modules/unitType';
 import savedSearches from './modules/savedSearches';
+import propList from './modules/propList';
 export default createStore({
   modules: {
     propFl: propFilter,
     units: units,
     savSearch: savedSearches,
+    proList: propList,
   },
   state() {
     return {

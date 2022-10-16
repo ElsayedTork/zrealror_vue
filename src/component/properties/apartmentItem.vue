@@ -2,7 +2,12 @@
   <div class="apartment__info">
     <div class="apartment__info__heading">
       <h3>{{ item.title }}</h3>
-      <img src="./../../assets/images/properties/Heart.png" alt="" srcset="" />
+      <img
+        @click="showWishlist"
+        src="./../../assets/images/properties/Heart.png"
+        alt=""
+        srcset=""
+      />
     </div>
 
     <p class="apartment__info__address">
@@ -38,14 +43,33 @@
       </p>
       <custom-button text="View Details" btnClass="details"></custom-button>
     </div>
+    <section v-if="flag">
+      wishlistModal
+      <wishlist-modal @close-modal="closeModal"></wishlist-modal>
+    </section>
   </div>
 </template>
 <script>
 import CustomButton from './../shared/customButton/index.vue';
+import WishlistModal from './wishlistModal.vue';
 export default {
   props: ['item'],
+  data() {
+    return {
+      flag: false,
+    };
+  },
   components: {
     CustomButton,
+    WishlistModal,
+  },
+  methods: {
+    showWishlist() {
+      this.flag = true;
+    },
+    closeModal() {
+      this.flag = false;
+    },
   },
 };
 </script>
@@ -60,6 +84,9 @@ export default {
       font-size: 1.5rem;
       font-weight: 600;
       color: var(--text-color-secondary);
+    }
+    img {
+      cursor: pointer;
     }
     margin-block-end: 12px;
   }
