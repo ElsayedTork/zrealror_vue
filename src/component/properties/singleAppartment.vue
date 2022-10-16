@@ -16,7 +16,14 @@
             </div>
           </div>
         </div>
-        <span class="apartment__element__discound">50% OFF</span>
+        <div class="apartment__element__discound">
+          <img
+            src="./../../assets/images/properties/sale.png"
+            class="img-fluid"
+            alt=""
+          />
+          <span class="">50% OFF</span>
+        </div>
       </div>
     </section>
   </section>
@@ -59,13 +66,31 @@ export default {
       position: absolute;
       right: 0;
       top: 80px;
-      background-color: var(--discound_color);
-      color: var(--white-color);
-      display: inline;
-      width: fit-content;
-      padding-inline: 8px;
-      padding-block: 4px;
-      border-radius: 8px 0 0 8px;
+      width: 68px;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        right: 100%;
+      }
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        right: 100%;
+        color: var(--white-color);
+        font-size: 12px;
+        font-weight: 500;
+        display: inline-block;
+        text-align: center;
+        transform: translateY(3px);
+      }
     }
   }
 }

@@ -18,9 +18,21 @@
             <span>My Wishlists</span>
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li>
+              <router-link to="/" class="dropdown-item" href="#"
+                >Action</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/" class="dropdown-item" href="#"
+                >Another action</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/" class="dropdown-item" href="#"
+                >Something else here</router-link
+              >
+            </li>
           </ul>
         </div>
       </li>

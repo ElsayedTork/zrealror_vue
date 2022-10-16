@@ -1,6 +1,12 @@
 <template>
   <div class="properties">
     <div class="container">
+      <div class="properties__breadcrumb">
+        <router-link to="/" class="me-2">Home</router-link>
+        <i class="fa-solid fa-chevron-right"></i>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span class="ms-2">Properties </span>
+      </div>
       <div class="row">
         <div class="col-xl-3">
           <advanced-search></advanced-search>
@@ -35,7 +41,25 @@ export default {
 <style lang="scss" scoped>
 .properties {
   background-color: var(--background-color);
-  padding-block: 80px;
+  &__breadcrumb {
+    padding-block-start: 40px;
+    margin-block-end: 46px;
+    a {
+      color: var(--range-color);
+      font-weight: 600;
+      margin-block-end: 10px;
+      display: inline-block;
+    }
+    span {
+      color: var(--text-gray-color);
+      margin-block-start: 10px;
+      display: inline-block;
+    }
+    i {
+      font-size: 12px;
+      color: var(--text-gray-color);
+    }
+  }
 }
 .properties__propAdd {
   margin-block-start: 48px;
