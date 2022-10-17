@@ -14,8 +14,12 @@
         </div>
       </li>
       <ol>
-        <li v-for="(item, index) in propList" :key="index">
-          <span>{{ item.listName }}</span>
+        <li
+          v-for="(item, index) in propList"
+          :key="index"
+          @click="filterWishlist(item)"
+        >
+          <span>{{ item }}</span>
           <span>5</span>
         </li>
       </ol>
@@ -61,7 +65,7 @@ export default {
   computed: {
     ...mapState({
       propList: (state) => {
-        return state.proList.propList;
+        return state.propFl.propList;
       },
     }),
   },
@@ -71,6 +75,9 @@ export default {
     },
     closeModal() {
       this.flag = false;
+    },
+    filterWishlist(itemWishlist) {
+      this.$store.dispatch('propFl/wishlistFilter', itemWishlist);
     },
   },
 };

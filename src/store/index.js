@@ -195,6 +195,7 @@ export default createStore({
     addSearch(state, saveSearch) {
       state.searches = [...state.searches, saveSearch];
     },
+
   },
   actions: {
     setProfileDataAction({ commit }, obj) {
@@ -203,5 +204,6 @@ export default createStore({
     addSearch({ commit }, saveSearch) {
       commit('addSearch', saveSearch);
     },
+
   },
 });

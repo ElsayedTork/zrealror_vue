@@ -2,7 +2,7 @@ export default {
   namespaced: true,
   state() {
     return {
-      propList: ['all', 'cairo', 'alex', 'tanta'],
+      propList: ['All', 'Cairo', 'Alex', 'Tanta'],
       propInformations: [
         {
           id: 0,
@@ -24,8 +24,8 @@ export default {
           valueBathroom: 2,
           valueArea: 200,
           value: 3000,
-          isFavorit: false,
-          listTitle: '',
+          isFavorit: true,
+          listTitle: 'Cairo',
         },
         {
           id: 1,
@@ -47,8 +47,8 @@ export default {
           valueBathroom: 2,
           valueArea: 300,
           value: 4000,
-          isFavorit: false,
-          listTitle: '',
+          isFavorit: true,
+          listTitle: 'Alex',
         },
         {
           id: 2,
@@ -70,8 +70,8 @@ export default {
           valueBathroom: 1,
           valueArea: 300,
           value: 5000,
-          isFavorit: false,
-          listTitle: '',
+          isFavorit: true,
+          listTitle: 'Alex',
         },
         {
           id: 3,
@@ -393,6 +393,17 @@ export default {
       });
       console.log(state.propInformations);
     },
+    addNewlist(state, newList) {
+      let ar = state.propList;
+      state.propList = [...ar, newList];
+      console.log(state.propList);
+    },
+    wishlistFilter(state, itemWishlist) {
+      this.state.propInformations = state.propInformations.filter((item) => {
+        console.log(item.listTitle, itemWishlist);
+        return item.listTitle == itemWishlist;
+      });
+    },
   },
   actions: {
     itemSearch({ commit }, arr) {
@@ -406,6 +417,12 @@ export default {
     },
     addFavorit({ commit }, infoWish) {
       commit('addFavorit', infoWish);
+    },
+    addNewlist({ commit }, newList) {
+      commit('addNewlist', newList);
+    },
+    wishlistFilter({ commit }, itemWishlist) {
+      commit('wishlistFilter', itemWishlist);
     },
   },
 };

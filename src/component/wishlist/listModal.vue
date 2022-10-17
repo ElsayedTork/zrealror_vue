@@ -53,11 +53,6 @@ export default {
       newList: '',
     };
   },
-  computed: {
-    propList() {
-      return this.$store.state.proList.propList;
-    },
-  },
   components: {
     CustomButton,
   },
@@ -71,7 +66,7 @@ export default {
       this.closeModal();
     },
     addNewlist() {
-      this.$store.dispatch('proList/addNewlist', this.newList);
+      this.$store.dispatch('propFl/addNewlist', this.newList);
       this.closeModal();
     },
   },
