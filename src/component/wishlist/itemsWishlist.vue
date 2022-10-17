@@ -98,7 +98,11 @@ export default {
   computed: {
     ...mapState({
       propInformations: (state) => {
-        return state.propInformations;
+        let arr = state.propFl.propInformations.filter(
+          (item) => item.isFavorit === true
+        );
+        console.log(arr);
+        return arr;
       },
     }),
   },

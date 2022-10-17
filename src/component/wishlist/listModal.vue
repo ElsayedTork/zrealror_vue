@@ -6,7 +6,7 @@
           <div
             class="modal-header d-flex justify-content-between align-items-center"
           >
-            <h2>wishlist Modael</h2>
+            <h2 class="m-0">Add New List</h2>
             <i class="fa-solid fa-xmark" @click="closeModal"></i>
           </div>
           <hr />
@@ -22,39 +22,10 @@
                   class="form-control shadow-none"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
-                  v-model="saveSerch"
+                  v-model="newList"
                 />
               </div>
             </form>
-            <div class="modal-body__container">
-              <div class="modal-line"></div>
-              <span>or</span>
-              <div class="modal-line"></div>
-            </div>
-            <section>
-              <div>
-                <label>Select From List</label>
-                <div class="modal-body__list__container">
-                  <ul>
-                    <li
-                      class="form-check"
-                      v-for="(item, index) in propList.listName"
-                      :key="index"
-                    >
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="list"
-                        id="flexRadioDefault1"
-                      />
-                      <label class="form-check-label" for="flexRadioDefault1">
-                        {{ item }}
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </section>
           </div>
 
           <div class="modal-footer">
@@ -66,7 +37,7 @@
             <custom-button
               text="Save"
               btnClass="savingSearch"
-              @click="sendSearch"
+              @click="addNewlist"
             ></custom-button>
           </div>
         </div>
@@ -75,20 +46,17 @@
   </transition>
 </template>
 <script>
-import { mapState } from 'vuex';
 import CustomButton from './../shared/customButton/index.vue';
 export default {
   data() {
     return {
-      saveSerch: '',
+      newList: '',
     };
   },
   computed: {
-    ...mapState({
-      propList: (state) => {
-        return state.proList.propList;
-      },
-    }),
+    propList() {
+      return this.$store.state.proList.propList;
+    },
   },
   components: {
     CustomButton,
@@ -102,6 +70,10 @@ export default {
       //   this.$store.dispatch('savedSerch', newSavedSerch);
       this.closeModal();
     },
+    addNewlist() {
+      this.$store.dispatch('proList/addNewlist', this.newList);
+      this.closeModal();
+    },
   },
 };
 </script>
@@ -111,6 +83,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   margin-block-end: 20px;
+
   span {
     color: var(--text-gray-color);
     font-size: 14px;
@@ -121,7 +94,6 @@ export default {
     width: 46%;
   }
 }
-
 .modal-mask {
   position: fixed;
   z-index: 9998;
@@ -141,7 +113,7 @@ export default {
 
 .modal-container {
   border-radius: 16px;
-  width: 606px;
+  max-width: 502px;
   margin: 0px auto;
   padding: 20px 30px;
   background-color: var(--white-color);
@@ -168,7 +140,6 @@ export default {
 }
 
 .modal-body {
-  margin: 20px 0;
   label {
     color: var(--text-edit-color);
     font-size: 0.875rem;
@@ -207,23 +178,5 @@ export default {
   border-radius: 5px;
   max-height: 181px;
   overflow: auto;
-}
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--hr-color);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--scrool-color);
-  max-height: 50px !important;
-  border-radius: 5px;
-}
-::-webkit-scrollbar-button {
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
 }
 </style>

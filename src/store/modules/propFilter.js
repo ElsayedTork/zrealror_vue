@@ -23,6 +23,7 @@ export default {
           valueBathroom: 2,
           valueArea: 200,
           value: 3000,
+          isFavorit: false,
         },
         {
           id: 1,
@@ -44,6 +45,7 @@ export default {
           valueBathroom: 2,
           valueArea: 300,
           value: 4000,
+          isFavorit: false,
         },
         {
           id: 2,
@@ -65,6 +67,7 @@ export default {
           valueBathroom: 1,
           valueArea: 300,
           value: 5000,
+          isFavorit: false,
         },
         {
           id: 3,
@@ -86,6 +89,7 @@ export default {
           valueBathroom: 1,
           valueArea: 400,
           value: 5000,
+          isFavorit: false,
         },
         {
           id: 4,
@@ -107,6 +111,7 @@ export default {
           valueBathroom: 1,
           valueArea: 400,
           value: 10000,
+          isFavorit: false,
         },
         {
           id: 5,
@@ -128,6 +133,7 @@ export default {
           valueBathroom: 4,
           valueArea: 300,
           value: 3000,
+          isFavorit: false,
         },
         {
           id: 6,
@@ -149,6 +155,7 @@ export default {
           valueBathroom: 4,
           valueArea: 400,
           value: 10000,
+          isFavorit: false,
         },
         {
           id: 7,
@@ -170,6 +177,7 @@ export default {
           valueBathroom: 3,
           valueArea: 300,
           value: 10000,
+          isFavorit: false,
         },
         {
           id: 8,
@@ -191,6 +199,7 @@ export default {
           valueBathroom: 3,
           valueArea: 400,
           value: 10000,
+          isFavorit: false,
         },
         {
           id: 9,
@@ -212,6 +221,7 @@ export default {
           valueBathroom: 3,
           valueArea: 300,
           value: 12000,
+          isFavorit: false,
         },
       ],
     };

@@ -5,39 +5,30 @@
         <img src="./../../assets/icons/profile/profile-circle.svg" alt="" />
         <span>my profile</span>
       </li>
-      <li>
-        <div class="dropdown">
+
+      <li class="profile__left__dropdown">
+        <div class="p-0 m-0">
           <img src="./../../assets/icons/profile/wishlist.svg" alt="" />
-          <button
-            class="py-0 pe-0 ps-1 dropdown-toggle"
-            type="button"
-            id="dropdownMenuButton1"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <span>My Wishlists</span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li>
-              <router-link to="/" class="dropdown-item" href="#"
-                >Action</router-link
-              >
-            </li>
-            <li>
-              <router-link to="/" class="dropdown-item" href="#"
-                >Another action</router-link
-              >
-            </li>
-            <li>
-              <router-link to="/" class="dropdown-item" href="#"
-                >Something else here</router-link
-              >
-            </li>
-          </ul>
+          <span>My Wishlists</span>
+          <i class="fa-solid fa-chevron-up ms-5"></i>
         </div>
+      </li>
+      <ol>
+        <li v-for="(item, index) in propList" :key="index">
+          <span>{{ item.listName }}</span>
+          <span>5</span>
+        </li>
+      </ol>
+      <li @click="showList">
+        <img src="./../../assets/images/wishlist/plus-circle.svg" alt="" />
+        <span>Add New List</span>
       </li>
       <li>
         <img src="./../../assets/icons/profile/PaperDownload.svg" alt="" />
+        <span>Contacted Units</span>
+      </li>
+      <li>
+        <img src="./../../assets/images/wishlist/requestUnit.svg" alt="" />
         <span>My Requests</span>
       </li>
       <li>
@@ -45,22 +36,49 @@
         <span>Logout</span>
       </li>
     </ul>
-    <figure class="d-flex justify-content-center align-items-center">
-      <img
-        class="img-fluid"
-        src="./../../assets/images/adds/addSideBar.png"
-        alt=""
-      />
-    </figure>
+    <div
+      class="profile__left__advertisement d-flex justify-content-center align-items-center"
+    >
+      <span>184 x 540</span>
+    </div>
+    <div v-if="flag">
+      <list-model @close-modal="closeModal"></list-model>
+    </div>
   </div>
 </template>
 <script>
-export default {};
+import { mapState } from 'vuex';
+import listModel from './listModal.vue';
+export default {
+  data() {
+    return {
+      flag: false,
+    };
+  },
+  components: {
+    listModel,
+  },
+  computed: {
+    ...mapState({
+      propList: (state) => {
+        return state.proList.propList;
+      },
+    }),
+  },
+  methods: {
+    showList() {
+      this.flag = true;
+    },
+    closeModal() {
+      this.flag = false;
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 .profile__left {
   background-color: var(--white-color);
-  padding-inline: 18px;
+  padding-inline: 12px;
   padding-block: 24px;
   border-radius: 16px;
   height: fit-content;
@@ -71,6 +89,7 @@ export default {};
       padding-block: 10px;
       margin-block-end: 6px;
       padding-inline-start: 5px;
+      cursor: pointer;
       span {
         margin-inline-start: 6px;
         font-size: 0.875rem;
@@ -95,6 +114,27 @@ export default {};
         color: var(--main-color);
       }
     }
+    ol {
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: 20px;
+        span {
+          &:last-child {
+            color: var(--white-color);
+            background-color: var(--list-color);
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            font-size: 0.625rem;
+            font-weight: 600;
+            text-align: center;
+          }
+        }
+      }
+    }
   }
   &__advertisement {
     height: 540px;
@@ -107,21 +147,15 @@ export default {};
       color: var(--advertisement-text-color);
     }
   }
-}
-
-@media (max-width: 786px) {
-  .profile__left {
-    padding-inline: 10px;
-  }
-  figure {
-    position: absolute;
-    padding: 0;
-    position: relative;
-    padding-inline: 18px;
-    height: 200px;
-    img {
-      transform: rotate(90deg);
-      height: 200px;
+  &__dropdown {
+    ol {
+      padding-inline: 20px;
+      li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
     }
   }
 }

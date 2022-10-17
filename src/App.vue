@@ -48,9 +48,11 @@ html {
   --rang-color: #484b50;
   --hr-color: #e4e9ef;
   --scrool-color: rgba(115, 118, 128, 0.2);
+  --list-color:rgba(115, 118, 128, 0.8);
 }
 *,
 ul,
+ol,
 p,
 span,
 div,

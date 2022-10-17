@@ -36,7 +36,7 @@ export default {
   &__conatiner {
     display: grid;
     grid-template-columns: 220px 1fr 240px;
-    grid-row-gap: 20px;
+    grid-gap: 32px;
     &__sidebar {
     }
     &__items {
