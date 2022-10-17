@@ -2,6 +2,7 @@ export default {
   namespaced: true,
   state() {
     return {
+      propList: ['all', 'cairo', 'alex', 'tanta'],
       propInformations: [
         {
           id: 0,
@@ -24,6 +25,7 @@ export default {
           valueArea: 200,
           value: 3000,
           isFavorit: false,
+          listTitle: '',
         },
         {
           id: 1,
@@ -46,6 +48,7 @@ export default {
           valueArea: 300,
           value: 4000,
           isFavorit: false,
+          listTitle: '',
         },
         {
           id: 2,
@@ -68,6 +71,7 @@ export default {
           valueArea: 300,
           value: 5000,
           isFavorit: false,
+          listTitle: '',
         },
         {
           id: 3,
@@ -90,6 +94,7 @@ export default {
           valueArea: 400,
           value: 5000,
           isFavorit: false,
+          listTitle: '',
         },
         {
           id: 4,
@@ -112,6 +117,7 @@ export default {
           valueArea: 400,
           value: 10000,
           isFavorit: false,
+          listTitle: '',
         },
         {
           id: 5,
@@ -134,6 +140,7 @@ export default {
           valueArea: 300,
           value: 3000,
           isFavorit: false,
+          listTitle: '',
         },
         {
           id: 6,
@@ -156,6 +163,7 @@ export default {
           valueArea: 400,
           value: 10000,
           isFavorit: false,
+          listTitle: '',
         },
         {
           id: 7,
@@ -178,6 +186,7 @@ export default {
           valueArea: 300,
           value: 10000,
           isFavorit: false,
+          listTitle: '',
         },
         {
           id: 8,
@@ -200,6 +209,7 @@ export default {
           valueArea: 400,
           value: 10000,
           isFavorit: false,
+          listTitle: '',
         },
         {
           id: 9,
@@ -222,6 +232,7 @@ export default {
           valueArea: 300,
           value: 12000,
           isFavorit: false,
+          listTitle: '',
         },
       ],
     };
@@ -372,6 +383,16 @@ export default {
         }
       });
     },
+    addFavorit(state, infoWish) {
+      console.log(infoWish, 'Mutation');
+      state.propInformations = state.propInformations.map((item) => {
+        if (item.id === infoWish[0]) {
+          return { ...item, isFavorit: true, listTitle: infoWish[1] };
+        }
+        return item;
+      });
+      console.log(state.propInformations);
+    },
   },
   actions: {
     itemSearch({ commit }, arr) {
@@ -382,6 +403,9 @@ export default {
     },
     filterItems({ commit }, index) {
       commit('filterItems', index);
+    },
+    addFavorit({ commit }, infoWish) {
+      commit('addFavorit', infoWish);
     },
   },
 };

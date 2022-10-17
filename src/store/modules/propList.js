@@ -2,7 +2,7 @@ export default {
   namespaced: true,
   state() {
     return {
-      // propList: ['all', 'cairo', 'alex', 'tanta'],
+      
       propList: [
         {
           listName: 'All Saved',

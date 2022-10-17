@@ -3,7 +3,7 @@
     <div class="apartment__info__heading">
       <h3>{{ item.title }}</h3>
       <img
-        @click="showWishlist"
+        @click="showWishlist(item.id)"
         src="./../../assets/images/properties/Heart.png"
         alt=""
         srcset=""
@@ -45,7 +45,7 @@
     </div>
     <section v-if="flag">
       wishlistModal
-      <wishlist-modal @close-modal="closeModal"></wishlist-modal>
+      <wishlist-modal @close-modal="closeModal" :indexId="indexId"></wishlist-modal>
     </section>
   </div>
 </template>
@@ -57,6 +57,7 @@ export default {
   data() {
     return {
       flag: false,
+      indexId: null,
     };
   },
   components: {
@@ -64,7 +65,9 @@ export default {
     WishlistModal,
   },
   methods: {
-    showWishlist() {
+    showWishlist(index) {
+      this.indexId = index;
+      //  this.$store.dispatch('propFl/addFavorit', index);
       this.flag = true;
     },
     closeModal() {

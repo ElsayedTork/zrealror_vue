@@ -27,7 +27,7 @@
               <router-link class="nav-link" to="#">About Us</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="#">Properties</router-link>
+              <router-link class="nav-link" to="/prop">Properties</router-link>
             </li>
             <li class="nav-item">
               <router-link class="nav-link" to="#">Projects</router-link>
@@ -40,6 +40,9 @@
             </li>
             <li class="nav-item">
               <router-link class="nav-link" to="#">Contact Us</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/wish">wishList</router-link>
             </li>
           </ul>
           <ul class="header__info">

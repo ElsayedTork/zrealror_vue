@@ -101,7 +101,6 @@ export default {
         let arr = state.propFl.propInformations.filter(
           (item) => item.isFavorit === true
         );
-        console.log(arr);
         return arr;
       },
     }),

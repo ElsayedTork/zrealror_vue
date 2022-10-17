@@ -38,7 +38,7 @@
                   <ul>
                     <li
                       class="form-check"
-                      v-for="(item, index) in propList.listName"
+                      v-for="(item, index) in propList"
                       :key="index"
                     >
                       <input
@@ -46,6 +46,8 @@
                         type="radio"
                         name="list"
                         id="flexRadioDefault1"
+                        v-model="listElement"
+                        :value="item"
                       />
                       <label class="form-check-label" for="flexRadioDefault1">
                         {{ item }}
@@ -66,7 +68,7 @@
             <custom-button
               text="Save"
               btnClass="savingSearch"
-              @click="sendSearch"
+              @click="sendSearch(indexId)"
             ></custom-button>
           </div>
         </div>
@@ -78,15 +80,17 @@
 import { mapState } from 'vuex';
 import CustomButton from './../shared/customButton/index.vue';
 export default {
+  props: ['indexId'],
   data() {
     return {
       saveSerch: '',
+      listElement: '',
     };
   },
   computed: {
     ...mapState({
       propList: (state) => {
-        return state.proList.propList;
+        return state.propFl.propList;
       },
     }),
   },
@@ -97,9 +101,9 @@ export default {
     closeModal() {
       this.$emit('close-modal');
     },
-    sendSearch() {
-      //   let newSavedSerch = { name: this.saveSerch, dataSearch: this.arrSave };
-      //   this.$store.dispatch('savedSerch', newSavedSerch);
+    sendSearch(index) {
+      console.log('listElement', this.listElement);
+      this.$store.dispatch('propFl/addFavorit', [index, this.listElement]);
       this.closeModal();
     },
   },
