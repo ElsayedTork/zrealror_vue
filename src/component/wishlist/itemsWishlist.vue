@@ -91,6 +91,11 @@ import ApartmentItem from './../properties/apartmentItem.vue';
 import { mapState } from 'vuex';
 
 export default {
+  data() {
+    return {
+      nameWish: this.arr,
+    };
+  },
   components: {
     ApartmentSlider,
     ApartmentItem,

@@ -235,6 +235,7 @@ export default {
           listTitle: '',
         },
       ],
+      propInformationsFilter:[]
     };
   },
   mutations: {
@@ -384,7 +385,6 @@ export default {
       });
     },
     addFavorit(state, infoWish) {
-      console.log(infoWish, 'Mutation');
       state.propInformations = state.propInformations.map((item) => {
         if (item.id === infoWish[0]) {
           return { ...item, isFavorit: true, listTitle: infoWish[1] };
@@ -401,7 +401,7 @@ export default {
     wishlistFilter(state, itemWishlist) {
       this.state.propInformations = state.propInformations.filter((item) => {
         console.log(item.listTitle, itemWishlist);
-        return item.listTitle == itemWishlist;
+        return item.listTitle === itemWishlist;
       });
     },
   },
